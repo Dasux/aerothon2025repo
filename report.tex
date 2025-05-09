@@ -1,0 +1,180 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{graphicx}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled]{helvet}
+
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{}{0pt}{\Huge\vspace{-2cm}} % you can tweak this
+
+\titlespacing*{\chapter}{0pt}{5pt}{20pt} % left, before, after
+
+
+\begin{document}
+
+% ====================== TITLE ========================
+  \begin{center}
+    % \vspace*{-1in}
+    \includegraphics[width=0.4\textwidth]{sae_aerospace.png}\\
+    \vspace{1cm}
+    \textbf{\LARGE AEROTHON 2025} \\
+    \vspace{0.5in}
+    \textbf{\Large UNCREWED AIRCRAFT SYSTEM  (UAS) \\
+    DESIGN, BUILD \\ AND FLY CONTEST}\\
+    \vspace{0.5cm}
+    \includegraphics[width=0.4\textwidth]{aerothon2025.png}\\
+    \vspace{0.5cm}
+    \Large \textbf{PHASE 1:} DESIGN REPORT \\
+    \vspace{0.5cm}
+    \Large \textbf{TEAM NAME:} UDSAV \\
+    \Large \textbf{TEAM NUMBER: } AT2025043
+    
+    \vspace{0.5cm}
+    \includegraphics[width=0.3\textwidth]{gsvlogo.png}\\
+    \vspace{0.5cm}
+    \textbf{\Large GATI SHAKTI VISHWAVIDYALAYA} \\
+    \large{Ministry of Railways, Govt. of India \\Vadodara, India - 390004}
+  \end{center}
+  % ======================================================
+  \newpage
+  add certificate faculty mentor 
+  \newpage
+
+  \newgeometry{left=1in, right=0.5in, top=1in, bottom=0.5in}
+  % ============ [TABLE OF CONTENTS] ================
+  \tableofcontents
+  \newpage
+
+  \newgeometry{left=1in, right=0.5in, top=0.5in, bottom=0.5in}
+
+  % ================== Introduction =================
+  \chapter{Introduction}
+  \section{Overview}
+
+   In the face of natural and man-made disasters, rapid response and situational awareness are critical. Drones have emerged as powerful tools in disaster management, offering real-time aerial insights, access to hard-to-reach areas, and faster deployment compared to traditional methods. Whether locating survivors, assessing damage, or delivering essential supplies, drone technology enhances the efficiency and safety of relief operations. As disasters grow more complex and unpredictable, integrating drones into emergency response systems is no longer a luxury—it's a necessity.
+
+    \section{Problem Statement and Mission Requirements}
+    This year's AEROTHON is themed on \textbf{\textit{Surveillance and Disaster Management.}} The problem statement is to build an \textbf{\textit{Uncrewed Aircraft System (UAS)}} to be able to perform the mission requirements as per the rulebook. The mission requirements at a glance are as follows: \\ \\
+    \textbf{Mission - 1:} \textit{Advanced Obstacle Navigation $\&$ Fragile Payload Delivery with Precision Placement – Manual Operation} \\ \\
+    \textbf{Mission - 2:} \textit{Autonomous Object Classification, Disaster Situation Identification $\&$ Payload Drop – Autonomous Operation} 
+
+
+
+    \section{Scope of Report}
+    The scope of this report is to provide a comprehensive understanding of the design rationale we have used while building this project. We have tried to provide the relevant calculations, figures, and analysis models to justify the materials/design/framework we've chosen to work with for our structual and system architectures. \\ 
+
+    \noindent Apart from that, this report is intended to also serve as an accessible guide catering to neophytes in UAV/UAS systems. We have tried our best to aim at providing clear context and insight that sort of demystifies drone development.
+
+  % ======== Requirements and Design Objectives =========
+  \chapter{System Requirements \& Design Objectives}
+    \section{Mission Profile}
+    \begin{enumerate}
+      \item \textbf{Mission 1:} \textit{Advanced Obstacle Navigation $\&$ Fragile Payload Delivery with Precision Placement} \\
+        This is a \textbf{\textit{Manual Operation.}} In this mission, the drone must transport a fragile payload through a challenging course filled with static obstacles such as walls, barriers, and narrow passages. The primary objective is to navigate these obstacles with high precision while ensuring the payload remains undamaged. \\
+        
+        Upon reaching the target zone, the drone must land carefully and place the fragile payload on the ground without causing any damage. After the successful placement, the drone must then return to the takeoff point or designated home base, ensuring safe and efficient navigation back through the course. The mission is complete once the payload is placed securely, and the drone successfully returns to the home base.
+      \item \textbf{Mission 2:} \textit{Autonomous Object Classification, Disaster Situation Identification $\&$ Payload Drop }\\
+        This is an \textbf{\textit{Autonomous Operation.}} In this mission, the drone will autonomously scan, classify, and assess objects within a predefined area using onboard sensors and algorithms. The objects will vary in shape, size, color, and structure, and may be partially obscured, presenting challenges for detection and classification. Once the objects are classified, the drone will identify potential disaster scenarios, such as flooding, fire, or damaged infrastructure, within the same area.
+    \end{enumerate}
+    \section{Key Performance Indicators}
+    According to the above defined mission profiles, we have a few KPIs (\textit{Key Performance Index}) to keep in mind.
+    \begin{enumerate}
+      \item Flight Endurance and Range 
+      \item Payload Handling 
+      \item Autonomous Capabilites
+      \item System Reliability
+      \item Design and Innovation
+    \end{enumerate}
+    \section{Constraints}
+    The design and development of the UAV is subjected to several constraints as per the guidelines mentioned in the rulebook AEROTHON 2025. These include dimensional constraints, payload restrictions and strict autonomy requirements. The drone must perform all missions bound by these constraints and we have taken great time and care to articulate them down to ensure nothing is amiss.
+    \begin{enumerate}
+      \item \textbf{Dimensional Constraints}
+        \begin{itemize}
+          \item Maximum Wingspan: \textbf{1.5 metres} - the UAV must fit inside a \textbf{\textit{1.5m x 1.5m x 1.5m bounding box}} in assembled condition.
+          \item Maximum Takeoff Weight: \textbf{3.5kg} including battery and payload.
+        \end{itemize}
+      \item \textbf{Payload Constraints}
+        \begin{itemize}
+          \item Payload: One fragile payload cube of \textbf{\textit{10cm x 10cm x 10cm}} weighing \textbf{\textit{150 ~ 200g}}.
+          \item Payload must be released within a \textbf{\textit{3m x 3m}} target zone.
+        \end{itemize}
+      \item \textbf{Flight Environment Constraints}
+        \begin{itemize}
+          \item Missions are conducted in \textbf{\textit{open outdoor airspace}}.
+          \item Expect wind speeds upto \textbf{\textit{5m/s}}
+        \end{itemize}
+      \item \textbf{Autonomy and Mission Constraints}
+        \begin{itemize}
+          \item \textbf{Mission 1:} Manual flight only (no GPS or autopilot usage).
+          \item \textbf{Mission 2:} Fully autonomous flight (no pilot intervention or RC use).
+          \item All autonomous missions must avoid obstacles and make decisions based on \textbf{\textit{onboard computation.}}
+        \end{itemize}
+      \item \textbf{Power and Communication Constraints}
+        \begin{itemize}
+          \item Must operate on battery only
+          \item No cellular or internet-based comms allowed
+          \item Only 2.4 GHz or 5.8 GHz RF modules permitted
+        \end{itemize}
+      \item \textbf{Safety and Compliance}
+        \begin{itemize}
+          \item Must have a failsafe mode (e.g., return-to-home or emergency land)
+          \item Must pass technical inspection before flying
+          \item Compliance with DGCA drone guidelines (if relevant in test zones)
+        \end{itemize}
+      \item \textbf{Operational Constraints}
+        \begin{itemize}
+          \item The team must complete the flight within a \textbf{\textit{15-minute slot.}}
+          \item Payload must be dropped in an area of \textbf{\textit{3m x 3m.}}
+        \end{itemize}
+    \end{enumerate}
+  % ========= Conceptual Design Approach =======
+  \chapter{Conceptual Design Approach}
+    \section{Design Methodology and Material Selection}
+
+    \section{Trade-off Analysis} % why we chose this design over other 
+    \section{Schematic Diagram and CAD Model}
+                                                 
+  % ======== Aerodynamic and Flight Performance ======
+  \chapter{Detailed Design Breakdown}                                 
+    \section{Aerodynamics \& Flight Performance}
+      \subsection{Lift, Drag and Stability Considerations}
+      \subsection{Theoretical Performance Predictions}
+
+  % ============== Propulsion ====================
+    \section{Propulsion System}
+      \subsection{Motor, ESC, Propellor Selection}
+      \subsection{Powertrain Efficiency Calculations}
+      \subsection{Battery or Fuel Details}
+  
+  % ======== Avionics and Control Systems ====
+    \section{Avionics and Control Systems}
+      \subsection{Flight controller, sensors, and navigation}
+      \subsection{Communication System}
+      \subsection{Autonomous Capabilites}
+
+  %========== Payload Gripper Mechanims
+    \section{Payload and Gripper Mechanism}
+      \subsection{Integration with the UAV}
+      \subsection{Impact on aerodynamics and weight}
+
+  %========= Ground Control
+    \section{Ground Control Systems}
+      \subsection{Ground Station Setup}
+      \subsection{Mission Execution strategy}
+
+  % =========== Safety, Compliance & Risk Assessment====== 
+  \chapter{Safety, Compliance \& Risk Assessment}
+    \section{Compliance with SAEINDIA/FAA guidelines}
+    \section{Risk analysis and mitigation strategies}
+    \section{Emergency procedures}
+  
+  % ========= Conclusion & Future Work =====
+  \chapter{Bill of Materials}
+  \chapter{Methodology for Autonomous Operations}
+  \chapter{Innovations and Future Scope}
+  
+\end{document}
+
