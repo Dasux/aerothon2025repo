@@ -1,8 +1,10 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=0.5in]{geometry}
-\usepackage{graphicx}
+\usepackage{graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[scaled]{helvet}
+\usepackage[table]{xcolor}
+\geometry{margin=1in}
 
 
 \usepackage{titlesec}
@@ -64,7 +66,7 @@
 
 
     \section{Scope of Report}
-    The scope of this report is to provide a comprehensive understanding of the design rationale we have used while building this project. We have tried to provide the relevant calculations, figures, and analysis models to justify the materials/design/framework we've chosen to work with for our structual and system architectures. \\ 
+    The scope of this report is to provide a comprehensive understanding of the design rationale we have used while building this project. We have tried to provide the relevant calculations, figures, and analysis models to justify the materials/design/framework we've chosen to work with for our structural and system architectures. \\ 
 
     \noindent Apart from that, this report is intended to also serve as an accessible guide catering to neophytes in UAV/UAS systems. We have tried our best to aim at providing clear context and insight that sort of demystifies drone development.
 
@@ -133,7 +135,7 @@
   % ========= Conceptual Design Approach =======
   \chapter{Conceptual Design Approach}
     \section{Design Methodology and Material Selection}
-
+    
     \section{Trade-off Analysis} % why we chose this design over other 
     \section{Schematic Diagram and CAD Model}
                                                  
@@ -145,10 +147,82 @@
 
   % ============== Propulsion ====================
     \section{Propulsion System}
-      \subsection{Motor, ESC, Propellor Selection}
+      \subsection{Motor, ESC, Propellor Selection \& Battery}
+      \vspace{0.5cm}
+      
+      \textbf{Motor: DYS D2836-7 1120KV Brushless Motor} \\
+      \begin{wrapfigure}{r}{0.2\textwidth}
+        \includegraphics[width=0.2\textwidth]{bldc.png}
+        \caption{DYS D2836-7 1120kV BLDC}
+        \label{fig:bldc1120}
+      \end{wrapfigure}
+      The DYS D2836-7 1120KV Brushless Motor is our go-to motor for this project because of the following leverages it offers:
+        
+      \begin{itemize}
+        \item \textbf{\textit{KV Rating: 1120KV}} - KV generally means RPM per volt. In layman terms, in one volt, how many rotations does it make per minute = KV. In this case, 1120KV is mid-range, which means good thrust at moderate RPMs, and it works decently with larger propellors (\textit{9" - 11"}) which improves lift and efficiency, \textit{especially} at low speeds. This is perfect for surveillance drones that require loitering and stability. A lower KV would force us to use bulky propellors, and a higher KV would drain the battery faster. 1120KV is a sweet spot between the two.
+        \item \textbf{\textit{Power \& Efficiency:}} - With a 3S or 4S LiPo, this motor produces ~800g to 1100g of thrust, depending on the propeller used. It can pull 20–25A max, so it's efficient for mid-weight UAVs (\textit{in our case, it is around \textbf{1.5 ~ 2kg AUW} (All Up Weight.)}), so it's ideal for our choice.
+        \item \textbf{\textit{Build Quality \& Availability}} - DYS motors are known for durability and consistent performance, and since they are so weidely available, it's easier to find cheap spare parts, like mounts/ shafts/ bearings.
+      \end{itemize}
+      \textbf{Detailed Specifications Table:}
+      \renewcommand{\arraystretch}{1.5}
+      \rowcolors{1}{white}{blue!10}
+
+      \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
+      \hline
+      \rowcolor{white}
+      \textbf{Motor KV (RPM/V):} & 1120 \\
+      \textbf{Motor Type:} & Brushless Motor \\
+      \textbf{Compatible LiPO Batteries:} & 2S to 4S \\
+      \textbf{Weight (g):} & 70 \\
+      \textbf{Shaft Diameter (mm):} & $\Phi$4.0×49mm \\
+      \textbf{Max. Power (W):} & 336 \\
+      \textbf{Maximum Thrust (gm):} & 1130 \\
+      \textbf{Compatible Prop (inch):} & 11×7 / 7×3 \\
+      \textbf{Required ESC (A):} & 40 \\
+      \textbf{Shipping Weight:} & 0.089 kg \\
+      \textbf{Shipping Dimensions:} & 10 × 6 × 5 cm \\
+      \hline
+      \end{tabular} \\
+      \vspace{0.5cm}
+      \textbf{ESC: ReadytoSky 40A 2-4S ESC} \\
+      \begin{wrapfigure}{r}{0.3\textwidth}
+        \includegraphics[width=1\linewidth]{esc.png}
+        \caption{ReadytoSky 40A 2-4S ESC}
+        \label{fig:esc40a}
+      \end{wrapfigure}
+
+      The ReadytoSky 40A 2-4S ESC is a good choice for surveillance drones, and our use case for the following reasons:
+      \begin{itemize}
+        \item \textbf{\textit{Sufficient Current Handling}} - Our DYS D2836 motor draws about 20 -- 25A at max. The ESC we're using can supply upto 40A, which is comfortably safe for our use case.
+        \item \textbf{\textit{2-4s LiPo Compatiility}} - This works best with common drone battery setups like 3S -- 4S. Another reason for this choice is that it matches our motor's voltage tolerance (D2836 runs fine upto 4S).
+        \item \textbf{\textit{BLHeli Firmware}} - Comes pre-flashed  with BLHeli, and this offers a smooth throttle response; brake support (for fixed wing or quad hybrid designs).
+        \item \textbf{\textit{Thermal Performance and Build}} - The ESC is rating to suport 40A, which means it can take bursty loads without frying good for maneuvers, sudden wind corrections, or takeoffs.
+      \end{itemize}
+
+      \vspace{0.5cm}
+      \noindent \textbf{Propellor: } 
+
+      \vspace{0.5cm}
+      \noindent \textbf{Battery: Orange 7.4V 5200 MAH} \\
+      \begin{wrapfigure}{r}{0.2\textwidth}
+        \includegraphics[width=1\linewidth]{battery.png}
+        \caption{Orange 7.4V 5200 MAH}
+        \label{fig:esc40a}
+      \end{wrapfigure}
+      The Orange 7.4V 5200 MAH battery is optimum for our choice, for the following reasons: \\ \\
+Generally, 2s LiPo batteries are thermally stable. They account for less ESC or motor overheating, especially in long-endurance missions. The \textbf{discharge-rate} of this battery is \textbf{35C}, and so, the maximum Theoretical discharge current than can be supplied is 
+      \begin{gather*} 
+        \text{Max Continuous Current} = \text{Capacity (Ah)} \, \times \, \text{C - rate} \\
+          = 5.2 \mathrm{Ah} \, \times \, 35 \\
+          = \boldsymbol{182 A}
+      \end{gather*}
+      From the official datasheet of the battery, it is rated at \textbf{156A}, which is not what we're expecting. So we can assume that the actual discharge-rate is \textbf{30C}.  \\ 
+      
+      Now, the DYS D2836-7 motor draws on an average of 18 -- 22A current on a 2s LiPo battery with 10x4.2 propellor. Let us assume that on full throttle, with a load also, it draws 25A current. If a single motor draws 25A, then total current drawn by quad motors, 25 $\times$ 4 = \textbf{100A}. That is well enough below the total theoretical discharge current of 156A. In that case, if we're using the motor at full-throttle, and it draws 25A current, then \[ \text{Discharge Load} = \frac{25}{156} = 16.02 \% \quad \text{of battery's safe limit} \]  \[ \text{Discharge Time (hrs)} = \frac{5.2}{25 \times 4} = 0.052 \, \, \text{hrs} = 3.12 \, \, \text{minutes} \] This means the battery is well within safe thermal and chemical limits.
+
+
       \subsection{Powertrain Efficiency Calculations}
-      \subsection{Battery or Fuel Details}
-  
+        
   % ======== Avionics and Control Systems ====
     \section{Avionics and Control Systems}
       \subsection{Flight controller, sensors, and navigation}
