@@ -1,6 +1,6 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=0.5in]{geometry}
-\usepackage{graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array}
+\usepackage{graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array, float}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[scaled]{helvet}
 \usepackage[table]{xcolor}
@@ -71,8 +71,8 @@
     \noindent Apart from that, this report is intended to also serve as an accessible guide catering to neophytes in UAV/UAS systems. We have tried our best to aim at providing clear context and insight that sort of demystifies drone development.
 
   % ======== Requirements and Design Objectives =========
-  \chapter{System Requirements \& Design Objectives}
-    \section{Mission Profile}
+  \section{System Requirements \& Design Objectives}
+    \subsection{Mission Profile}
     \begin{enumerate}
       \item \textbf{Mission 1:} \textit{Advanced Obstacle Navigation $\&$ Fragile Payload Delivery with Precision Placement} \\
         This is a \textbf{\textit{Manual Operation.}} In this mission, the drone must transport a fragile payload through a challenging course filled with static obstacles such as walls, barriers, and narrow passages. The primary objective is to navigate these obstacles with high precision while ensuring the payload remains undamaged. \\
@@ -81,7 +81,7 @@
       \item \textbf{Mission 2:} \textit{Autonomous Object Classification, Disaster Situation Identification $\&$ Payload Drop }\\
         This is an \textbf{\textit{Autonomous Operation.}} In this mission, the drone will autonomously scan, classify, and assess objects within a predefined area using onboard sensors and algorithms. The objects will vary in shape, size, color, and structure, and may be partially obscured, presenting challenges for detection and classification. Once the objects are classified, the drone will identify potential disaster scenarios, such as flooding, fire, or damaged infrastructure, within the same area.
     \end{enumerate}
-    \section{Key Performance Indicators}
+    \subsection{Key Performance Indicators \& Constraints}
     According to the above defined mission profiles, we have a few KPIs (\textit{Key Performance Index}) to keep in mind.
     \begin{enumerate}
       \item Flight Endurance and Range 
@@ -90,8 +90,7 @@
       \item System Reliability
       \item Design and Innovation
     \end{enumerate}
-    \section{Constraints}
-    The design and development of the UAV is subjected to several constraints as per the guidelines mentioned in the rulebook AEROTHON 2025. These include dimensional constraints, payload restrictions and strict autonomy requirements. The drone must perform all missions bound by these constraints and we have taken great time and care to articulate them down to ensure nothing is amiss.
+        The design and development of the UAV is subjected to several constraints as per the guidelines mentioned in the rulebook AEROTHON 2025. These include dimensional constraints, payload restrictions and strict autonomy requirements. The drone must perform all missions bound by these constraints and we have taken great time and care to articulate them down to ensure nothing is amiss.
     \begin{enumerate}
       \item \textbf{Dimensional Constraints}
         \begin{itemize}
@@ -134,20 +133,16 @@
     \end{enumerate}
   % ========= Conceptual Design Approach =======
   \chapter{Conceptual Design Approach}
-    \section{Design Methodology and Material Selection}
-    
-    \section{Trade-off Analysis} % why we chose this design over other 
-    \section{Schematic Diagram and CAD Model}
+    \section{Design Methodology}
+    \section{Product Benchmark \& Trade-off Analysis} % why we chose this design over other 
                                                  
   % ======== Aerodynamic and Flight Performance ======
   \chapter{Detailed Design Breakdown}                                 
-    \section{Aerodynamics \& Flight Performance}
-      \subsection{Lift, Drag and Stability Considerations}
-      \subsection{Theoretical Performance Predictions}
+    \section{Preliminary Weight Estimation}
 
   % ============== Propulsion ====================
-    \section{Propulsion System}
-      \subsection{Motor, ESC, Propellor Selection \& Battery}
+    \section{Thrust Requirement \& Propulsion System Selection}
+      \subsection{Motor, ESC, Propellor \& Battery Selection}
       \vspace{0.5cm}
       
       \textbf{Motor: DYS D2836-7 1120KV Brushless Motor} \\
@@ -161,28 +156,41 @@
       \begin{itemize}
         \item \textbf{\textit{KV Rating: 1120KV}} - KV generally means RPM per volt. In layman terms, in one volt, how many rotations does it make per minute = KV. In this case, 1120KV is mid-range, which means good thrust at moderate RPMs, and it works decently with larger propellors (\textit{9" - 11"}) which improves lift and efficiency, \textit{especially} at low speeds. This is perfect for surveillance drones that require loitering and stability. A lower KV would force us to use bulky propellors, and a higher KV would drain the battery faster. 1120KV is a sweet spot between the two.
         \item \textbf{\textit{Power \& Efficiency:}} - With a 3S or 4S LiPo, this motor produces ~800g to 1100g of thrust, depending on the propeller used. It can pull 20–25A max, so it's efficient for mid-weight UAVs (\textit{in our case, it is around \textbf{1.5 ~ 2kg AUW} (All Up Weight.)}), so it's ideal for our choice.
-        \item \textbf{\textit{Build Quality \& Availability}} - DYS motors are known for durability and consistent performance, and since they are so weidely available, it's easier to find cheap spare parts, like mounts/ shafts/ bearings.
       \end{itemize}
-      \textbf{Detailed Specifications Table:}
       \renewcommand{\arraystretch}{1.5}
       \rowcolors{1}{white}{blue!10}
-
-      \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
-      \hline
-      \rowcolor{white}
-      \textbf{Motor KV (RPM/V):} & 1120 \\
-      \textbf{Motor Type:} & Brushless Motor \\
-      \textbf{Compatible LiPO Batteries:} & 2S to 4S \\
-      \textbf{Weight (g):} & 70 \\
-      \textbf{Shaft Diameter (mm):} & $\Phi$4.0×49mm \\
-      \textbf{Max. Power (W):} & 336 \\
-      \textbf{Maximum Thrust (gm):} & 1130 \\
-      \textbf{Compatible Prop (inch):} & 11×7 / 7×3 \\
-      \textbf{Required ESC (A):} & 40 \\
-      \textbf{Shipping Weight:} & 0.089 kg \\
-      \textbf{Shipping Dimensions:} & 10 × 6 × 5 cm \\
-      \hline
-      \end{tabular} \\
+      
+      \begin{table}[H]
+      \centering
+      \caption{Motor Characteristics (DYS D2836-7 1120kV BLDC)}
+        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Motor KV (RPM/V) & 1120 \\
+          \hline
+          Motor Type & Brushless Motor \\
+          \hline
+          Compatible LiPO Batteries & 2S to 4S \\
+          \hline
+          Weight (g) & 70 \\
+          \hline
+          Shaft Diameter (mm) & $\Phi$4.0×49mm \\
+          \hline
+          Max. Power (W) & 336 \\
+          \hline
+          Maximum Thrust (gm) & 1130 \\
+          \hline
+          Compatible Prop (inch) & 11×7 / 7×3 \\
+          \hline
+          Required ESC (A) & 40 \\
+          \hline
+          Shipping Weight & 0.089 kg \\
+          \hline
+          Shipping Dimensions & 10 × 6 × 5 cm \\
+          \hline
+        \end{tabular}
+      \end{table}
       \vspace{0.5cm}
       \textbf{ESC: ReadytoSky 40A 2-4S ESC} \\
       \begin{wrapfigure}{r}{0.3\textwidth}
@@ -203,52 +211,93 @@
       \noindent \textbf{Propellor: } 
 
       \vspace{0.5cm}
-      \noindent \textbf{Battery: Orange 7.4V 5200 MAH} \\
-      \begin{wrapfigure}{r}{0.2\textwidth}
-        \includegraphics[width=1\linewidth]{battery.png}
-        \caption{Orange 7.4V 5200 MAH}
-        \label{fig:esc40a}
-      \end{wrapfigure}
-      The Orange 7.4V 5200 MAH battery is optimum for our choice, for the following reasons: \\ \\
-Generally, 2s LiPo batteries are thermally stable. They account for less ESC or motor overheating, especially in long-endurance missions. The \textbf{discharge-rate} of this battery is \textbf{35C}, and so, the maximum Theoretical discharge current than can be supplied is 
-      \begin{gather*} 
-        \text{Max Continuous Current} = \text{Capacity (Ah)} \, \times \, \text{C - rate} \\
-          = 5.2 \mathrm{Ah} \, \times \, 35 \\
-          = \boldsymbol{182 A}
-      \end{gather*}
-      From the official datasheet of the battery, it is rated at \textbf{156A}, which is not what we're expecting. So we can assume that the actual discharge-rate is \textbf{30C}.  \\ 
       
-      Now, the DYS D2836-7 motor draws on an average of 18 -- 22A current on a 2s LiPo battery with 10x4.2 propellor. Let us assume that on full throttle, with a load also, it draws 25A current. If a single motor draws 25A, then total current drawn by quad motors, 25 $\times$ 4 = \textbf{100A}. That is well enough below the total theoretical discharge current of 156A. In that case, if we're using the motor at full-throttle, and it draws 25A current, then \[ \text{Discharge Load} = \frac{25}{156} = 16.02 \% \quad \text{of battery's safe limit} \]  \[ \text{Discharge Time (hrs)} = \frac{5.2}{25 \times 4} = 0.052 \, \, \text{hrs} = 3.12 \, \, \text{minutes} \] This means the battery is well within safe thermal and chemical limits.
-
 
       \subsection{Powertrain Efficiency Calculations}
+  % ======== Aircraft Sizing ========
+    \section{Aircraft Sizing}
+      \subsection*{Rotor Arm}
+      \subsection*{Hub}
+      \subsection*{Wheelbase}
+      \subsection*{Propellor Clearance}
+      \subsection*{Landing Gear}
         
-  % ======== Avionics and Control Systems ====
-    \section{Avionics and Control Systems}
-      \subsection{Flight controller, sensors, and navigation}
-      \subsection{Communication System}
-      \subsection{Autonomous Capabilites}
+  % ======== Aircraft Performance ====
+    \section{Aircraft Performance}
+      \subsection{Power Estimation}
+      \subsection{Battery Selection and Endurance}
+      \noindent \textbf{Battery: Orange Pro-Range 11.1V 5200mAh (3S)} \\
+      \begin{wrapfigure}{r}{0.3\textwidth}
+        \includegraphics[width=1\linewidth]{battery.png}
+        \caption{Orange 11.1V 5200mAh 3S}
+        \label{fig:battery3s}
+      \end{wrapfigure}
+     
+      The Orange Pro-Range 11.1V 5200mAh battery is the best for our use case for the following reasons: \\
 
-  %========== Payload Gripper Mechanims
-    \section{Payload and Gripper Mechanism}
-      \subsection{Integration with the UAV}
-      \subsection{Impact on aerodynamics and weight}
+      The 3S variant provides 11.1V, and has a \textbf{discharge-rate} of 40C. According to the official rated specifications, the maximum continuous discharge current is \textbf{208.0A} (\textit{40C}). It also has a max. burst discharge of \textbf{416.0A} (\textit{80C}). Let us assume that each motor draws 24A current at full-throttle, total current draw would be $ \boldsymbol{24 \times 4 = 96A} $ then \vspace{0.5cm} \[ \text{Theoretical Flight Time (hrs)} = \frac{\text{Capacity (Ah)}}{\text{Current Draw (A)}} = \frac{5.2}{96} \approx 0.0542 hrs = 3.25 mins \] But in real world applications, we dont use 100\% of the battery, we use about 60\%, so that would make the flight time around 5.2mins. 
+      \begin{table}[h!]
+      \centering
+      \caption{Battery and Flight Characteristics Summary (Orange 11.1V 5200mAh 3S)}
+        \begin{tabular}{|l|c|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Voltage & 11.1V (3S) \\
+          \hline
+          Capacity & 5.2Ah \\
+          \hline
+          C-Rating (Continuous) & 35C \\
+          \hline
+          Theoretical Max Discharge Current & $35 \times 5.2 = \mathbf{182A}$ \\
+          \hline
+          Stated Max Discharge Current (datasheet) & 156A \\
+          \hline
+          System Current Draw (4 motors @ 24A) & $4 \times 24 = \mathbf{96A}$ \\
+          \hline
+          Flight Time @ Full Throttle (96A) & $\frac{5.2}{96} = \mathbf{3.25 \text{ minutes}}$ \\
+          \hline
+          Flight Time @ Moderate Throttle (60A) & $\frac{5.2}{60} = \mathbf{5.2 \text{ minutes}}$ \\
+          \hline
+          Energy Capacity & $11.1 \times 5.2 = \mathbf{57.72\,Wh}$ \\
+          \hline
+        \end{tabular}
+      \end{table}
+
+
+  %========== Material Selection ========
+    \section{Material Selection}
+      \subsection{Structural Frame, Airframe Components}
+    
 
   %========= Ground Control
-    \section{Ground Control Systems}
-      \subsection{Ground Station Setup}
-      \subsection{Mission Execution strategy}
+    \section{Subystems Selection}
+      \subsection{Flight Controller, Sensors, Navigation}
+      \subsection{Communication Systems}
 
+    \section{Autonomous Navigation System}
+      \subsection{Hardware Setup}
+      \subsection{Software Architechture}
+
+    \section{C.G. Calculation \& Stability Analysis}
+      \subsection{Lift, Drag and Stability Considerations}
+      \subsection{Center of Gravity Position \& Trim}
+
+  % =========== Computationl Analysis ============
+  \chapter{Computationl Analysis}
+    \section{CFD / FEM / MATLAB Simulations}
+    \section{CAD Model and Performance Validation}
   % =========== Safety, Compliance & Risk Assessment====== 
-  \chapter{Safety, Compliance \& Risk Assessment}
-    \section{Compliance with SAEINDIA/FAA guidelines}
-    \section{Risk analysis and mitigation strategies}
-    \section{Emergency procedures}
-  
+  \chapter{Safety \& SORA Assessment}
+    \section{Risk Analysis and Mitigation Strategies}
+      
   % ========= Conclusion & Future Work =====
-  \chapter{Bill of Materials}
   \chapter{Methodology for Autonomous Operations}
+    \section{Flight Control Algorithm}
+    \section{Object Detection \& Counting}
+    \section{Autonomous Payload Drop Mechanism (Gripper)}
+
   \chapter{Innovations and Future Scope}
-  
+  \chapter{Bill of Materials}
 \end{document}
 

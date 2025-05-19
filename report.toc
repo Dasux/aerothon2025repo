@@ -2,35 +2,40 @@
 \contentsline {section}{\numberline {1.1}Overview}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Problem Statement and Mission Requirements}{4}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Scope of Report}{4}{section.1.3}%
-\contentsline {chapter}{\numberline {2}System Requirements \& Design Objectives}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Mission Profile}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Key Performance Indicators}{5}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Constraints}{5}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Conceptual Design Approach}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Design Methodology and Material Selection}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Trade-off Analysis}{7}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Schematic Diagram and CAD Model}{7}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Detailed Design Breakdown}{8}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Aerodynamics \& Flight Performance}{8}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Lift, Drag and Stability Considerations}{8}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Theoretical Performance Predictions}{8}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Propulsion System}{8}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Motor, ESC, Propellor Selection \& Battery}{8}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Powertrain Efficiency Calculations}{10}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Avionics and Control Systems}{10}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Flight controller, sensors, and navigation}{10}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Communication System}{10}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Autonomous Capabilites}{10}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Payload and Gripper Mechanism}{10}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Integration with the UAV}{10}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Impact on aerodynamics and weight}{10}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Ground Control Systems}{10}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Ground Station Setup}{10}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Mission Execution strategy}{10}{subsection.4.5.2}%
-\contentsline {chapter}{\numberline {5}Safety, Compliance \& Risk Assessment}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Compliance with SAEINDIA/FAA guidelines}{11}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Risk analysis and mitigation strategies}{11}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Emergency procedures}{11}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Bill of Materials}{12}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Methodology for Autonomous Operations}{13}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Innovations and Future Scope}{14}{chapter.8}%
+\contentsline {section}{\numberline {1.4}System Requirements \& Design Objectives}{4}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Mission Profile}{4}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Key Performance Indicators \& Constraints}{5}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Conceptual Design Approach}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Design Methodology}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Product Benchmark \& Trade-off Analysis}{7}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Detailed Design Breakdown}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Preliminary Weight Estimation}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Thrust Requirement \& Propulsion System Selection}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Motor, ESC, Propellor \& Battery Selection}{8}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Powertrain Efficiency Calculations}{9}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Aircraft Sizing}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Aircraft Performance}{9}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Power Estimation}{9}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Battery Selection and Endurance}{9}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Material Selection}{10}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Structural Frame, Airframe Components}{10}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Subystems Selection}{10}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Flight Controller, Sensors, Navigation}{10}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Communication Systems}{10}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Autonomous Navigation System}{10}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Hardware Setup}{10}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Software Architechture}{10}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}C.G. Calculation \& Stability Analysis}{10}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Lift, Drag and Stability Considerations}{10}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Center of Gravity Position \& Trim}{10}{subsection.3.8.2}%
+\contentsline {chapter}{\numberline {4}Computationl Analysis}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}CFD / FEM / MATLAB Simulations}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}CAD Model and Performance Validation}{11}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Safety \& SORA Assessment}{12}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Risk Analysis and Mitigation Strategies}{12}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Methodology for Autonomous Operations}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Flight Control Algorithm}{13}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Object Detection \& Counting}{13}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Autonomous Payload Drop Mechanism (Gripper)}{13}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Innovations and Future Scope}{14}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Bill of Materials}{15}{chapter.8}%

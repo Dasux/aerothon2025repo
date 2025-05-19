@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.3.12)  10 MAY 2025 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.3.12)  19 MAY 2025 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -303,6 +303,14 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \backup@length=\skip56
 \ar@cellbox=\box56
 )
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count299
+\float@exts=\toks26
+\float@box=\box57
+\@float@everytoks=\toks27
+\@floatcapt=\box58
+)
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
@@ -327,18 +335,18 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
-\everycr=\toks26
+\everycr=\toks28
 \minrowclearance=\skip57
-\rownum=\count299
+\rownum=\count300
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box57
+\ttl@box=\box59
 \beforetitleunit=\skip58
 \aftertitleunit=\skip59
 \ttl@plus=\dimen169
 \ttl@minus=\dimen170
-\ttl@toksa=\toks27
+\ttl@toksa=\toks29
 \titlewidth=\dimen171
 \titlewidthlast=\dimen172
 \titlewidthfirst=\dimen173
@@ -354,14 +362,10 @@ LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count300
-\l__pdf_internal_box=\box58
+\l__color_backend_stack_int=\count301
+\l__pdf_internal_box=\box60
 )
-(./report.aux
-
-LaTeX Warning: Label `fig:esc40a' multiply defined.
-
-)
+(./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -419,17 +423,17 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count301
+\scratchcounter=\count302
 \scratchdimen=\dimen174
-\scratchbox=\box59
-\nofMPsegments=\count302
-\nofMParguments=\count303
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count304
+\scratchbox=\box61
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count305
 \MPscratchDim=\dimen175
-\MPnumerator=\count305
-\makeMPintoPDFobject=\count306
-\everyMPtoPDFconversion=\toks29
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -445,7 +449,7 @@ Package hyperref Info: Link coloring OFF on input line 18.
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-<sae_aerospace.png, id=148, 392.96812pt x 118.19156pt>
+<sae_aerospace.png, id=168, 392.96812pt x 118.19156pt>
 File: sae_aerospace.png Graphic file (type png)
 <use sae_aerospace.png>
 Package pdftex.def Info: sae_aerospace.png  used on input line 23.
@@ -456,14 +460,14 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 19.70294pt on input line 25.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 16.41594pt on input line 28.
-<aerothon2025.png, id=149, 301.125pt x 110.66344pt>
+<aerothon2025.png, id=169, 301.125pt x 110.66344pt>
 File: aerothon2025.png Graphic file (type png)
 <use aerothon2025.png>
 Package pdftex.def Info: aerothon2025.png  used on input line 30.
 (pdftex.def)             Requested size: 181.18439pt x 66.58768pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 16.41594pt on input line 32.
-<gsvlogo.png, id=150, 614.295pt x 794.97pt>
+<gsvlogo.png, id=170, 614.295pt x 794.97pt>
 File: gsvlogo.png Graphic file (type png)
 <use gsvlogo.png>
 Package pdftex.def Info: gsvlogo.png  used on input line 38.
@@ -591,68 +595,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 75.
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+
+ []
+
 
 
 [4
 
 
 ]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
-
- []
-
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 9
-8.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+7.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 98.
+(Font)              scaled to size 11.39996pt on input line 97.
 
 
-[5
-
-]
+[5]
 
 [6]
-Chapter 3.
+Chapter 2.
 
 
 [7
 
 ]
-Chapter 4.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 145.
-<bldc.png, id=238, 235.63031pt x 220.57407pt>
+Chapter 3.
+<bldc.png, id=263, 235.63031pt x 220.57407pt>
 File: bldc.png Graphic file (type png)
 <use bldc.png>
-Package pdftex.def Info: bldc.png  used on input line 155.
+Package pdftex.def Info: bldc.png  used on input line 150.
 (pdftex.def)             Requested size: 97.81908pt x 91.57018pt.
 
-Underfull \hbox (badness 2680) in paragraph at lines 156--156
-[]\OT1/phv/m/n/12 Figure 4.1: []DYS
+Underfull \hbox (badness 2680) in paragraph at lines 151--151
+[]\OT1/phv/m/n/12 Figure 3.1: []DYS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--156
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
 \OT1/phv/m/n/12 D2836-7 1120kV
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--158
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
 
  []
 
-<esc.png, id=239, 320.69812pt x 181.42781pt>
+<esc.png, id=264, 320.69812pt x 181.42781pt>
 File: esc.png Graphic file (type png)
 <use esc.png>
-Package pdftex.def Info: esc.png  used on input line 189.
+Package pdftex.def Info: esc.png  used on input line 197.
 (pdftex.def)             Requested size: 146.73235pt x 83.0121pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--192
+Underfull \hbox (badness 10000) in paragraph at lines 195--200
 
  []
 
@@ -660,92 +661,135 @@ Underfull \hbox (badness 10000) in paragraph at lines 170--192
 
 [8
 
- <./bldc.png (PNG copy)>]
-<battery.png, id=245, 268.00125pt x 158.09062pt>
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.200       \end{wrapfigure}
+                            
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.200       \end{wrapfigure}
+                             <./bldc.png (PNG copy)>]
+<battery.png, id=271, 242.40562pt x 163.3603pt>
 File: battery.png Graphic file (type png)
 <use battery.png>
-Package pdftex.def Info: battery.png  used on input line 208.
-(pdftex.def)             Requested size: 97.81908pt x 57.70139pt.
+Package pdftex.def Info: battery.png  used on input line 231.
+(pdftex.def)             Requested size: 146.73235pt x 98.88936pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--211
+Underfull \hbox (badness 1226) in paragraph at lines 232--232
+[]\OT1/phv/m/n/12 Figure 3.3: []Orange 11.1V
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 218.
+(Font)              scaled to size 7.59998pt on input line 238.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 218.
+(Font)              scaled to size 5.69998pt on input line 238.
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--220
-
+Overfull \hbox (77.45654pt too wide) detected at line 238
+[] \OT1/cmr/m/n/12 = [] = [] \OMS/cmsy/m/n/12 ^^Y \OT1/cmr/m/n/12 0\OML/cmm/m/i
+t/12 :\OT1/cmr/m/n/12 0542\OML/cmm/m/it/12 hrs \OT1/cmr/m/n/12 = 3\OML/cmm/m/it
+/12 :\OT1/cmr/m/n/12 25\OML/cmm/m/it/12 mins
  []
 
 
 
-[9 <./esc.png (PNG copy)> <./battery.png (PNG copy)>]
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.238 ....2}{96} \approx 0.0542 hrs = 3.25 mins \]
+                                                   But in real world applica...
 
-[10]
-Chapter 5.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.238 ....2}{96} \approx 0.0542 hrs = 3.25 mins \]
+                                                   But in real world applica...
+ <./esc.png (PNG copy)> <./battery.png (PNG copy)>]
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.287   \chapter
+                {Computationl Analysis}]
+Chapter 4.
 
 
 [11
 
 ]
-Chapter 6.
+Chapter 5.
 
 
 [12
 
 ]
-Chapter 7.
+Chapter 6.
 
 
 [13
 
 ]
-Chapter 8.
+Chapter 7.
 
 
 [14
+
+]
+Chapter 8.
+
+
+[15
 
 ] (./report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 379EC06F7A832D2207AE4EFAF0DE9F3B;7186.
+(rerunfilecheck)             Checksum: 2C601B01638A9A8C94449B06EC4AF51F;8314.
  ) 
 Here is how much of TeX's memory you used:
- 11471 strings out of 475178
- 172372 string characters out of 5766437
- 586883 words of memory out of 5000000
- 34227 multiletter control sequences out of 15000+600000
+ 11552 strings out of 475178
+ 173577 string characters out of 5766437
+ 590303 words of memory out of 5000000
+ 34296 multiletter control sequences out of 15000+600000
  585472 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,79p,786b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helv
-etic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a
-.pfb>
-Output written on report.pdf (14 pages, 473484 bytes).
+ 75i,15n,79p,767b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
+elvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb
+o8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on report.pdf (15 pages, 479482 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 292 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 384 PDF objects out of 1000 (max. 8388607)
+ 333 compressed objects within 4 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 359 words of extra memory for PDF output out of 10000 (max. 10000000)
 
