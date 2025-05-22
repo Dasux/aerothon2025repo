@@ -310,19 +310,6 @@
       
       \subsection{Propulsion Powertrain Efficiency}
       The total powertrain involves all the individual components that draw power from the battery, this includes things like the flight controller and flight computer. Here we are interested only in the propulsion powertrain. The propulsion powertrain typically includes: \[ \text{Battery} \quad \quad \rightarrow \quad \quad  \text{ESC} \quad \quad \rightarrow \quad \quad \text{Motors} \]
-      \begin{table}[H]
-      \centering
-      \caption{Total Power Budget}
-        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
-          \hline
-          \textbf{Component} & \textbf{Power Drawn} \\
-          \hline
-          Propulsion & 1344W  ( {\small 4 x 336W} ) \\
-          Jetson Nano & 10W \\
-          Pixhawk 2.4.8 & 2W\\
-          \hline
-        \end{tabular}
-      \end{table}
 
       The battery and ESC are suppliers, they supply on demand, and since all 4 motors won't derive the same amount of current (and hence power) at the same point of time-- the real-life parameters will vary in time. Here we assume that all motors demand the same power at all times.\\ \\ To quantify the overall efficiency of the UAV’s propulsion system, we analyze losses in each powertrain component. That is mathematically given by, 
       \[ 

@@ -16,9 +16,9 @@
 \contentsline {subsubsection}{ESC: SpeedyBee BL32 50A 4-in-1 ESC}{9}{table.3.2}%
 \contentsline {subsubsection}{Propellor: HQProp Thin Electric Prop 9×5 (2CCW) Propeller}{10}{table.3.3}%
 \contentsline {subsection}{\numberline {3.2.2}Propulsion Powertrain Efficiency}{11}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Aircraft Sizing}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Aircraft Performance}{14}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Battery Selection and Endurance}{14}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.3}Aircraft Sizing}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Aircraft Performance}{13}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Battery Selection and Endurance}{13}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Total Power Budget Summary}{15}{subsection.3.4.2}%
 \contentsline {subsubsection}{Propulsion Demand}{15}{subsection.3.4.2}%
 \contentsline {subsubsection}{Avionics Demand}{15}{subsection.3.4.2}%
