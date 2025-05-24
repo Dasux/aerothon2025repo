@@ -1,6 +1,6 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=0.5in]{geometry}
-\usepackage{graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array, float}
+\usepackage{tikz, xcolor, graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array, float}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[scaled]{helvet}
 \usepackage[table]{xcolor}
@@ -102,11 +102,11 @@
       \item \textbf{Dimensional Constraints}
         \begin{itemize}
           \item Maximum Wingspan: \textbf{1.5 metres} - the UAV must fit inside a \textbf{\textit{1.5m x 1.5m x 1.5m bounding box}} in assembled condition.
-          \item Maximum Takeoff Weight: \textbf{3.5kg} including battery and payload.
+          \item Maximum Takeoff Weight: $ \boldsymbol{< 2kg} $ including battery and payload.
         \end{itemize}
       \item \textbf{Payload Constraints}
         \begin{itemize}
-          \item Payload: One fragile payload cube of \textbf{\textit{10cm x 10cm x 10cm}} weighing \textbf{\textit{150 ~ 200g}}.
+          \item Payload: One fragile payload cube of \textbf{\textit{12cm x 7cm x 7cm}} weighing \textbf{\textit{200g}}.
           \item Payload must be released within a \textbf{\textit{3m x 3m}} target zone.
         \end{itemize}
       \item \textbf{Flight Environment Constraints}
@@ -158,29 +158,38 @@
           Camera (\textit{x2})	 & 20 \\
           SpeedyBee BL32 50A 4-in-1 ESC	& 90 \\
           DYS D2836-7 1120KV BLDC (\textit{x4}) &	280 \\
-          Battery	& --  \\
+          Battery	({\small Orange 5200mAh 11.1V
+3S)} & 360  \\
           GPS – Neo M8N & 	23  \\
-          Transmitter (SkyDroid) & 	17 \\
-          Receiver & -- \\
+          \textcolor{red}{Transmitter (SkyDroid)} & 	\textcolor{red}{525} \\
+          Receiver & 17 \\
           Payload	& 200 \\
           Additional Wiring & 50 \\
           Servo Motor & 10 \\
-          Propellor (9") & -- \\
+          Propellor (9") & 40 \\
           Estimated Frame Weight & 500 \\
           \hline
-          \textbf{\textit{Total:}} & -- \\
+          \textbf{\textit{Total:}} & \textbf{2330} \\
           \hline
         \end{tabular}
       \end{table}
+      \textcolor{red}{ \textbf{Note:} The transmitter is not a part of the UAS itself, so effective drone weight is \textbf{1805gms}. }
       
   % ============== Propulsion ====================
     \section{Thrust Requirement \& Propulsion System Selection}
-      \subsection{Motor, ESC \& Propellor}
-      \vspace{0.5cm}
+      \subsection{Thrust Requirement}
+      \begin{wrapfigure}{l}{0.3\textwidth}
+        \includegraphics[width=0.175\textwidth]{thrust3.png}
+        \caption{\small Thrust-to-Weight Diagram}
+        \label{fig:thrustuas}
+      \end{wrapfigure}
       
+      To ensure stable and controlled flight, a multirotor drone must generate sufficient thrust to overcome its total weight. The drone in this design has a total takeoff weight of \textbf{1805 grams} (1.805 kg). For stable hovering, the combined thrust of all motors should ideally be at least equal to the total weight. However, to allow for effective maneuverability, rapid ascent, and compensation for wind or payload imbalance, a common design guideline is to target a thrust-to-weight ratio of at least \textbf{2:1}. This implies a minimum total thrust of approximately $2 \times 1.805 = 3.61$ kg. The selected propulsion system comprises four DYS D2836-7 1120KV brushless DC motors. According to manufacturer test data, when paired with a suitable 10$\times$4.7 propeller and a 3S (11.1V) LiPo battery, each motor can produce up to approximately \textbf{1130 grams} of thrust. Therefore, the total available thrust from all four motors is approximately \textbf{4.52 kg}, yielding a thrust-to-weight ratio of $4.52 / 1.805 \approx 2.5$. This satisfies the performance margin and confirms that the chosen motor-propeller combination is adequate for the drone's operational requirements.
+
+      \subsection{Motor, ESC \& Propellor}
       \subsubsection{Motor: DYS D2836-7 1120KV Brushless Motor} 
-      \begin{wrapfigure}{r}{0.2\textwidth}
-        \includegraphics[width=0.2\textwidth]{bldc.png}
+      \begin{wrapfigure}{r}{0.3\textwidth}
+        \includegraphics[width=0.3\textwidth]{bldc.png}
         \caption{DYS D2836-7 1120kV BLDC}
         \label{fig:bldc1120}
       \end{wrapfigure}
@@ -217,13 +226,9 @@
           \hline
           Required ESC (A) & 40 \\
           \hline
-          Shipping Weight & 0.089 kg \\
-          \hline
-          Shipping Dimensions & 10 × 6 × 5 cm \\
-          \hline
         \end{tabular}
       \end{table}
-      \vspace{0.5cm}
+      \newpage
       \subsubsection{ESC: SpeedyBee BL32 50A 4-in-1 ESC} 
       \begin{wrapfigure}{r}{0.3\textwidth}
         \includegraphics[width=1\linewidth]{esc.png}
@@ -257,8 +262,6 @@
           Width (mm)	&      40 \\
           Height (mm)	&        8.8 \\
           Weight (g)	& 19.2g with heat sink\\
-          Shipping Weight	& 0.09 kg \\
-          Shipping Dimensions	& 12 × 5.8 × 3 cm \\
           \hline
         \end{tabular}
       \end{table}
@@ -300,14 +303,11 @@
           Shaft Size (mm) &	9.5/8/6\\
           Adapter Rings (mm) & 6/5/4/3\\
           Weight (g) &	9, (each)\\
-          Shipping Weight &	0.035 kg\\
-          Shipping Dimensions	& 26 × 6 × 3 cm    \\      
           \hline
         \end{tabular}
       \end{table}
 
-      \vspace{0.5cm}
-      
+      \newpage
       \subsection{Propulsion Powertrain Efficiency}
       The total powertrain involves all the individual components that draw power from the battery, this includes things like the flight controller and flight computer. Here we are interested only in the propulsion powertrain. The propulsion powertrain typically includes: \[ \text{Battery} \quad \quad \rightarrow \quad \quad  \text{ESC} \quad \quad \rightarrow \quad \quad \text{Motors} \]
 
@@ -318,8 +318,7 @@
       \textbf{Note:} There are other components in the powertrain which we have not discussed here, and which we have discussed later in this report. Here we are only interested in Propulsion powertrain. \\
 
       In order to calculate each of these components, we would need to calculate the power input and output at each stage. Since we don't currently have access to each component at the moment, we're going to use the parameters provided by the manufacturers for this calculation. \\ \\
-      \newpage
-      \textbf{\large Battery Efficiency Derivation:}\\
+      \subsubsection{\large Battery Efficiency Derivation:}
       Given are the following from datasheets:
       \begin{itemize}
         \item Voltage (V): \hfill 11.1V
@@ -339,7 +338,7 @@
       P_{stored} = 2308.8 + 648.96 = 2957.76 \, \text{W} \\ \\
       \boldsymbol{\eta_{battery}} = \frac{2308.8}{2957.76} \quad \approx \quad 78.07\, \% \quad = \boldsymbol{0.78}
     \end{gather*}
-      \textbf{\large ESC Efficiency Calculations:}\\
+      \subsubsection{\large ESC Efficiency Calculations:}
       The following data from the datasheets:
       \begin{itemize}
         \item Max Continuous Current:	\hfill50A (per channel)
@@ -355,11 +354,9 @@
         \boldsymbol{\eta_{esc}} = \frac{P_{out}}{P_{in}} = \frac{2193.36}{2308.8} \quad \approx \quad \boldsymbol{0.95}
       \end{gather*}
       The total power output shared by all 4-channels of the ESC is \textbf{2193.36W}. A single channel is capable of supplying, \[ \mathrm{P_{in\_motor}} = \mathrm{P_{out\_ESC}} = \frac{2193.36}{4} = \boldsymbol{548.34 \, \text{W}} \]
-      \vspace{0.5in}
   
-      \newpage
 
-      \noindent \textbf{\large Motor Efficiency Derivation:}\\
+      \subsubsection{\large Motor Efficiency Derivation:}
       The following data is given in the official datasheet:
       \begin{itemize}
         \item KV Rating: \hfill1120 RPM/V
@@ -393,13 +390,7 @@
   \end{gather*}
   The final propulsion powertrain efficiency sums upto around 55\%, which is a reasonable value considering that some of the parameters we're assumed. Real world values will obviously vary from this.
       
-      %\textbf{Assumptions:}
-      %\begin{itemize}
-       % \item Battery internal + wiring losses (3\% loss): $\eta_{battery} = 0.97$
-        %\item ESC PWM \& Switching Losses: $\eta_{esc} = 0.95$
-        %\item Motor (KV rating + loading): $\eta_{motor} = 0.88$
-        %\item Propeller thrust efficiency: $ \eta_{prop} = 0.78 $
-      %\end{itemize}
+     
   % ======== Aircraft Sizing ========
     \section{Aircraft Sizing}
       \subsection*{Rotor Arm}
@@ -450,6 +441,22 @@
       \end{table}
     
       \subsection{Total Power Budget Summary}
+      This sub-section summarizes the total electrical power budget of the UAS, highlighting how power from the battery is allocated to propulsion and non-propulsion (avionics and payload) subsystems.
+        \begin{table}[h!]
+      \centering
+      \caption{Battery and Flight Datasheet Summary (Orange 11.1V 5200mAh 3S)}
+        \begin{tabular}{|l|c||c|}
+          \hline
+          \textbf{Subsystem} & \textbf{Power Demand (W)} & \textbf{\% of Total Power} \\
+          Propulsion ({\small 4 x Motors + ESC}) & 1344 W & 58.2\% \\
+          Avionics (FC, sensors, Jetson) & -- & \\
+          Communication Systems  & -- & \\
+          Onboard Computer & -- & \\
+          \hline
+        \end{tabular}
+      \end{table}
+
+
         \subsubsection{Propulsion Demand}
         \subsubsection{Avionics Demand}
         \subsubsection{Margins, Safety Factors}
@@ -488,5 +495,29 @@
 
   \chapter{Innovations and Future Scope}
   \chapter{Bill of Materials}
+    \begin{table}[h!]
+      \centering
+      \caption{Battery and Flight Datasheet Summary (Orange 11.1V 5200mAh 3S)}
+        \begin{tabular}{|l|c||c|}
+          \hline
+          \textbf{Component Name} & \textbf{Quantity} & \textbf{Unit Price {INR}} \\
+          \hline
+          NVIDIA Jetson Orin Nano 8GB & 1 & 36,499 \\
+          Pixhawk 2.4.8 Flight Controller & 1 & 11,179 \\
+          Cameras & 2 & 1,000 \\
+          SpeedyBee BL32 50A 4-in-1 ESC &1 &7139\\
+          DYS D2836-7 1120KV Brushless Motor &4 &1,228\\
+          Orange Pro-Range 5200mah 11.1V & 1 &3,653\\
+          GPS – Neo M8N  &1 &1,500\\
+          SkyDroid Transmitter  &1 & 12,075\\
+          Servo & 1& 500\\
+          Frame  &1& 3,000\\
+          9-inch Propellers & 4 &200\\
+          \hline
+          Total  & --  &83,257   \\      
+          \hline
+        \end{tabular}
+    \end{table}
+
 \end{document}
 
