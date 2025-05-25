@@ -442,20 +442,21 @@
     
       \subsection{Total Power Budget Summary}
       This sub-section summarizes the total electrical power budget of the UAS, highlighting how power from the battery is allocated to propulsion and non-propulsion (avionics and payload) subsystems.
-        \begin{table}[h!]
-      \centering
-      \caption{Battery and Flight Datasheet Summary (Orange 11.1V 5200mAh 3S)}
-        \begin{tabular}{|l|c||c|}
+      \begin{table}[h!]
+        \centering
+        \caption{Power Distribution Summary}
+        \begin{tabular}{|l|p{5.5cm}|c|c|}
           \hline
-          \textbf{Subsystem} & \textbf{Power Demand (W)} & \textbf{\% of Total Power} \\
-          Propulsion ({\small 4 x Motors + ESC}) & 1344 W & 58.2\% \\
-          Avionics (FC, sensors, Jetson) & -- & \\
-          Communication Systems  & -- & \\
-          Onboard Computer & -- & \\
+          \textbf{Subsystem} & \textbf{Included Components} & \textbf{Power Demand (W)} & \textbf{\% of Total Power} \\
+          \hline
+          Propulsion & {\small 4 x Motors + ESC} & 1344 W & 58.2\% \\
+          Avionics & {\small Flight Controller, GPS Module, Sensors (IMU, barometer)} & -- & \\
+          Communication & {\small RC Receiver, Wifi Modules}  & -- & \\
+          Cameras & --  & -- & \\
+          Onboard Computer  & {\small NVIDIA Jetson Orin Nano 8GB Module} & -- & \\
           \hline
         \end{tabular}
       \end{table}
-
 
         \subsubsection{Propulsion Demand}
         \subsubsection{Avionics Demand}
