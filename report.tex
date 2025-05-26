@@ -402,7 +402,7 @@
   % ======== Aircraft Performance ====
     \section{Aircraft Performance}
       \subsection{Battery Selection and Endurance}
-      \noindent \textbf{Battery: Orange Pro-Range 11.1V 5200mAh (3S)} \\
+      \subsubsection{\large Battery: Orange Pro-Range 11.1V 5200mAh (3S)} 
       \begin{wrapfigure}{r}{0.3\textwidth}
         \includegraphics[width=1\linewidth]{battery.png}
         \caption{Orange 11.1V 5200mAh 3S}
@@ -414,7 +414,7 @@
       The 3S variant provides 11.1V, and has a \textbf{discharge-rate} of 40C. According to the official rated specifications, the maximum continuous discharge current is \textbf{208.0A} (\textit{40C}). It also has a max. burst discharge of \textbf{416.0A} (\textit{80C}). Let us assume that each motor draws 24A current at full-throttle, total current draw would be $ \boldsymbol{24 \times 4 = 96A} $ then \vspace{0.5cm} \[ \text{Theoretical Flight Time (hrs)} = \frac{\text{Capacity (Ah)}}{\text{Current Draw (A)}} = \frac{5.2}{96} \approx 0.0542 hrs = 3.25 mins \] But in real world applications, we dont use 100\% of the battery, we use about 60\%, so that would make the flight time around 5.2mins. 
       \begin{table}[h!]
       \centering
-      \caption{Battery and Flight Datasheet Summary (Orange 11.1V 5200mAh 3S)}
+      \caption{Battery Datasheet (Orange 11.1V 5200mAh 3S)}
         \begin{tabular}{|l|c|}
           \hline
           \textbf{Parameter} & \textbf{Value} \\
@@ -449,17 +449,26 @@
           \hline
           \textbf{Subsystem} & \textbf{Included Components} & \textbf{Power Demand (W)} & \textbf{\% of Total Power} \\
           \hline
-          Propulsion & {\small 4 x Motors + ESC} & 1344 W & 58.2\% \\
+          Propulsion & {\small 4 x Motors} & 1344 W & 58.2\% \\
           Avionics & {\small Flight Controller, GPS Module, Sensors (IMU, barometer)} & -- & \\
           Communication & {\small RC Receiver, Wifi Modules}  & -- & \\
-          Cameras & --  & -- & \\
+          Payload & {\small 2 x Cameras} & -- & \\
           Onboard Computer  & {\small NVIDIA Jetson Orin Nano 8GB Module} & -- & \\
           \hline
         \end{tabular}
       \end{table}
 
-        \subsubsection{Propulsion Demand}
+        \subsubsection{\large Propulsion Demand}
+        Based on the datasheet specification and text results, the propulsion subsystems (\textbf{\textit{4xMotors}}) demands \textbf{1344W} during peak operation. This forms the largest share of the total Power requirement ($ \sim $ 58.2 \%).
         \subsubsection{Avionics Demand}
+        The avionics system forms the central nervous system of any unmanned aerial vehicle (UAV), including those designed for Aerothon-class missions. Its design and power requirements significantly influence the overall electrical and power architecture of the aircraft. The avionics suite typically comprises a flight controller (e.g., Pixhawk, ArduPilot), GPS module, telemetry transceiver, power module, airspeed sensor, magnetometer, and optional payload components such as cameras or LIDAR.\\
+
+        For our configuration, we estimate a continuous power draw of approximately 4--7~W for the flight control unit, with peak consumption occurring during sensor fusion and control loop calculations. GPS and telemetry systems combined account for an additional 2--3~W, while payload elements such as a live camera feed (ESP32-CAM or similar) can add up to 2~W intermittently. These figures necessitate a robust power supply strategy, typically sourced from a regulated DC bus connected to the main propulsion battery, with onboard voltage regulation via buck converters to ensure clean and stable 5~V and 3.3~V rails. \\
+
+        Additionally, electromagnetic interference (EMI) shielding and power line filtering are considered critical to maintain reliable communication and sensor accuracy during flight. The avionics bay is thermally isolated and strategically placed near the center of gravity to reduce vibration and ensure precise attitude estimation.\\
+
+        Overall, the avionics demand, while modest in terms of raw power, is mission-critical and demands high reliability, low latency, and efficient power distribution to support stable flight control and telemetry feedback loops.
+
         \subsubsection{Margins, Safety Factors}
   %========== Material Selection ========
     \section{Material Selection}
@@ -467,10 +476,62 @@
     
 
   %========= Ground Control
-    \section{Subystems Selection}
-      \subsection{Flight Controller, Sensors, Navigation}
-        \subsubsection{Avionics Power Demand}
-      \subsection{Communication Systems}
+    \section{Avionics Subsystems Selection}
+      \subsection{Flight Controller, Flight Computer, Cameras}
+        \subsubsection{\large Flight Controller (Pixhawk 2.4.8)}
+        \begin{wrapfigure}{r}{0.3\textwidth}
+          \includegraphics[width=1\linewidth]{pixhawk.png}
+          \caption{Pixhawk 2.4.8}
+          \label{fig:pixhawk}
+        \end{wrapfigure}
+        Pixhawk is widely egarded as one of the best flight controllers for drone and autonomous aircraft projects — especially in academic and research-grade prototypes — for several compelling reasons:
+      \begin{itemize}
+        \item \textbf{\textit{Open-Source and Flexible:}} It is built on open hardware and supported by powerful open-source firmware like PX4 or ArduPilot. This enables deep customization, ideal for research and control system testing. And for this reason also, we have \textbf{ample documentation backed by a strong collaborative community, forums, and tutorials}.
+        \item \textbf{\textit{Rich I/O capabilities:}} Multiple UART, I2C, CAN, and PWM ports for connecting sensors (GPS, IMU, barometer, etc.) and actuators (ESCs, servos). Ideal for integration with multiple onboard systems including companion computers (e.g., Jetson Nano).
+        \item \textbf{\textit{Compatible with autonomous and GPS-guided missions:}}  Supports autonomous navigation, geofencing, waypoints, and RTL (Return to Launch).
+        \item \textbf{\textit{Built-in failsafes and safety features:}} Battery failsafes, signal loss handling, and software watchdogs protect the aircraft during unexpected conditions.
+        \item \textbf{\textit{Excellent simulation support:}} Compatible with \textbf{HITL (Hardware-in-the-loop)} and \textbf{SITL (Software-in-the-loop)} for control testing and simulation.
+      \end{itemize}
+      \begin{table}[h!]
+        \centering
+        \caption{Flight Controller Datasheet (Pixhawk 2.4.8)}
+        \begin{tabular}{|l|p{6cm}|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Input Voltage (V)	& 7V \\
+          Firmware	   &   Mission Planner \\
+          Sensor	 &  {\small 3-Axis Gyrometer, Accelerometer, High-performance Barometer, Magnetometer} \\
+          Processor	 &    {\small 32bit STM32F427 Cortex M4 core with FPU, The 32-bit STM32F103 failsafe Co-processor} \\
+          Micro SD Card Slot (Y/N)	    &   Yes \\
+          Dimensions {\small (L x W x H) mm}	   &   82 x 50 x 16 \\
+          Weight (g)	 &    40 \\
+          \hline
+        \end{tabular}
+      \end{table}
+
+      \subsubsection{\large Flight Computer (NVIDIA Jetson Orin Nano 8GB)}
+      The NVIDIA Jetson Orin Nano 8GB is a powerful, compact AI computing module designed for edge AI applications that demand both high performance and energy efficiency. In the context of our Aerothon UAV project, the Orin Nano plays a pivotal role in enabling advanced onboard computation, particularly for tasks such as \textbf{real-time image processing, autonomous navigation, and object detection.} \\
+
+      \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.5\textwidth]{jetson.png}
+        \caption{NVIDIA Jetson Orin Nano 8GB Module}
+        \label{fig:jetson}
+      \end{figure}
+
+      We selected this module not only for its impressive up to \textbf{40 TOPS} of AI performance but also for its \textbf{low power footprint}, which makes it ideal for flight-based applications where every gram and watt matter. The 8GB RAM ensures sufficient memory for running heavy models, such as convolutional neural networks for visual recognition or SLAM algorithms for path planning. \\
+
+      The Jetson Orin Nano interfaces seamlessly with the Pixhawk flight controller via UART or serial USB connections, enabling a tight coupling between autonomous decision-making and low-level control. For example, live video feed from an \textbf{ESP32-CAM} or other camera modules is processed onboard the Jetson, where the output — such as target coordinates or navigation commands — is relayed to the Pixhawk for actuation. \\
+
+      This configuration allows the aircraft to function \textbf{autonomously even without constant ground station communication}, which is critical in GPS-denied or communication-constrained environments. By offloading high-level intelligence to the Jetson module, we achieve a modular and scalable architecture that separates perception and decision-making from flight stabilization, thereby improving system robustness and flexibility. \\
+
+      In essence, the NVIDIA Jetson Orin Nano 8GB empowers our drone with a true edge-AI brain — transforming it from a remotely controlled vehicle into a \textbf{fully autonomous aerial system} capable of intelligent flight and mission execution.
+
+      \subsubsection{Camera}
+
+    \subsection{Communication Systems}
+    \subsubsection{\large Avionics Powertrain Calculations}
 
     \section{Autonomous Navigation System}
       \subsection{Hardware Setup}
@@ -498,8 +559,8 @@
   \chapter{Bill of Materials}
     \begin{table}[h!]
       \centering
-      \caption{Battery and Flight Datasheet Summary (Orange 11.1V 5200mAh 3S)}
-        \begin{tabular}{|l|c||c|}
+      \caption{Bill of Materials} \vspace{0.2cm}
+        \begin{tabular}{|l|c|c|}
           \hline
           \textbf{Component Name} & \textbf{Quantity} & \textbf{Unit Price {INR}} \\
           \hline
@@ -515,7 +576,8 @@
           Frame  &1& 3,000\\
           9-inch Propellers & 4 &200\\
           \hline
-          Total  & --  &83,257   \\      
+          bold
+          \textbf{Total}  & --  & \textbf{83,257}   \\      
           \hline
         \end{tabular}
     \end{table}
