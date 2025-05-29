@@ -450,10 +450,10 @@
           \textbf{Subsystem} & \textbf{Included Components} & \textbf{Power Demand (W)} & \textbf{\% of Total Power} \\
           \hline
           Propulsion & {\small 4 x Motors} & 1344 W & 58.2\% \\
-          Avionics & {\small Flight Controller, GPS Module, Sensors (IMU, barometer)} & -- & \\
-          Communication & {\small RC Receiver, Wifi Modules}  & -- & \\
-          Payload & {\small 2 x Cameras} & -- & \\
-          Onboard Computer  & {\small NVIDIA Jetson Orin Nano 8GB Module} & -- & \\
+          Avionics & {\small Flight Controller, GPS Module, Sensors (IMU, barometer)} & 6.9486 W & 0.3009 \% \\
+          Communication & {\small RC Receiver, Wifi Modules}  & 20.41 W & 0.884 \% \\
+          Payload & {\small 2 x Cameras} & 3.879 W & 0.168 \% \\
+          Onboard Computer  & {\small NVIDIA Jetson Orin Nano 8GB Module} & 6.997 W & 0.303 \% \\
           \hline
         \end{tabular}
       \end{table}
@@ -461,15 +461,75 @@
         \subsubsection{\large Propulsion Demand}
         Based on the datasheet specification and text results, the propulsion subsystems (\textbf{\textit{4xMotors}}) demands \textbf{1344W} during peak operation. This forms the largest share of the total Power requirement ($ \sim $ 58.2 \%).
         \subsubsection{Avionics Demand}
-        The avionics system forms the central nervous system of any unmanned aerial vehicle (UAV), including those designed for Aerothon-class missions. Its design and power requirements significantly influence the overall electrical and power architecture of the aircraft. The avionics suite typically comprises a flight controller (e.g., Pixhawk, ArduPilot), GPS module, telemetry transceiver, power module, airspeed sensor, magnetometer, and optional payload components such as cameras or LIDAR.\\
+        The avionics system forms the central nervous system of any unmanned aerial vehicle (UAV), including those designed for \textbf{Aerothon-class missions}. Its architecture and power requirements play a decisive role in shaping the overall energy distribution and electrical resilience of the aircraft. The avionics suite typically comprises a flight controller (e.g., Pixhawk), GPS module, telemetry and communication transceivers, RC receiver, and sensor systems such as IMUs and barometers. \\ 
 
-        For our configuration, we estimate a continuous power draw of approximately 4--7~W for the flight control unit, with peak consumption occurring during sensor fusion and control loop calculations. GPS and telemetry systems combined account for an additional 2--3~W, while payload elements such as a live camera feed (ESP32-CAM or similar) can add up to 2~W intermittently. These figures necessitate a robust power supply strategy, typically sourced from a regulated DC bus connected to the main propulsion battery, with onboard voltage regulation via buck converters to ensure clean and stable 5~V and 3.3~V rails. \\
+        In advanced UAV configurations—such as ours—it is further augmented by an onboard companion computer, namely the NVIDIA Jetson Orin Nano 8GB, which performs real-time perception and decision-making tasks. \\ 
 
-        Additionally, electromagnetic interference (EMI) shielding and power line filtering are considered critical to maintain reliable communication and sensor accuracy during flight. The avionics bay is thermally isolated and strategically placed near the center of gravity to reduce vibration and ensure precise attitude estimation.\\
+        Based on our subsystem-level analysis, the avionics block—comprising flight control, communication, and onboard computing—demands a cumulative peak power of approximately \textbf{34.36 W}. This includes:
+        \begin{itemize}
+          \item \textbf{6.948 W} for the flight controller and embedded sensor suite
+          \item \textbf{20.41 W} for communication subsystems including RC receivers and WiFi modules,
+          \item \textbf{6.997 W} for the Jetson Orin Nano, which manages AI workloads and perception.
+        \end{itemize}
+        While this represents only \textbf{1.49 \%} of the total system power draw, the avionics demand is non-negotiable and continuous, requiring high uptime and precision. Power is supplied via a regulated DC bus derived from the main propulsion battery, with dedicated buck converters providing clean and stable 5V and 3.3V rails to sensitive electronics.
 
-        Overall, the avionics demand, while modest in terms of raw power, is mission-critical and demands high reliability, low latency, and efficient power distribution to support stable flight control and telemetry feedback loops.
+        \subsubsection{\large Margins, Safety Factors}
+        \textbf{\large Power Budget Margin:} \\
+        \begin{enumerate}
+          \item \textbf{Purpose:} To ensure that the chosen power source (battery) and propulsion system can consistently provide sufficient power, even under demanding conditions or if components don't perform exactly to spec.
+          \item \textbf{Typical Range:} 15\% - 30\% of the calculated total power demand.
+          \item \textbf{Application:} After calculating the power required for propulsion (hover, cruise, max thrust) and avionics, an additional percentage is added. \[ \text{Total Required Power = (Propulsion Power + Avionics Power) * (1 + Power Margin)} \]
+          \item \textbf{Considerations:} 
+            \begin{itemize}
+              \item Battery degradation over time.
+              \item Variation in motor/propeller efficiency.
+              \item Ambient temperature effects on battery performance.
+              \item Increased power draw due to wind or aggressive maneuvers.
+            \end{itemize}
+        \end{enumerate}
 
-        \subsubsection{Margins, Safety Factors}
+        \noindent \textbf{\large Weight/Payload Margin:} \\
+        \begin{enumerate}
+          \item \textbf{Purpose:} To allow for small increases in component weight during design evolution, manufacturing variations, or for potential future upgrades/additional payloads.
+          \item \textbf{Typical Range:} 10\% - 20\% of the estimated total weight (Empty Weight + Max Payload).
+          \item \textbf{Application:} When defining the Maximum Take-Off Weight (MTOW), a buffer is included. This also impacts thrust-to-weight ratio calculations. \[ \text{Max All-Up Weight (MAUW) = (Estimated Empty Weight + Max Payload) * (1 + Weight Margin)} \]
+          \item \textbf{Considerations:}
+            \begin{itemize}
+              \item Small design changes or additions.
+              \item Manufacturing tolerances.
+              \item Unforeseen weight of cabling, fasteners, etc.
+            \end{itemize}
+        \end{enumerate}
+        \noindent \textbf{\large Battery-Capacity/Flight-Time Margin:} \\
+        \begin{enumerate}
+          \item \textbf{Purpose:} To ensure sufficient energy is available for the planned mission duration, plus a reserve for unexpected events (e.g., strong headwind, holding pattern, emergency landing).
+          \item \textbf{Typical Range:} 15\% - 25\% of the total mission energy requirement.
+          \item \textbf{Application:} After calculating the energy needed for the mission profile, additional capacity is added. Also, a "return to home" or "emergency landing" battery percentage is typically set (e.g., 20-30\% remaining). \[ \text{Total Battery Capacity Needed = (Mission Energy Requirement / Battery Discharge Efficiency) * (1 + Capacity Margin)} \]
+          \item \textbf{Considerations:}
+            \begin{itemize}
+              \item Battery performance degradation over cycles and temperature.
+              \item Unexpected mission deviations.
+              \item Wind conditions requiring higher power.
+              \item Maintaining a safe reserve for landing.
+            \end{itemize}
+        \end{enumerate}
+        \noindent \textbf{\large Structural/Safety Margin:} \\
+        \begin{enumerate}
+          \item \textbf{Purpose:} To ensure that the drone's airframe and structural components can withstand expected and unexpected loads without failure.
+          \item \textbf{Ultimate Factor of Safety (FoS):} 1.5 - 2.0 (or higher for critical components). This is the ratio of ultimate load capacity to the maximum expected operating load.
+          \item \textbf{Yield Factor of Safety:} 1.1 - 1.25. This is the ratio of yield strength to the maximum expected operating load, ensuring no permanent deformation.
+          \item \textbf{Application:} Applied to material strength calculations for frame arms, motor mounts, landing gear, etc. \[ \text{Required Strength = Maximum Expected Load * Factor of Safety} \]
+          \item \textbf{Considerations:}
+            \begin{itemize}
+              \item Dynamic loads during flight (acceleration, turns).
+              \item Impact loads during hard landings or minor crashes.
+              \item Vibration fatigue.
+              \item Material imperfections and manufacturing variability.
+            \end{itemize}
+        \end{enumerate}
+
+        
+
   %========== Material Selection ========
     \section{Material Selection}
       \subsection{Structural Frame, Airframe Components}
@@ -477,7 +537,7 @@
 
   %========= Ground Control
     \section{Avionics Subsystems Selection}
-      \subsection{Flight Controller, Flight Computer, Cameras}
+      \subsection{Detailed Component Breakdown}
         \subsubsection{\large Flight Controller (Pixhawk 2.4.8)}
         \begin{wrapfigure}{r}{0.3\textwidth}
           \includegraphics[width=1\linewidth]{pixhawk.png}
@@ -529,9 +589,56 @@
       In essence, the NVIDIA Jetson Orin Nano 8GB empowers our drone with a true edge-AI brain — transforming it from a remotely controlled vehicle into a \textbf{fully autonomous aerial system} capable of intelligent flight and mission execution.
 
       \subsubsection{Camera}
+      \subsubsection{\large Transmitter: (SKYDROID T10 2.4Ghz 10CH)}
+      \begin{wrapfigure}{r}{0.3\textwidth}
+          \includegraphics[width=1\linewidth]{transmitter.png}
+          \caption{Skydriod T10 2.4Ghz}
+          \label{fig:skydriod}
+        \end{wrapfigure}
 
-    \subsection{Communication Systems}
-    \subsubsection{\large Avionics Powertrain Calculations}
+      Reasons why this transmitter is good for our mission:
+      \begin{itemize}
+        \item \textbf{\textit{10-Channel Support:}} Enables simultaneous control of multiple subsystems—throttle, yaw, pitch, roll, camera gimbal, payload, etc.—with high precision.
+        \item \textbf{\textit{Long-Range Communication (upto 10-20 kms):}} Essential for long-distance BVLOS (Beyond Visual Line of Sight) flights, ideal for mapping, surveying, or package delivery missions.
+        \item \textbf{\textit{Low Latency, High Reliability:}} Ensures stable control inputs with low delay (<200 ms), which is critical for real-time maneuvering and emergency responses.
+        \item \textbf{\textit{Telemetry Integration:}} Supports two-way telemetry for critical in-flight data monitoring such as battery voltage, GPS, altitude, and more.
+        \item \textbf{\textit{Open Protocol Compatibility:}} Works seamlessly with systems like ArduPilot and PX4, making it a perfect match for autopilots like Pixhawk.
+      \end{itemize}
+
+      \begin{table}[h!]
+        \centering
+        \caption{Transmitter Datasheet (Skydroid T10 2.4Ghz)}
+        \begin{tabular}{|l|p{6cm}|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Frequency (GHz):	&    2.4 \\
+          Operating Voltage (V):	&    4.2V \\
+          Working Current (mA)	&   100mA \\
+          Dimensions (L x W x H) mm	&      150*130*20 \\
+          Weight (g):	 & 525g      \\
+          \hline
+        \end{tabular}
+      \end{table}
+
+       The T10-R10 combo is designed for mission-critical UAV applications. They reduce system complexity by combining control, video, and telemetry into a single ground control unit. Ideal for mapping, surveillance, agricultural spraying, or delivery drones—as in Aerothon. Seamlessly integrates with Pixhawk flight controllers, NVIDIA Jetson modules, and other onboard avionics.
+
+
+      \subsubsection{\large Receiver: Skydriod R10}
+      \begin{itemize}
+        \item \textbf{\textit{10 PWM Channels or SBUS/PPM Support:}} Can directly interface with flight controllers (like Pixhawk) and handle multiple channels via a single signal wire (SBUS).
+
+
+        \item \textbf{\textit{High-Speed, Low-Latency Link:}} Matches the T10’s low-latency protocol for precise motor response and stability.
+        \item \textbf{\textit{Secure Signal Handling:}} Supports frequency-hopping and error correction to minimize interference and signal loss, even in high-noise RF environments.
+        \item \textbf{\textit{Long-Range Capability:}} Complements the T10’s range, enabling safe long-range flight and robust signal quality even at maximum distance.
+        \item \textbf{\textit{Powerful Telemetry Interface:}} Allows downlink of data to the transmitter (e.g., battery status, GPS info), helping pilots make informed decisions mid-flight.
+      \end{itemize}
+
+
+
+
+    \subsection{Avionics Powertrain Efficiency}
 
     \section{Autonomous Navigation System}
       \subsection{Hardware Setup}
@@ -542,7 +649,7 @@
       \subsection{Center of Gravity Position \& Trim}
 
   % =========== Computationl Analysis ============
-  \chapter{Computationl Analysis}
+  \chapter{Computational Analysis}
     \section{CFD / FEM / MATLAB Simulations}
     \section{CAD Model and Performance Validation}
   % =========== Safety, Compliance & Risk Assessment====== 
@@ -576,8 +683,7 @@
           Frame  &1& 3,000\\
           9-inch Propellers & 4 &200\\
           \hline
-          bold
-          \textbf{Total}  & --  & \textbf{83,257}   \\      
+          \textbf{Total}  & --  & \textbf{83,257 /-}   \\      
           \hline
         \end{tabular}
     \end{table}

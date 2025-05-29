@@ -26,31 +26,32 @@
 \contentsline {subsubsection}{\large Battery: Orange Pro-Range 11.1V 5200mAh (3S)}{14}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Total Power Budget Summary}{15}{subsection.3.4.2}%
 \contentsline {subsubsection}{\large Propulsion Demand}{15}{table.3.6}%
-\contentsline {subsubsection}{Avionics Demand}{16}{table.3.6}%
-\contentsline {subsubsection}{Margins, Safety Factors}{16}{table.3.6}%
-\contentsline {section}{\numberline {3.5}Material Selection}{16}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Structural Frame, Airframe Components}{16}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Avionics Subsystems Selection}{16}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Flight Controller, Flight Computer, Cameras}{16}{subsection.3.6.1}%
-\contentsline {subsubsection}{\large Flight Controller (Pixhawk 2.4.8)}{16}{subsection.3.6.1}%
-\contentsline {subsubsection}{\large Flight Computer (NVIDIA Jetson Orin Nano 8GB)}{17}{table.3.7}%
-\contentsline {subsubsection}{Camera}{18}{figure.3.7}%
-\contentsline {subsection}{\numberline {3.6.2}Communication Systems}{18}{subsection.3.6.2}%
-\contentsline {subsubsection}{\large Avionics Powertrain Calculations}{18}{subsection.3.6.2}%
-\contentsline {section}{\numberline {3.7}Autonomous Navigation System}{18}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Hardware Setup}{18}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Software Architechture}{18}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}C.G. Calculation \& Stability Analysis}{18}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Lift, Drag and Stability Considerations}{18}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Center of Gravity Position \& Trim}{18}{subsection.3.8.2}%
-\contentsline {chapter}{\numberline {4}Computationl Analysis}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}CFD / FEM / MATLAB Simulations}{19}{section.4.1}%
-\contentsline {section}{\numberline {4.2}CAD Model and Performance Validation}{19}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Safety \& SORA Assessment}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Risk Analysis and Mitigation Strategies}{20}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Methodology for Autonomous Operations}{21}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Flight Control Algorithm}{21}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Object Detection \& Counting}{21}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Autonomous Payload Drop Mechanism (Gripper)}{21}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Innovations and Future Scope}{22}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Bill of Materials}{23}{chapter.8}%
+\contentsline {subsubsection}{Avionics Demand}{15}{table.3.6}%
+\contentsline {subsubsection}{\large Margins, Safety Factors}{16}{table.3.6}%
+\contentsline {section}{\numberline {3.5}Material Selection}{18}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Structural Frame, Airframe Components}{18}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Avionics Subsystems Selection}{18}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Component Breakdown}{18}{subsection.3.6.1}%
+\contentsline {subsubsection}{\large Flight Controller (Pixhawk 2.4.8)}{18}{subsection.3.6.1}%
+\contentsline {subsubsection}{\large Flight Computer (NVIDIA Jetson Orin Nano 8GB)}{18}{table.3.7}%
+\contentsline {subsubsection}{Camera}{20}{figure.3.7}%
+\contentsline {subsubsection}{\large Transmitter: (SKYDROID T10 2.4Ghz 10CH)}{20}{figure.3.7}%
+\contentsline {subsubsection}{\large Receiver: Skydriod R10}{20}{table.3.8}%
+\contentsline {subsection}{\numberline {3.6.2}Avionics Powertrain Efficiency}{21}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Autonomous Navigation System}{21}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Hardware Setup}{21}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Software Architechture}{21}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}C.G. Calculation \& Stability Analysis}{21}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Lift, Drag and Stability Considerations}{21}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Center of Gravity Position \& Trim}{21}{subsection.3.8.2}%
+\contentsline {chapter}{\numberline {4}Computational Analysis}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}CFD / FEM / MATLAB Simulations}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}CAD Model and Performance Validation}{22}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Safety \& SORA Assessment}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Risk Analysis and Mitigation Strategies}{23}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Methodology for Autonomous Operations}{24}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Flight Control Algorithm}{24}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Object Detection \& Counting}{24}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Autonomous Payload Drop Mechanism (Gripper)}{24}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Innovations and Future Scope}{25}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Bill of Materials}{26}{chapter.8}%
