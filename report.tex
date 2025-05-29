@@ -478,7 +478,8 @@
         \begin{enumerate}
           \item \textbf{Purpose:} To ensure that the chosen power source (battery) and propulsion system can consistently provide sufficient power, even under demanding conditions or if components don't perform exactly to spec.
           \item \textbf{Typical Range:} 15\% - 30\% of the calculated total power demand.
-          \item \textbf{Application:} After calculating the power required for propulsion (hover, cruise, max thrust) and avionics, an additional percentage is added. \[ \text{Total Required Power = (Propulsion Power + Avionics Power) * (1 + Power Margin)} \]
+          \item \textbf{Application:} After calculating the power required for propulsion (hover, cruise, max thrust) and avionics, an additional percentage is added. 
+            \[ \text{Total Required Power = (Propulsion Power + Avionics Power) * (1 + Power Margin)} \]
           \item \textbf{Considerations:} 
             \begin{itemize}
               \item Battery degradation over time.
@@ -504,7 +505,8 @@
         \begin{enumerate}
           \item \textbf{Purpose:} To ensure sufficient energy is available for the planned mission duration, plus a reserve for unexpected events (e.g., strong headwind, holding pattern, emergency landing).
           \item \textbf{Typical Range:} 15\% - 25\% of the total mission energy requirement.
-          \item \textbf{Application:} After calculating the energy needed for the mission profile, additional capacity is added. Also, a "return to home" or "emergency landing" battery percentage is typically set (e.g., 20-30\% remaining). \[ \text{Total Battery Capacity Needed = (Mission Energy Requirement / Battery Discharge Efficiency) * (1 + Capacity Margin)} \]
+          \item \textbf{Application:} After calculating the energy needed for the mission profile, additional capacity is added. Also, a "return to home" or "emergency landing" battery percentage is typically set (e.g., 20-30\% remaining). 
+            \[ (\text{Battery-Capacity})_{\text{Total}} = \frac{ \text{Mission Energy Requirement} }{ \text{Battery Discharge Efficiency} } \times (1 * \text{Capacity Margin}) \] 
           \item \textbf{Considerations:}
             \begin{itemize}
               \item Battery performance degradation over cycles and temperature.
