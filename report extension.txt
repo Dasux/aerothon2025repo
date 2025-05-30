@@ -1,0 +1,47 @@
+2.1 Design Methodology
+
+In design methodology, we followed structured top down system engineering approach. Our main mission is manual payload delivery and autonomous disaster surveillance. Once the mission is defined, we proceeded through the following design steps:
+Requirement Analysis: Key performance indicators (KPIs) such as payload stability, endurance and autonomy levels were associated to component-level specifications.
+Conceptual Design: Various design choices such as a multirotor configuration, frame, and AI-enabled onboard computation were evaluated.
+Component Selection: Each subsystem—propulsion, aerodynamics, structure, sensors—was chosen based on performance, power, weight, and cost.
+Iterative Prototyping: Using simulation and CAD modeling, we iteratively refine CG balance, and propulsion performance.
+Validation & Optimization: The design is validated using CFD/FEM tools for aerodynamic , deformation , stress and structural behavior.
+
+
+2.2 Product Benchmark & Trade-off Analysis
+
+For optimizing performance and ensuring mission reliability, a benchmarking exercise was conducted.
+Benchmarked Categories:
+Frame type: H-frame, X-frame, and custom modular frames
+Motor: Low vs high KV ratings
+Material: Carbon fiber vs aluminum vs ABS composites
+Computational Units: Raspberry Pi vs Jetson Nano/Orin for onboard processing
+Flight Controllers: Pixhawk vs DJI N3 vs Navio2
+Trade-off Analysis:
+Each option was assessed across several key criteria:
+Weight vs Strength (e.g., carbon fiber offers great stiffness at low weight)
+Cost vs Performance (e.g., Jetson Orin offers better AI capabilities than Pi but is costlier)
+Thrust vs Efficiency (e.g., higher KV motors offer more speed and power)
+
+
+
+4.1 CFD/FEM Simulations
+
+To ensure efficiency and integrity, computational tools such as CFD (Computational Fluid Dynamics) and FEM (Finite Element Method) were used.
+CFD Analysis:
+The airflow around the drone was analyzed to optimize lift, minimize drag, and improve stability during low-speed operations like payload drop and hovering. Simulations focused on propeller wash interactions, pressure distribution, and vortex formation near the arms. This helped in validating the positioning of rotors and the overall aerodynamics of the UAV.
+FEM Analysis:
+FEM simulations were analyzed on the frame and arm structures to assess stress concentration under typical flight loads and possible deformations. The goal was to verify that the ABS frame would withstand static and dynamic loads without deformation or failure. Stress, strain, and displacement plots were generated to ensure safety margins under thrust and payload weight.
+Open-source and proprietary tools like ANSYS and SolidWorks Simulation were used. These analyses guided material thickness choices, arm length adjustments, and center of mass alignment to enhance both flight performance and structural durability.
+
+
+
+4.2 CAD Model and Performance Validation
+
+A comprehensive 3D CAD model of the drone was created using SolidWorks to visualize and validate all mechanical subsystems.
+Spatial Layout:
+The CAD model ensured that all components — motors, ESCs, battery, payload, flight controller, and camera — were properly mounted without interference. Special attention was given to propeller clearance, wiring space, and CG alignment.
+Mass and Balance Validation:
+Using the CAD tool’s mass properties feature, it is confirmed the total takeoff weight and ensured that the center of gravity (CG) fell within the desired range for stable flight. 
+Design-to-Prototype Transition:
+The finalized CAD was used to generate 2D technical drawings for 3D printing, and component fabrication. It served as the backbone for building a physically accurate prototype, ensuring minimal mismatch between design and build.

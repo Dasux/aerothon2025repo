@@ -1,0 +1,51 @@
+3.6.2
+
+RC Link
+The Radio Control & Telemetry link being used is ELRS. ELRS stands for ExpressLRS. Some of the benefits of ELRS are -
+1. Compatibility and interoperability with Ardupilot GSC as well as ROS ecosystem.
+2. Long Range (compared to traditional 2.4GHz systems)
+3. Telemetry (over Mavlink)
+4. Versatile hardware and software support due to the open source nature.
+
+The 2.4GHz ELRS communication link comprises of control and telemetry data, the packet rates and bandwidth of which can be adjusted according to the latency, range and signal strength required. The ELRS link is also fully compatible with the Ardupilot Flight Control software which provides open access to the Mission Planner Ground Control Software. This enables various smart features such as -
+1. Geofencing.
+2. Waypoint-based GPS navigation.
+3. Python language based control of the UAV during autonomous operation.
+4. Various failsafe triggers along with support for custom failsafe routines.
+5. Automation of the payload drop mechanism through the onboard flight computer via mavlink.
+
+The Jetson Nano (flight computer) is the intermediary between the Digital cameras mounted on the UAV and the analog video transmitter unit. The schematic is as follows:
+
+Camera (Front) ───── Jetson Nano ───────── HDMI-to-AV ──── Analog ──── 5.8GHz
+                           |                    converter         VTX         Signal
+Camera (Downward) _________|
+
+This setup allows for dynamic switching of both feeds as per need. The feed to be transmitted can be selected on GCS and the corresponding feed will be outputted over HDMI as an external display signal. This allows for onboard processing of the video feed on the UAV itself and subsequent transmission, avoiding latency issues encountered with offboard processing based systems.
+
+3.7.1
+The hardware setup for autonomous navigation primarily consists of -
+1. M8N GPS sensor with Magnetometer.
+2. 8X 360 degree ultrasonic sensor array for proximity sensing (collision avoidance).
+3. Front-facing camera sensor for scene detection (collision avoidance).
+4. Down-facing camera sensor for identifying the landing pad.
+5. Pixhawk 2.4.8 Flight Controller for UAV control after issuance from flight computer.
+6. Jetson Nano (onboard flight computer) for mission execution and path planning.
+
+3.7.2
+The software setup for autonomous navigation primarily consists of -
+1. ROS2 for providing the inter-nodal communication during operation.
+2. Ardupilot MissionPlanner GCS for geofencing and manual/autonomous operation control.
+3. Tensorflow based custom trained Neural Network for disaster identification.
+4. OpenCV for "stiching the frames" from the downward feed to obtain a collective map of the area for more accurate counting.
+5. Marker Tracker library for autonomous payload dropping.
+6. Failsafe ROS2 node which stops the UAV in 3d space in order to a prevent collision by utilizing data from the Ultrasonic Sensor Array.
+
+6.1
+The flight control algorithm primarily consists of a setup based upon the ROS2 architecture. Here, multiple operation nodes will be executed as subroutines based upon their required use. The communication between the nodes will be based upon a subscriber-publisher relationship.
+
+Under the various nodes, there is a primary node which decides upon the flight path. The flight path is generated using the geofence co-ordinates as the boundary then a maximum coverage algorithm is utilised to effectively scan the whole bound area for objects and disaster scenarios. The master node also runs the image recognition model which identifies objects in the frame. Then a counter slave node is called upon which inputs the incoming feed and outputs the number of objects identified under each class. This is a separate CNN meant for accurate counting. Another slave node is present for more classification of the disaster once a signal is received from the master node. The type of disaster is returned to the master node. The same feed is sent into a "headcount" which identifies the number for human bodies in the frame to look for potential survivors in the area, after notification from the master node.
+
+As the mapping is completed, a "stiching" node inputs the video feed to turn the feed into a panorama map by utilizing the time series accelerometer data. This is then further fed into the object classification node for a final object count to ensure optimal accuracy. The following routine is executed during the Autonomous operation of the UAV. Our unique approach to cross checking with the stiched map ensures accuracy as it directly reduces the chances for one object getting counted multiple times if the UAV crosses an area twice. The divided processing approach based on the nodal architecture ensures optimal computation usage and saves on energy as well, which is an important factor for on-board processing systems.
+
+6.2 (Chakshu)
+6.3 (Chakshu)
