@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.20)  31 MAY 2025 01:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.20)  31 MAY 2025 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -595,6 +595,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks39
 \@floatcapt=\box69
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen275
+\captionmargin=\dimen276
+\caption@leftmargin=\dimen277
+\caption@rightmargin=\dimen278
+\caption@width=\dimen279
+\caption@indent=\dimen280
+\caption@parindent=\dimen281
+\caption@hangindent=\dimen282
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count321
+\c@continuedfloat=\count322
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
@@ -602,20 +623,24 @@ Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS)
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 \everycr=\toks40
 \minrowclearance=\skip57
-\rownum=\count321
+\rownum=\count323
 )
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box70
 \beforetitleunit=\skip58
 \aftertitleunit=\skip59
-\ttl@plus=\dimen275
-\ttl@minus=\dimen276
+\ttl@plus=\dimen283
+\ttl@minus=\dimen284
 \ttl@toksa=\toks41
-\titlewidth=\dimen277
-\titlewidthlast=\dimen278
-\titlewidthfirst=\dimen279
+\titlewidth=\dimen285
+\titlewidthlast=\dimen286
+\titlewidthfirst=\dimen287
 )
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
 8.
 
@@ -627,7 +652,7 @@ LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
+\l__color_backend_stack_int=\count324
 \l__pdf_internal_box=\box71
 )
 (./report.aux)
@@ -688,16 +713,16 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen280
+\scratchcounter=\count325
+\scratchdimen=\dimen288
 \scratchbox=\box72
-\nofMPsegments=\count324
-\nofMParguments=\count325
+\nofMPsegments=\count326
+\nofMParguments=\count327
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen281
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
+\MPscratchCnt=\count328
+\MPscratchDim=\dimen289
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
 \everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -711,53 +736,12 @@ e
 Package hyperref Info: Link coloring OFF on input line 18.
 
 (./report.out) (./report.out)
-\@outlinefile=\write4
-\openout4 = `report.out'.
+\@outlinefile=\write5
+\openout5 = `report.out'.
 
-<sae_aerospace.png, id=171, 392.96812pt x 118.19156pt>
-File: sae_aerospace.png Graphic file (type png)
-<use sae_aerospace.png>
-Package pdftex.def Info: sae_aerospace.png  used on input line 23.
-(pdftex.def)             Requested size: 181.18439pt x 54.49501pt.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 25.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 19.70294pt on input line 25.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 28.
-<aerothon2025.png, id=172, 301.125pt x 110.66344pt>
-File: aerothon2025.png Graphic file (type png)
-<use aerothon2025.png>
-Package pdftex.def Info: aerothon2025.png  used on input line 30.
-(pdftex.def)             Requested size: 181.18439pt x 66.58768pt.
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 32.
-<gsvlogo.png, id=173, 614.295pt x 794.97pt>
-File: gsvlogo.png Graphic file (type png)
-<use gsvlogo.png>
-Package pdftex.def Info: gsvlogo.png  used on input line 38.
-(pdftex.def)             Requested size: 135.89174pt x 175.85223pt.
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 41.
-
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/base/8r.enc} <./sae_aerospace.png (PNG copy)> <./aerothon202
-5.png (PNG copy)> <./gsvlogo.png>]
-<certificate_faculty.jpeg, id=181, 2927.93875pt x 4175.6pt>
-File: certificate_faculty.jpeg Graphic file (type jpg)
-<use certificate_faculty.jpeg>
-Package pdftex.def Info: certificate_faculty.jpeg  used on input line 47.
-(pdftex.def)             Requested size: 452.9679pt x 645.93704pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[2 <./certificate_faculty.jpeg>]
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ Excluding 'comment' comment.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -791,10 +775,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 23.63593pt on input line 53.
+(Font)              scaled to size 23.63593pt on input line 56.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 53.
+(Font)              scaled to size 23.63593pt on input line 56.
  (./report.toc
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 1.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -805,37 +791,38 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-\tf@toc=\write5
-\openout5 = `report.toc'.
+\tf@toc=\write6
+\openout6 = `report.toc'.
 
 
 
-[3
+[1
 
 
-] (./report.lot
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-5.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}] (./report.lot)
+\tf@lot=\write7
+\openout7 = `report.lot'.
+
+ (./report.lof
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 4.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 15.
+(Font)              scaled to size 11.39996pt on input line 7.
 )
-\tf@lot=\write6
-\openout6 = `report.lot'.
-
-
-(./report.lof
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 4.
-)
-\tf@lof=\write7
-\openout7 = `report.lof'.
+\tf@lof=\write8
+\openout8 = `report.lof'.
 
 
 
-[4]
+[2]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -870,498 +857,471 @@ LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 
 
 Chapter 1.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 16.41594pt on input line 72.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 16.41594pt on input line 72.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 73.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 76.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 73.
+(Font)              scaled to size 11.39996pt on input line 76.
+<droneschematic2d.png, id=265, 390.70969pt x 305.64188pt>
+File: droneschematic2d.png Graphic file (type png)
+<use droneschematic2d.png>
+Package pdftex.def Info: droneschematic2d.png  used on input line 79.
+(pdftex.def)             Requested size: 244.55144pt x 191.30551pt.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 77.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 85.
 LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
-(Font)              scaled to size 11.39996pt on input line 77.
+(Font)              scaled to size 11.39996pt on input line 85.
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+
+[3
+
+
+ <./droneschematic2d.png (PNG copy)>]
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 98.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 90.
+(Font)              scaled to size 13.67995pt on input line 98.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
 
  []
 
 
 
-[5
+[4]
 
-
-]
-
-[6]
-
-[7]
+[5]
 Chapter 2.
 
+Overfull \hbox (5.82567pt too wide) in paragraph at lines 164--165
+[]\OT1/phv/m/n/12 Component Se-lec-tion: Each sub-sys-tem|propulsion, aero-dy-n
+am-ics, struc-ture, sen-sors|was
+ []
 
-[8
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+
+
+[6
 
 ]
 Chapter 3.
-<thrust3.png, id=313, 96.36pt x 160.6pt>
+<thrust3.png, id=302, 96.36pt x 160.6pt>
 File: thrust3.png Graphic file (type png)
 <use thrust3.png>
-Package pdftex.def Info: thrust3.png  used on input line 190.
+Package pdftex.def Info: thrust3.png  used on input line 228.
 (pdftex.def)             Requested size: 85.5945pt x 142.65662pt.
 
 
-[9
+[7
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.196 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.196 
-       <./thrust3.png>]
-<bldc.png, id=323, 235.63031pt x 220.57407pt>
+ <./thrust3.png>]
+<bldc.png, id=312, 235.63031pt x 220.57407pt>
 File: bldc.png Graphic file (type png)
 <use bldc.png>
-Package pdftex.def Info: bldc.png  used on input line 200.
+Package pdftex.def Info: bldc.png  used on input line 238.
 (pdftex.def)             Requested size: 146.73235pt x 137.35695pt.
 
-Underfull \hbox (badness 1584) in paragraph at lines 201--201
-[]\OT1/phv/m/n/12 Figure 3.2: []DYS D2836-7
+Underfull \hbox (badness 1584) in paragraph at lines 239--239
+[]\OT1/phv/m/n/12 Figure 3.2: |DYS D2836-7
  []
 
-<esc.png, id=324, 139.27031pt x 152.06813pt>
+<esc.png, id=313, 139.27031pt x 152.06813pt>
 File: esc.png Graphic file (type png)
 <use esc.png>
-Package pdftex.def Info: esc.png  used on input line 213.
+Package pdftex.def Info: esc.png  used on input line 251.
 (pdftex.def)             Requested size: 146.73235pt x 160.21921pt.
 
 
-[10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.225         \item \textbf
-                           {\textit{Built-in TVS Protection:}} Has \textbf{T...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.225         \item \textbf
-                           {\textit{Built-in TVS Protection:}} Has \textbf{T...
- <./bldc.png (PNG copy)> <./esc.png (PNG copy)>]
+[8 <./bldc.png (PNG copy)> <./esc.png (PNG copy)>]
 LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 228.
-<prop.png, id=329, 170.88844pt x 101.62968pt>
+(Font)              scaled to size 13.67995pt on input line 266.
+<prop.png, id=319, 170.88844pt x 101.62968pt>
 File: prop.png Graphic file (type png)
 <use prop.png>
-Package pdftex.def Info: prop.png  used on input line 230.
+Package pdftex.def Info: prop.png  used on input line 268.
 (pdftex.def)             Requested size: 146.73235pt x 87.26955pt.
 
-Underfull \hbox (badness 2384) in paragraph at lines 231--231
-[]\OT1/phv/m/n/12 Figure 3.4: []HQProp Thin
+Underfull \hbox (badness 2384) in paragraph at lines 269--269
+[]\OT1/phv/m/n/12 Figure 3.4: |HQProp Thin
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 231--231
+Underfull \hbox (badness 1888) in paragraph at lines 269--269
 \OT1/phv/m/n/12 Elec-tric Prop 9\TS1/phv/m/n/12 Ö\OT1/phv/m/n/12 5 (2CCW)
  []
 
 LaTeX Info: Symbol \textrightarrow not provided by
             font family phv in TS1 encoding.
-            Default family used instead on input line 238.
+            Default family used instead on input line 276.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family phv in TS1 encoding.
-            Default family used instead on input line 239.
+            Default family used instead on input line 277.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 250.
+(Font)              scaled to size 7.59998pt on input line 288.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 250.
+(Font)              scaled to size 5.69998pt on input line 288.
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 
  []
 
 
 
-[11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.261         \item V
-                     oltage (V): \hfill 11.1V <./prop.png (PNG copy)>]
+[9 <./prop.png (PNG copy)>]
 
-[12]
-<battery.png, id=347, 242.40562pt x 163.3603pt>
+[10]
+
+LaTeX Warning: Hyper reference `chap:appendix' on page 11 undefined on input li
+ne 371.
+
+
+
+[11]
+<hub1.png, id=341, 237.13594pt x 124.96687pt>
+File: hub1.png Graphic file (type png)
+<use hub1.png>
+Package pdftex.def Info: hub1.png  used on input line 378.
+(pdftex.def)             Requested size: 234.76729pt x 123.7233pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 379.
+See the caption package documentation for explanation.
+
+<hub3.png, id=342, 161.10187pt x 142.28156pt>
+File: hub3.png Graphic file (type png)
+<use hub3.png>
+Package pdftex.def Info: hub3.png  used on input line 384.
+(pdftex.def)             Requested size: 164.33638pt x 145.14479pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 385.
+See the caption package documentation for explanation.
+
+<hub2.png, id=343, 249.18094pt x 188.95593pt>
+File: hub2.png Graphic file (type png)
+<use hub2.png>
+Package pdftex.def Info: hub2.png  used on input line 394.
+(pdftex.def)             Requested size: 244.55144pt x 185.44945pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 395.
+See the caption package documentation for explanation.
+
+<landing1.png, id=344, 222.07968pt x 143.03438pt>
+File: landing1.png Graphic file (type png)
+<use landing1.png>
+Package pdftex.def Info: landing1.png  used on input line 403.
+(pdftex.def)             Requested size: 195.63817pt x 126.00375pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 404.
+See the caption package documentation for explanation.
+
+<landing2.png, id=345, 173.14688pt x 142.28156pt>
+File: landing2.png Graphic file (type png)
+<use landing2.png>
+Package pdftex.def Info: landing2.png  used on input line 411.
+(pdftex.def)             Requested size: 156.5165pt x 128.61885pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 412.
+See the caption package documentation for explanation.
+
+<wheelbase.png, id=346, 326.72063pt x 352.31625pt>
+File: wheelbase.png Graphic file (type png)
+<use wheelbase.png>
+Package pdftex.def Info: wheelbase.png  used on input line 417.
+(pdftex.def)             Requested size: 244.55144pt x 263.70969pt.
+
+
+[12 <./hub1.png (PNG copy)> <./hub3.png (PNG copy)> <./hub2.png (PNG copy)> <./
+landing1.png (PNG copy)> <./landing2.png (PNG copy)>]
+
+[13 <./wheelbase.png (PNG copy)>]
+<battery.png, id=356, 242.40562pt x 163.3603pt>
 File: battery.png Graphic file (type png)
 <use battery.png>
-Package pdftex.def Info: battery.png  used on input line 344.
+Package pdftex.def Info: battery.png  used on input line 430.
 (pdftex.def)             Requested size: 146.73235pt x 98.88936pt.
 
-Underfull \hbox (badness 1226) in paragraph at lines 345--345
-[]\OT1/phv/m/n/12 Figure 3.5: []Orange 11.1V
- []
-
-
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Overfull \hbox (77.45654pt too wide) detected at line 351
+Overfull \hbox (77.45654pt too wide) detected at line 437
 [] \OT1/cmr/m/n/12 = [] = [] \OMS/cmsy/m/n/12 ^^Y \OT1/cmr/m/n/12 0\OML/cmm/m/i
 t/12 :\OT1/cmr/m/n/12 0542\OML/cmm/m/it/12 hrs \OT1/cmr/m/n/12 = 3\OML/cmm/m/it
 /12 :\OT1/cmr/m/n/12 25\OML/cmm/m/it/12 mins
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 363--363
+Underfull \hbox (badness 2359) in paragraph at lines 449--449
 []|\OT1/phv/m/n/10.95 Flight Con-troller, GPS Mod-ule,
  []
 
 
-Overfull \hbox (8.51627pt too wide) in paragraph at lines 358--369
+Overfull \hbox (8.51627pt too wide) in paragraph at lines 444--455
  [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+
  []
 
 
 
 [14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.373         \subsubsection{Avionics Demand}
-                                             
-pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.373         \subsubsection{Avionics Demand}
-                                              <./battery.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ <./battery.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--388
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
-
+Overfull \hbox (14.5725pt too wide) detected at line 492
+[]
  []
 
 
 
 [15]
-Overfull \hbox (14.5725pt too wide) detected at line 406
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
+<pixhawk.png, id=372, 164.86594pt x 217.5628pt>
+File: pixhawk.png Graphic file (type png)
+<use pixhawk.png>
+Package pdftex.def Info: pixhawk.png  used on input line 541.
+(pdftex.def)             Requested size: 146.73235pt x 193.64024pt.
 
 
 [16]
-<pixhawk.png, id=381, 164.86594pt x 217.5628pt>
-File: pixhawk.png Graphic file (type png)
-<use pixhawk.png>
-Package pdftex.def Info: pixhawk.png  used on input line 455.
-(pdftex.def)             Requested size: 146.73235pt x 193.64024pt.
-
-Underfull \hbox (badness 1852) in paragraph at lines 463--464
+Underfull \hbox (badness 1852) in paragraph at lines 549--550
 []\OT1/phv/b/sl/12 Compatible with au-tonomous and GPS-guided mis-
  []
 
 
-Overfull \hbox (28.29387pt too wide) in paragraph at lines 465--466
+Overfull \hbox (28.29387pt too wide) in paragraph at lines 551--552
 []\OT1/phv/b/sl/12 Excellent sim-u-la-tion sup-port: \OT1/phv/m/n/12 Com-pat-i-
 ble with \OT1/phv/b/n/12 HITL (Hardware-
  []
 
 
-Overfull \hbox (5.67682pt too wide) in paragraph at lines 465--466
+Overfull \hbox (5.67682pt too wide) in paragraph at lines 551--552
 \OT1/phv/b/n/12 in-the-loop) \OT1/phv/m/n/12 and \OT1/phv/b/n/12 SITL (Software
 -in-the-loop) \OT1/phv/m/n/12 for con-trol test-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--470
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
 
  []
 
-<jetson.png, id=382, 389.20406pt x 260.47313pt>
+<jetson.png, id=387, 389.20406pt x 260.47313pt>
 File: jetson.png Graphic file (type png)
 <use jetson.png>
-Package pdftex.def Info: jetson.png  used on input line 473.
+Package pdftex.def Info: jetson.png  used on input line 559.
 (pdftex.def)             Requested size: 244.55144pt x 163.6697pt.
 
 
-[17
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.477 
-       <./pixhawk.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+[17 <./pixhawk.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 564--565
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
 
-Overfull \hbox (3.89604pt too wide) in paragraph at lines 482--483
+Overfull \hbox (3.89604pt too wide) in paragraph at lines 568--569
 []\OT1/phv/m/n/12 This con-fig-u-ra-tion al-lows the air-craft to func-tion \OT
 1/phv/b/n/12 au-tonomously even with-out con-stant ground
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
 
 
-[18
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.501       \newpage
-                     <./jetson.png (PNG copy)>]
-<rpicam.png, id=394, 137.01187pt x 124.96687pt>
+[18 <./jetson.png (PNG copy)>]
+<rpicam.png, id=398, 137.01187pt x 124.96687pt>
 File: rpicam.png Graphic file (type png)
 <use rpicam.png>
-Package pdftex.def Info: rpicam.png  used on input line 504.
+Package pdftex.def Info: rpicam.png  used on input line 590.
 (pdftex.def)             Requested size: 146.73235pt x 133.8429pt.
 
-Underfull \hbox (badness 2486) in paragraph at lines 505--505
-[]\OT1/phv/m/n/12 Figure 3.8: []Raspberry Pi
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--507
+Underfull \hbox (badness 10000) in paragraph at lines 588--593
 
  []
 
-<fpvcam.png, id=395, 115.93312pt x 109.91063pt>
+<fpvcam.png, id=399, 115.93312pt x 109.91063pt>
 File: fpvcam.png Graphic file (type png)
 <use fpvcam.png>
-Package pdftex.def Info: fpvcam.png  used on input line 521.
+Package pdftex.def Info: fpvcam.png  used on input line 607.
 (pdftex.def)             Requested size: 146.73235pt x 139.12204pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 519--524
+Underfull \hbox (badness 10000) in paragraph at lines 605--610
 
  []
 
 
 
-[19
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.532         \clearpage
-                        
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.532         \clearpage
-                         <./rpicam.png (PNG copy)> <./fpvcam.png (PNG copy)>]
-<transmitter.png, id=401, 197.23688pt x 193.47281pt>
+[19 <./rpicam.png (PNG copy)> <./fpvcam.png (PNG copy)>]
+<transmitter.png, id=405, 197.23688pt x 193.47281pt>
 File: transmitter.png Graphic file (type png)
 <use transmitter.png>
-Package pdftex.def Info: transmitter.png  used on input line 535.
+Package pdftex.def Info: transmitter.png  used on input line 621.
 (pdftex.def)             Requested size: 146.73235pt x 143.93224pt.
 
-Underfull \hbox (badness 2856) in paragraph at lines 536--536
-[]\OT1/phv/m/n/12 Figure 3.10: []Radiomaster
+Underfull \hbox (badness 2856) in paragraph at lines 622--622
+[]\OT1/phv/m/n/12 Figure 3.17: |Ra-diomas-ter
  []
 
 
 
 [20
 
+ <./transmitter.png (PNG copy)>]
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.560   \chapter
-                {Computational Analysis} <./transmitter.png (PNG copy)>]
+[21]
 Chapter 4.
 
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
-[21
+ []
 
-]
-Chapter 5.
 
 
 [22
 
 ]
-Chapter 6.
+Chapter 5.
 
 
 [23
 
 ]
-Chapter 7.
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 689--690
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--692
+
+ []
+
 
 
 [24
 
 ]
-Chapter 8.
+Chapter 7.
 
 
 [25
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.8.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.599     \chapter
-                  {Appendix}]
-Chapter 9.
-
-Underfull \hbox (badness 5862) in paragraph at lines 697--698
-[]|\OT1/phv/m/n/10.95 3-Axis Gy-rom-e-ter, Ac-celerom-e-ter,
- []
-
+]
+Chapter 8.
 
 
 [26
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.9.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.704       \end{table}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{table.9.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.704       \end{table}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{table.9.3}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.704       \end{table}
-                       ]
-LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 717.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+]
+Chapter 9.
 
 
 [27
-pdfTeX warning (ext4): destination with the same identifier (name{table.9.4}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.747 \end{document}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{table.9.5}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.747 \end{document}
-                    ]
 
-[28
-pdfTeX warning (ext4): destination with the same identifier (name{table.9.6}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.747 \end{document}
-                    ] (./report.aux)
+] (./report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 8182D01D9423023BE89189AC09DED20E;8071.
  ) 
 Here is how much of TeX's memory you used:
- 21642 strings out of 475178
- 393468 string characters out of 5766539
- 785944 words of memory out of 5000000
- 44125 multiletter control sequences out of 15000+600000
- 589661 words of font info for 94 fonts, out of 8000000 for 9000
+ 23026 strings out of 475178
+ 420264 string characters out of 5766539
+ 807911 words of memory out of 5000000
+ 45487 multiletter control sequences out of 15000+600000
+ 585407 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 102i,15n,107p,1233b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,14n,107p,1233b,592s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/anirban/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss1200.6
 00pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
@@ -1376,10 +1336,10 @@ lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
 bo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on report.pdf (28 pages, 1326680 bytes).
+Output written on report.pdf (27 pages, 969265 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 455 compressed objects within 5 object streams
- 128 named destinations out of 1000 (max. 500000)
- 411 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 470 compressed objects within 5 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,16 +1,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \small Thrust-to-Weight Diagram}}{9}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces DYS D2836-7 1120kV BLDC}}{10}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces SpeedyBee BL32 50A 4-in-1 ESC}}{10}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces HQProp Thin Electric Prop 9×5 (2CCW) Propeller}}{11}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Orange 11.1V 5200mAh 3S}}{14}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Pixhawk 2.4.8}}{17}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces NVIDIA Jetson Orin Nano 8GB Module}}{18}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Raspberry Pi Cam V2}}{19}{figure.3.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Caddx Ant Lit Analog Camera}}{19}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Radiomaster Pocket Radio CC2500/ELRS}}{20}{figure.3.10}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \small Thrust-to-Weight Diagram}}{7}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces DYS D2836-7 1120kV BLDC}}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces SpeedyBee BL32 50A 4-in-1 ESC}}{8}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces HQProp Thin Electric Prop 9×5 (2CCW) Propeller}}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Hub Side}}{12}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Hub Rear}}{12}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Hub Top}}{12}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Rear View}}{12}{figure.3.8}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Side View}}{12}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Wheelbase = 422.02mm}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Orange 11.1V 5200mAh 3S}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Pixhawk 2.4.8}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces NVIDIA Jetson Orin Nano 8GB Module}}{18}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Raspberry Pi Cam V2}}{19}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Caddx Ant Lit Analog Camera}}{19}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Radiomaster Pocket Radio CC2500/ELRS}}{20}{figure.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

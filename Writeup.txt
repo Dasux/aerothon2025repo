@@ -33,12 +33,12 @@ The hardware setup for autonomous navigation primarily consists of -
 
 3.7.2
 The software setup for autonomous navigation primarily consists of -
-1. ROS2 for providing the inter-nodal communication during operation.
-2. Ardupilot MissionPlanner GCS for geofencing and manual/autonomous operation control.
-3. Tensorflow based custom trained Neural Network for disaster identification.
-4. OpenCV for "stiching the frames" from the downward feed to obtain a collective map of the area for more accurate counting.
-5. Marker Tracker library for autonomous payload dropping.
-6. Failsafe ROS2 node which stops the UAV in 3d space in order to a prevent collision by utilizing data from the Ultrasonic Sensor Array.
+ROS2 for providing the inter-nodal communication during operation.
+Ardupilot MissionPlanner GCS for geofencing and manual/autonomous operation control.
+Tensorflow based custom trained Neural Network for disaster identification.
+OpenCV for "stiching the frames" from the downward feed to obtain a collective map of the area for more accurate counting.
+Marker Tracker library for autonomous payload dropping.
+Failsafe ROS2 node which stops the UAV in 3d space in order to a prevent collision by utilizing data from the Ultrasonic Sensor Array.
 
 6.1
 The flight control algorithm primarily consists of a setup based upon the ROS2 architecture. Here, multiple operation nodes will be executed as subroutines based upon their required use. The communication between the nodes will be based upon a subscriber-publisher relationship.

@@ -1,13 +1,13 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=0.5in]{geometry}
-\usepackage{tikz, xcolor, graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array, float}
+\usepackage{tikz, xcolor, graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array, float, caption}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[scaled]{helvet}
 \usepackage[table]{xcolor}
 \geometry{margin=1in}
 
 
-\usepackage{titlesec}
+\usepackage{titlesec, comment}
 
 \titleformat{\chapter}[display]
   {\normalfont\huge\bfseries}{}{0pt}{\Huge\vspace{-2cm}} % you can tweak this
@@ -17,7 +17,8 @@
 
 \begin{document}
 
-% ====================== TITLE ========================
+\begin{comment}
+  % ====================== TITLE [commented] ========================
   \begin{center}
     % \vspace*{-1in}
     \includegraphics[width=0.4\textwidth]{sae_aerospace.png}\\
@@ -47,7 +48,9 @@
     \includegraphics[width=1\textwidth]{certificate_faculty.jpeg}
   \end{figure}
   \newpage
+\end{comment}
 
+% starting of main document for design report
   \newgeometry{left=1in, right=0.5in, top=1in, bottom=0.5in}
   % ============ [TABLE OF CONTENTS] ================
   \tableofcontents
@@ -71,6 +74,11 @@
    In the face of natural and man-made disasters, rapid response and situational awareness are critical. Drones have emerged as powerful tools in disaster management, offering real-time aerial insights, access to hard-to-reach areas, and faster deployment compared to traditional methods. Whether locating survivors, assessing damage, or delivering essential supplies, drone technology enhances the efficiency and safety of relief operations. As disasters grow more complex and unpredictable, integrating drones into emergency response systems is no longer a luxury—it's a necessity. \\ 
 
    Through Aerothon, Team UDSAV (\textit{Uncrewed Disaster Surveillance Aerial Vehicle}) is not just competing—we are contributing to the evolution of drone-assisted disaster response, pushing the boundaries of what UAVs can achieve in life-saving missions.
+   \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{droneschematic2d.png}
+        \label{fig:udsav}
+      \end{figure}
 
 
     \section{Problem Statement and Mission Requirements}
@@ -149,8 +157,38 @@
   % ========= Conceptual Design Approach =======
   \chapter{Conceptual Design Approach}
     \section{Design Methodology}
+    In design methodology, we followed structured top down system engineering approach. Our main mission is manual payload delivery and autonomous disaster surveillance. Once the mission is defined, we proceeded through the following design steps:
+    \begin{itemize}
+      \item Requirement Analysis: Key performance indicators (KPIs) such as payload stability, endurance and autonomy levels were associated to component-level specifications.
+      \item Conceptual Design: Various design choices such as a multirotor configuration, frame, and AI-enabled onboard computation were evaluated.
+      \item Component Selection: Each subsystem—propulsion, aerodynamics, structure, sensors—was chosen based on performance, power, weight, and cost.
+      \item Iterative Prototyping: Using simulation and CAD modeling, we iteratively refine CG balance, and propulsion performance.
+      \item Validation \& Optimization: The design is validated using CFD/FEM tools for aerodynamic , deformation , stress and structural behavior.
+
+    \end{itemize}
+
+
     \section{Product Benchmark \& Trade-off Analysis} % why we chose this design over other 
-                                                 
+    For optimizing performance and ensuring mission reliability, a benchmarking exercise was conducted. \\
+
+\textbf{Benchmarked Categories:}
+\begin{itemize}
+  \item Frame type: H-frame, X-frame, and custom modular frames
+\item Motor: Low vs high KV ratings
+  \item Material: Carbon fiber vs aluminum vs ABS composites
+  \item Computational Units: Raspberry Pi vs Jetson Nano/Orin for onboard processing
+  \item Flight Controllers: Pixhawk vs DJI N3 vs Navio2
+  
+\end{itemize}
+
+  \textbf{Trade-off Analysis:}
+\begin{itemize}
+  \item Each option was assessed across several key criteria:
+  \item Weight vs Strength (e.g., carbon fiber offers great stiffness at low weight)
+  \item Cost vs Performance (e.g., Jetson Orin offers better AI capabilities than Pi but is costlier)
+  \item Thrust vs Efficiency (e.g., higher KV motors offer more speed and power)
+\end{itemize}
+                               
   % ======== Aerodynamic and Flight Performance ======
   \chapter{Detailed Design Breakdown}                                 
     \section{Preliminary Weight Estimation}
@@ -175,7 +213,7 @@
           Additional Wiring & 50 \\
           Servo Motor & 10 \\
           Propellor (9") & 40 \\
-          Estimated Frame Weight & 500 \\
+          Estimated Frame Weight & 700 \\
           \hline
           \textbf{\textit{Total:}} & \textbf{2330} \\
           \hline
@@ -330,11 +368,59 @@
      
   % ======== Aircraft Sizing ========
     \section{Aircraft Sizing}
+    These are 2D schematics to ensure more precise depiction of the diagrams. 3D CAD schematics are provided in the \hyperref[chap:appendix]{\textbf{Appendix}} section.
+
       \subsection*{Rotor Arm}
       \subsection*{Hub}
-      \subsection*{Wheelbase}
+      \noindent
+      \begin{minipage}{0.48\textwidth}
+          \centering
+          \includegraphics[width=\linewidth]{hub1.png}
+          \captionof{figure}{Hub Side}
+      \end{minipage}%
+      \hfill
+      \begin{minipage}{0.48\textwidth}
+          \centering
+          \includegraphics[width=0.7\linewidth]{hub3.png}
+          \captionof{figure}{Hub Rear}
+      \end{minipage}
+
+      \vspace{1em}  % Space between rows
+
+      % Second row: center-aligned image
+      \begin{center}
+      \begin{minipage}{0.5\textwidth}
+          \centering
+          \includegraphics[width=1\linewidth]{hub2.png}
+          \captionof{figure}{Hub Top}
+      \end{minipage}
+      \end{center}
       \subsection*{Propeller Clearance}
+      
       \subsection*{Landing Gear}
+      \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{landing1.png}
+        \captionof{figure}{Rear View}
+        \stepcounter{figure}
+
+      \end{minipage}%
+      \hfill
+      \begin{minipage}{0.32\textwidth}
+          \centering
+          \includegraphics[width=1\textwidth]{landing2.png}
+          \captionof{figure}{Side View}
+      \end{minipage}%
+      \subsection*{Wheelbase}
+      \begin{figure}[h]
+        \centering 
+        \includegraphics[width=0.5\textwidth]{wheelbase.png}
+        \caption{Wheelbase = 422.02mm} 
+        \label{fig:wheelbase}
+      \end{figure}
+
+      \clearpage
+
         
   % ======== Aircraft Performance ====
     \section{Aircraft Performance}
@@ -544,13 +630,30 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
           \item \textbf{\textit{Telemetry Support:}} When paired with the RP1 V2 or telemetry-capable CC2500 receivers, it supports real-time telemetry data: \textit{battery voltage, GPS coordinates, RSSI, link quality etc.}
         \end{itemize}
 
-
-        fuck this... fix it tomorrow... \\
         \textcolor{red}{\textbf{Problem:} we're using mavlink and elrs.. but that is not compatible.. we need to discuss and clarify this part.}
 
     \section{Autonomous Navigation System}
       \subsection{Hardware Setup}
+      The hardware setup for autonomous navigation primarily consists of -
+      \begin{enumerate}
+        \item M8N GPS sensor with Magnetometer.
+        \item 8X 360 degree ultrasonic sensor array for proximity sensing (collision avoidance).
+        \item Front-facing camera sensor for scene detection (collision avoidance).
+        \item Down-facing camera sensor for identifying the landing pad.
+        \item Pixhawk 2.4.8 Flight Controller for UAV control after issuance from flight computer.
+        \item Jetson Nano (onboard flight computer) for mission execution and path planning.
+      \end{enumerate}
       \subsection{Software Architechture}
+      The software setup for autonomous navigation primarily consists of - 
+      \begin{enumerate}
+        \item ROS2 for providing the inter-nodal communication during operation.
+        \item Ardupilot MissionPlanner GCS for geofencing and manual/autonomous operation control.
+        \item Tensorflow based custom trained Neural Network for disaster identification.
+        \item OpenCV for "stiching the frames" from the downward feed to obtain a collective map of the area for more accurate counting.
+        \item Marker Tracker library for autonomous payload dropping.
+        \item Failsafe ROS2 node which stops the UAV in 3d space in order to a prevent collision by utilizing data from the Ultrasonic Sensor Array.
+      \end{enumerate}
+
 
     \section{C.G. Calculation \& Stability Analysis}
       \subsection{Lift, Drag and Stability Considerations}
@@ -559,7 +662,23 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
   % =========== Computationl Analysis ============
   \chapter{Computational Analysis}
     \section{CFD / FEM / MATLAB Simulations}
+    \subsubsection{\large CFD Analysis}
+    The airflow around the drone was analyzed to optimize lift, minimize drag, and improve stability during low-speed operations like payload drop and hovering. Simulations focused on propeller wash interactions, pressure distribution, and vortex formation near the arms. This helped in validating the positioning of rotors and the overall aerodynamics of the UAV.
+
+    \subsubsection{\large FEM Analysis}
+    FEM simulations were analyzed on the frame and arm structures to assess stress concentration under typical flight loads and possible deformations. The goal was to verify that the ABS frame would withstand static and dynamic loads without deformation or failure. Stress, strain, and displacement plots were generated to ensure safety margins under thrust and payload weight.\\
+
+Open-source and proprietary tools like ANSYS and SolidWorks Simulation were used. These analyses guided material thickness choices, arm length adjustments, and center of mass alignment to enhance both flight performance and structural durability.
+
+
+
     \section{CAD Model and Performance Validation}
+    A comprehensive 3D CAD model of the drone was created using SolidWorks to visualize and validate all mechanical subsystems.
+    \begin{enumerate}
+      \item \textbf{Spatial Layout:} The CAD model ensured that all components — motors, ESCs, battery, payload, flight controller, and camera — were properly mounted without interference. Special attention was given to propeller clearance, wiring space, and CG alignment.
+      \item \textbf{Mass and Balance Validation:} Using the CAD tool’s mass properties feature, it is confirmed the total takeoff weight and ensured that the center of gravity (CG) fell within the desired range for stable flight. 
+      \item \textbf{Design-to-Prototype Transition:} The finalized CAD was used to generate 2D technical drawings for 3D printing, and component fabrication. It served as the backbone for building a physically accurate prototype, ensuring minimal mismatch between design and build.
+    \end{enumerate}
   % =========== Safety, Compliance & Risk Assessment====== 
   \chapter{Safety \& SORA Assessment}
     \subsubsection{\Large Risk Analysis and Mitigation Strategies}
@@ -567,6 +686,12 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
   % ========= Conclusion & Future Work =====
   \chapter{Methodology for Autonomous Operations}
     \section{Flight Control Algorithm}
+    The flight control algorithm primarily consists of a setup based upon the ROS2 architecture. Here, multiple operation nodes will be executed as subroutines based upon their required use. The communication between the nodes will be based upon a subscriber-publisher relationship.\\
+
+Under the various nodes, there is a primary node which decides upon the flight path. The flight path is generated using the geofence co-ordinates as the boundary then a maximum coverage algorithm is utilised to effectively scan the whole bound area for objects and disaster scenarios. The master node also runs the image recognition model which identifies objects in the frame. Then a counter slave node is called upon which inputs the incoming feed and outputs the number of objects identified under each class. This is a separate CNN meant for accurate counting. Another slave node is present for more classification of the disaster once a signal is received from the master node. The type of disaster is returned to the master node. The same feed is sent into a "headcount" which identifies the number for human bodies in the frame to look for potential survivors in the area, after notification from the master node.\\
+
+As the mapping is completed, a "stiching" node inputs the video feed to turn the feed into a panorama map by utilizing the time series accelerometer data. This is then further fed into the object classification node for a final object count to ensure optimal accuracy. The following routine is executed during the Autonomous operation of the UAV. Our unique approach to cross checking with the stiched map ensures accuracy as it directly reduces the chances for one object getting counted multiple times if the UAV crosses an area twice. The divided processing approach based on the nodal architecture ensures optimal computation usage and saves on energy as well, which is an important factor for on-board processing systems.
+
     \section{Object Detection \& Counting}
     \section{Autonomous Payload Drop Mechanism (Gripper)}
 
@@ -596,153 +721,7 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
         \end{tabular}
     \end{table}
 
-    \chapter{Appendix}
-    \vspace{-0.5in}
-     \begin{table}[H]
-      \centering
-      \caption{Motor Datasheet (DYS D2836-7 1120kV BLDC)}
-        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
-          \hline
-          \textbf{Parameter} & \textbf{Value} \\
-          \hline
-          Motor KV (RPM/V) & 1120 \\
-          \hline
-          Motor Type & Brushless Motor \\
-          \hline
-          Compatible LiPO Batteries & 2S to 4S \\
-          \hline
-          Weight (g) & 70 \\
-          \hline
-          Shaft Diameter (mm) & $\Phi$4.0×49mm \\
-          \hline
-          Max. Power (W) & 336 \\
-          \hline
-          Maximum Thrust (gm) & 1130 \\
-          \hline
-          Compatible Propeller (inch) & 9×5 \\
-          \hline
-          Required ESC (A) & 40 \\
-          \hline
-        \end{tabular}
-
-      \caption{ESC Datasheet (SpeedyBee BL32 50A 4-in-1 ESC)}
-        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
-          \hline
-          \textbf{Parameter} & \textbf{Value} \\
-          \hline
-          Continuous Current (A)	& 50\\
-          PWM Frequency Range (KHz) & 16 to 128\\
-          Input Power (W)	& 3-6S LiPo \\
-          Current Sensor Input	& Support (Scale=490 Offset=0) \\
-          Mounting Hole Diameter (mm)	& 30.5 x 30.5mm( {\small 4mm hole diameter}) \\
-          Length (mm)	&          45.6\\
-          Width (mm)	&      40 \\
-          Height (mm)	&        8.8 \\
-          Weight (g)	& 19.2g with heat sink\\
-          \hline
-        \end{tabular}
-      
-      \caption{Propeller Datasheet (HQProp Thin Electric Prop 9×5 (2CCW) Propeller)}
-        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
-          \hline
-          \textbf{Parameter} & \textbf{Value} \\
-          \hline
-          Material & Carbon Fiber Composite\\
-          Rotation Direction	& CCW\\
-          Pitch(inch)	& 5\\
-          No. of Blades &	2\\
-          Hub Diameter (mm)	& 18\\
-          Hub Thickness (mm) &	7\\
-          Shaft Size (mm) &	9.5/8/6\\
-          Adapter Rings (mm) & 6/5/4/3\\
-          Weight (g) &	9, (each)\\
-          \hline
-        \end{tabular}
-      \end{table}
-
-      \begin{table}[h!]
-      \centering
-      \caption{Battery Datasheet (Orange 11.1V 5200mAh 3S)}
-        \begin{tabular}{|l|c|}
-          \hline
-          \textbf{Parameter} & \textbf{Value} \\
-          \hline
-          Voltage & 11.1V (3S) \\
-          \hline
-          Capacity & 5.2Ah \\
-          \hline
-          C-Rating (Continuous) & 35C \\
-          \hline
-          Theoretical Max Discharge Current & $35 \times 5.2 = \mathbf{182A}$ \\
-          \hline
-          Stated Max Discharge Current (datasheet) & 156A \\
-          \hline
-          System Current Draw (4 motors @ 24A) & $4 \times 24 = \mathbf{96A}$ \\
-          \hline
-              Flight Time @ Full Throttle (96A) & $\frac{5.2}{96} = \mathbf{3.25 \text{ minutes}}$ \\
-          \hline
-          Flight Time @ Moderate Throttle (60A) & $\frac{5.2}{60} = \mathbf{5.2 \text{ minutes}}$ \\
-          \hline
-          Energy Capacity & $11.1 \times 5.2 = \mathbf{57.72\,Wh}$ \\
-          \hline
-        \end{tabular}
-      
-        \caption{Flight Controller Datasheet (Pixhawk 2.4.8)}
-        \begin{tabular}{|l|p{6cm}|}
-          \hline
-          \textbf{Parameter} & \textbf{Value} \\
-          \hline
-          Input Voltage (V)	& 7V \\
-          Firmware	   &   Mission Planner \\
-          Sensor	 &  {\small 3-Axis Gyrometer, Accelerometer, High-performance Barometer, Magnetometer} \\
-          Processor	 &    {\small 32bit STM32F427 Cortex M4 core with FPU, The 32-bit STM32F103 failsafe Co-processor} \\
-          Micro SD Card Slot (Y/N)	    &   Yes \\
-          Dimensions {\small (L x W x H) mm}	   &   82 x 50 x 16 \\
-          Weight (g)	 &    40 \\
-          \hline
-        \end{tabular}
-      \end{table}
-
-      \begin{table}[h!]
-        \centering
-        \caption{Jetson Orin Nano 8GB Datasheet}
-      \begin{tabular}{|p{4.5cm}|p{8.5cm}|}
-        \hline
-        \textbf{Specification} & \textbf{Details} \\
-        \hline
-        AI Performance & 40 TOPS \\
-        \hline
-        GPU & 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores \\
-        \hline
-        CPU & 6-core Arm\textsuperscript{\textregistered} Cortex\textsuperscript{\texttrademark}-A78AE v8.2 64-bit CPU @ 1.5GHz \\
-        \hline
-        Memory & 8GB 128-bit LPDDR5 @ 68GB/s \\
-        \hline
-        Storage & Supports external NVMe \\
-        \hline
-        Camera Support & Up to 4 cameras (via 8 virtual channels), 8 MIPI CSI-2 lanes, D-PHY 2.1 (up to 20Gbps) \\
-        \hline
-        Display Output & 1x 4K30 via DP 1.2 (+MST) / eDP 1.4 / HDMI 1.4 \\
-        \hline
-        Video Encode & 1080p30 supported by 1–2 CPU cores \\
-        \hline
-        Video Decode & 1x 4K60 (H.265), 2x 4K30 (H.265), 5x 1080p60 (H.265), 11x 1080p30 (H.265) \\
-        \hline
-        Networking & 1x Gigabit Ethernet \\
-        \hline
-        USB Ports & 3x USB 3.2 Gen2 (10 Gbps), 3x USB 2.0 \\
-        \hline
-        Other I/O & 3x UART, 2x SPI, 2x I2S, 4x I2C, 1x CAN, DMIC \& DSPK, PWM, GPIOs \\
-        \hline
-        PCIe Support & 1x4 + 3x1 (PCIe Gen3, Root Port and Endpoint) \\
-        \hline
-        Power Consumption & 7W – 15W \\
-        \hline
-        Form Factor & 69.6mm × 45mm, 260-pin SO-DIMM connector \\
-        \hline
-      \end{tabular}
-      \end{table}
-
+   \chapter{Appendix} 
 
 \end{document}
 
