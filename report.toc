@@ -25,34 +25,40 @@
 \contentsline {subsection}{\numberline {3.4.1}Battery Selection and Endurance}{14}{subsection.3.4.1}%
 \contentsline {subsubsection}{\large Battery: Orange Pro-Range 11.1V 5200mAh (3S)}{14}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Total Power Budget Summary}{14}{subsection.3.4.2}%
-\contentsline {subsubsection}{\large Propulsion Demand}{14}{table.caption.12}%
-\contentsline {subsubsection}{Avionics Demand}{14}{table.caption.12}%
-\contentsline {subsubsection}{\large Margins, Safety Factors}{15}{table.caption.12}%
+\contentsline {subsubsection}{\large Propulsion Demand}{14}{table.caption.13}%
+\contentsline {subsubsection}{Avionics Demand}{14}{table.caption.13}%
+\contentsline {subsubsection}{\Large Margins, Safety Factors}{15}{table.caption.13}%
 \contentsline {section}{\numberline {3.5}Material Selection}{17}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Structural Frame, Airframe Components}{17}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Avionics Subsystems Selection}{17}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Detailed Component Breakdown}{17}{subsection.3.6.1}%
-\contentsline {subsubsection}{\large Flight Controller (Pixhawk 2.4.8)}{17}{subsection.3.6.1}%
-\contentsline {subsubsection}{\large Flight Computer (NVIDIA Jetson Orin Nano 8GB)}{17}{figure.caption.13}%
-\contentsline {subsubsection}{\large Cameras}{18}{figure.caption.14}%
-\contentsline {subsubsection}{\large Transmitter}{20}{figure.caption.16}%
-\contentsline {section}{\numberline {3.7}Autonomous Navigation System}{20}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Hardware Setup}{20}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Software Architechture}{20}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}C.G. Calculation \& Stability Analysis}{21}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Lift, Drag and Stability Considerations}{21}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Center of Gravity Position \& Trim}{21}{subsection.3.8.2}%
-\contentsline {chapter}{\numberline {4}Computational Analysis}{22}{chapter.4}%
-\contentsline {section}{\numberline {4.1}CFD / FEM / MATLAB Simulations}{22}{section.4.1}%
-\contentsline {subsubsection}{\large CFD Analysis}{22}{section.4.1}%
-\contentsline {subsubsection}{\large FEM Analysis}{22}{section.4.1}%
-\contentsline {section}{\numberline {4.2}CAD Model and Performance Validation}{22}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Safety \& SORA Assessment}{23}{chapter.5}%
-\contentsline {subsubsection}{\Large Risk Analysis and Mitigation Strategies}{23}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Methodology for Autonomous Operations}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Flight Control Algorithm}{24}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Object Detection \& Counting}{24}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Autonomous Payload Drop Mechanism (Gripper)}{24}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Innovations and Future Scope}{25}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Bill of Materials}{26}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Appendix}{27}{chapter.9}%
+\contentsline {section}{\numberline {3.6}Avionics Subsystems Selection}{18}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Component Breakdown}{18}{subsection.3.6.1}%
+\contentsline {subsubsection}{\large Flight Controller (Pixhawk 2.4.8)}{18}{subsection.3.6.1}%
+\contentsline {subsubsection}{\large Flight Computer (NVIDIA Jetson Orin Nano 8GB)}{18}{figure.caption.15}%
+\contentsline {subsubsection}{\large Cameras}{19}{figure.caption.16}%
+\contentsline {subsubsection}{\large Transmitter: {RadioMaster Pocket Radio Controller (M2) ELRS}}{20}{figure.caption.17}%
+\contentsline {subsubsection}{\large Receiver: RP1 V2 ExpressLRS 2.4ghz Nano Receiver}{20}{figure.caption.18}%
+\contentsline {subsubsection}{\large Video Transmitter: SpeedyBee TX800 5.8GHz VTX}{21}{figure.caption.19}%
+\contentsline {subsubsection}{\large NEO-M8N GPS Module}{21}{figure.caption.20}%
+\contentsline {subsubsection}{\large HDMI-to-RCA Converter}{21}{figure.caption.21}%
+\contentsline {subsection}{\numberline {3.6.2}Communication System Framework}{22}{subsection.3.6.2}%
+\contentsline {subsubsection}{\large RC Link}{22}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Autonomous Navigation System}{23}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Hardware Setup}{23}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Software Architechture}{23}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}C.G. Calculation \& Stability Analysis}{24}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Computational Analysis}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}CFD / FEM / MATLAB Simulations}{25}{section.4.1}%
+\contentsline {subsubsection}{\large CFD Analysis}{25}{section.4.1}%
+\contentsline {subsubsection}{\large FEM Analysis}{25}{section.4.1}%
+\contentsline {section}{\numberline {4.2}CAD Model and Performance Validation}{25}{section.4.2}%
+\contentsline {subsubsection}{\LARGE Safety \& SORA Assessment}{26}{Item.49}%
+\contentsline {chapter}{\numberline {5}Methodology for Autonomous Operations}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Flight Control Algorithm}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Object Detection \& Counting}{28}{section.5.2}%
+\contentsline {subsubsection}{\large Processing Pipeline}{28}{section.5.2}%
+\contentsline {subsubsection}{\large Ground Impact}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Autonomous Payload Drop Mechanism (Gripper)}{29}{section.5.3}%
+\contentsline {subsubsection}{Gripper Engineering}{29}{section.5.3}%
+\contentsline {subsubsection}{Drop Intelligence}{29}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Innovations and Future Scope}{30}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Bill of Materials}{31}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Appendix}{32}{chapter.8}%

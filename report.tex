@@ -1,9 +1,11 @@
 \documentclass[12pt]{report}
 \usepackage[a4paper, margin=0.5in]{geometry}
-\usepackage{tikz, xcolor, graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array, float, caption}
+\usepackage{tikz, xcolor, graphicx, wrapfig, hyperref, amsmath, amssymb, geometry, array, float, caption, placeins, tabularx, booktabs}
+
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[scaled]{helvet}
 \usepackage[table]{xcolor}
+\usetikzlibrary{shapes, arrows}
 \geometry{margin=1in}
 
 
@@ -207,19 +209,20 @@
           Battery	({\small Orange 5200mAh 11.1V
 3S)} & 360  \\
           GPS – Neo M8N & 	23  \\
-          \textcolor{red}{Transmitter (SkyDroid)} & 	\textcolor{red}{525} \\
-          Receiver & 17 \\
+          \textcolor{red}{Transmitter (RadioMaster)} & 	\textcolor{red}{370} \\
+          Receiver & 0.55 - 1 \\
+          VTX & 5.6 \\
+          HDMI to AV Converter & 40 \\
           Payload	& 200 \\
-          Additional Wiring & 50 \\
           Servo Motor & 10 \\
           Propellor (9") & 40 \\
           Estimated Frame Weight & 700 \\
           \hline
-          \textbf{\textit{Total:}} & \textbf{2330} \\
+          \textbf{\textit{Total:}} & \textbf{2354.6} \\
           \hline
         \end{tabular}
       \end{table}
-      \textcolor{red}{ \textbf{Note:} The transmitter is not a part of the UAS itself, so effective drone weight is \textbf{1805gms}. }
+      \textcolor{red}{ \textbf{Note:} The transmitter is not a part of the UAS itself, so effective drone weight is \textbf{1984.6gms}. }
       
   % ============== Propulsion ====================
     \section{Thrust Requirement \& Propulsion System Selection}
@@ -370,40 +373,42 @@
     \section{Aircraft Sizing}
     These are 2D schematics to ensure more precise depiction of the diagrams. 3D CAD schematics are provided in the \hyperref[chap:appendix]{\textbf{Appendix}} section.
 
-      \subsection*{Rotor Arm}
+    \subsection*{Propeller Clearance \& Rotor Arm}
+    Our propellers have a diameter of 9in. 1in = 25.4mm, so that means the diameter is 228.6mm. Each prop is placed 250mm away from the center (side-by-side adjacent distance), so the clearance is 250mm - 228.6mm = 21.4mm. \textbf{Rotor Arm} is approximately 120mm according to our schematics.
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=0.8\textwidth]{prop_clear.jpeg}
+        \end{center}
+        \caption{\small Propeller Clearance is around 21.4mm}\label{fig:propclear}
+    \end{figure}
+      
+      
       \subsection*{Hub}
       \noindent
-      \begin{minipage}{0.48\textwidth}
-          \centering
-          \includegraphics[width=\linewidth]{hub1.png}
-          \captionof{figure}{Hub Side}
-      \end{minipage}%
-      \hfill
-      \begin{minipage}{0.48\textwidth}
-          \centering
-          \includegraphics[width=0.7\linewidth]{hub3.png}
-          \captionof{figure}{Hub Rear}
-      \end{minipage}
+      \begin{minipage}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{hub1.png}
+    \captionof{figure}{Hub Side}
+\end{minipage}%
+\hfill % Removes extra space in between images
+\begin{minipage}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{hub3.png}
+    \captionof{figure}{Hub Rear}
+\end{minipage}%
+\hfill % Removes extra space in between images
+\begin{minipage}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{hub2.png}
+    \captionof{figure}{Hub Top}
+\end{minipage}
 
-      \vspace{1em}  % Space between rows
-
-      % Second row: center-aligned image
-      \begin{center}
-      \begin{minipage}{0.5\textwidth}
-          \centering
-          \includegraphics[width=1\linewidth]{hub2.png}
-          \captionof{figure}{Hub Top}
-      \end{minipage}
-      \end{center}
-      \subsection*{Propeller Clearance}
-      
-      \subsection*{Landing Gear}
+\subsection*{Landing Gear}
       \begin{minipage}{0.4\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{landing1.png}
         \captionof{figure}{Rear View}
         \stepcounter{figure}
-
       \end{minipage}%
       \hfill
       \begin{minipage}{0.32\textwidth}
@@ -411,14 +416,15 @@
           \includegraphics[width=1\textwidth]{landing2.png}
           \captionof{figure}{Side View}
       \end{minipage}%
-      \subsection*{Wheelbase}
-      \begin{figure}[h]
-        \centering 
-        \includegraphics[width=0.5\textwidth]{wheelbase.png}
-        \caption{Wheelbase = 422.02mm} 
-        \label{fig:wheelbase}
-      \end{figure}
 
+     
+    \subsection*{\centering Wheelbase}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{wheelbase.png}
+        \caption{Wheelbase = 422.02mm}
+        \label{fig:wheel}
+    \end{figure}
       \clearpage
 
         
@@ -469,7 +475,7 @@
         \end{itemize}
         While this represents only \textbf{1.49 \%} of the total system power draw, the avionics demand is non-negotiable and continuous, requiring high uptime and precision. Power is supplied via a regulated DC bus derived from the main propulsion battery, with dedicated buck converters providing clean and stable 5V and 3.3V rails to sensitive electronics.
 
-        \subsubsection{\large Margins, Safety Factors}
+        \subsubsection{\Large Margins, Safety Factors}
         \textbf{\large Power Budget Margin:} \\
         \begin{enumerate}
           \item \textbf{Purpose:} To ensure that the chosen power source (battery) and propulsion system can consistently provide sufficient power, even under demanding conditions or if components don't perform exactly to spec.
@@ -527,12 +533,77 @@
         \end{enumerate}
 
         
-
+\newpage
   %========== Material Selection ========
     \section{Material Selection}
-      \subsection{Structural Frame, Airframe Components}
-    
+      ABS meets our requirements with its strength, lightweight, durability, and thermal stability. Its cost-effectiveness and printability make it ideal for reliable, efficient drone components. Thus, we chose ABS for our designs.
 
+
+
+% Define bold column
+\newcolumntype{B}{>{\bfseries}X}
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{\textwidth}{|B|X|X|}
+\hline
+\multicolumn{3}{|c|}{\large \textbf{ABS Material Properties and Drone Application Relevance}} \\
+\hline
+\textbf{Property} & \textbf{Material Description} & \textbf{Use Justification} \\
+\hline
+
+Mechanical Properties & 
+Impact resistance: High  
+Tensile strength: 30–45 MPa  
+Flexibility: Moderate & 
+Withstands crashes and hard landings.  
+Can endure flight forces and minor impacts.  
+Absorbs shocks effectively. \\
+\hline
+
+Density & 
+Low density: $\sim$1.04 g/cm\textsuperscript{3} & 
+Lightweight material improves flight efficiency and increases battery life. \\
+\hline
+
+Thermal Properties & 
+Glass transition temperature: $\sim$105°C  
+Stable under moderate heat & 
+Resists deformation from motor heat or sunlight.  
+Performs consistently in various environmental conditions. \\
+\hline
+
+Chemical Resistance & 
+Resistant to oils, acids, and alkalis & 
+Suitable for drones exposed to industrial or outdoor environments with potential chemical exposure. \\
+\hline
+
+Printability & 
+Good layer adhesion  
+Requires heated bed and controlled environment to avoid warping  
+Easy post-processing (e.g., sanding, acetone smoothing) & 
+Ensures durable, smooth, and aerodynamic drone parts.  
+Customizable designs for prototyping and functional components. \\
+\hline
+
+Cost-Effectiveness & 
+Relatively low cost compared to alternatives & 
+Ideal for functional prototypes and small-scale production without compromising on quality. \\
+\hline
+
+Comparison with Alternatives & 
+\textbf{PLA:} Brittle, less heat-resistant  
+\textbf{Nylon:} Durable but expensive, harder to print  
+\textbf{Carbon Fiber Composites:} Strong, lightweight, but costly and harder to process & 
+ABS balances cost, durability, and ease of use compared to alternatives. \\
+\hline
+\end{tabularx}
+\caption{Properties and Evaluation of ABS Material for Drone Applications}
+\end{table}
+
+\newpage
   %========= Ground Control
     \section{Avionics Subsystems Selection}
       \subsection{Detailed Component Breakdown}
@@ -556,12 +627,14 @@
 
       \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.5\textwidth]{jetson.png}
+        \includegraphics[width=0.459\textwidth]{jetson.png}
         \caption{NVIDIA Jetson Orin Nano 8GB Module}
         \label{fig:jetson}
       \end{figure}
 
-      We selected this module not only for its impressive up to \textbf{40 TOPS} of AI performance but also for its \textbf{low power footprint}, which makes it ideal for flight-based applications where every gram and watt matter. The 8GB RAM ensures sufficient memory for running heavy models, such as convolutional neural networks for visual recognition or SLAM algorithms for path planning. \\
+     
+       We selected this module not only for its impressive up to \textbf{40 TOPS} of AI performance but also for its \textbf{low power footprint}, which makes it ideal for flight-based applications where every gram and watt matter. The 8GB RAM ensures sufficient memory for running heavy models, such as convolutional neural networks for visual recognition or SLAM algorithms for path planning. \\
+
 
       The Jetson Orin Nano interfaces seamlessly with the Pixhawk flight controller via UART or serial USB connections, enabling a tight coupling between autonomous decision-making and low-level control. For example, live video feed from an \textbf{ESP32-CAM} or other camera modules is processed onboard the Jetson, where the output — such as target coordinates or navigation commands — is relayed to the Pixhawk for actuation. \\
 
@@ -570,29 +643,16 @@
       In essence, the NVIDIA Jetson Orin Nano 8GB empowers our drone with a true edge-AI brain — transforming it from a remotely controlled vehicle into a \textbf{fully autonomous aerial system} capable of intelligent flight and mission execution.
 
       \subsubsection{\large Cameras}
-Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad visual perspective, which enhances situational awareness and spatial navigation.
+      We're using two Raspberry Pi Cam V2, one in the front for FPV purpose.. and another in the belly of the drone for obejct detection and payload drop purpose.
 
-      We're using two different cameras, for two different purposes:
-      \begin{enumerate}
-          \item \textbf{FPV:} Caddx Ant Lite Analog Camera (FPV Cycle Edition) (4:3)
-          \item \textbf{Object Detection:} Official Raspberry Pi Camera V2
-      \end{enumerate}
-
-      \noindent They will be placed in the drone as follows: 
-      \begin{itemize}
-        \item In this project, the Caddx Ant Lite serves as a live FPV feed camera transmitting real-time visuals to the ground control station.
-        \item The \textbf{Raspberry Pi Camera V2} handles object detection tasks. This will be deployed on the belly of the UAV. This will provide as a guide to the gripper mechanism as well. 
-      \end{itemize}
-
-      \newpage
-      \noindent \textbf{\large Official Raspberry Pi Camera V2} \\
       \begin{wrapfigure}{r}{0.3\textwidth}
           \includegraphics[width=1\linewidth]{rpicam.png}
           \caption{Raspberry Pi Cam V2}
           \label{fig:rpicam}
         \end{wrapfigure}
 
-        We have chosen this camera for the following reasons:
+        
+        \noindent We have chosen this camera for the following reasons:
         \begin{itemize}
           \item \textbf{\textit{8 Megapixel Sony IMX219 Sensor:}} Offers high-resolution image capture (3280 x 2464), which ensures that our object detection models get detailed input — especially helpful for detecting small or distant objects. 
           \item \textbf{\textit{1080p30 / 720p60 / 640x480p90 Video Modes:}} High frame rates allow for real-time object detection, essential in robotics, drones, and surveillance applications.
@@ -601,23 +661,9 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
           \item \textbf{\textit{CSI Interface for Direct Connection:}} Connects via the CSI-2 interface (Camera Serial Interface), which provides higher bandwidth and lower CPU usage compared to USB webcams — ideal for high-performance detection tasks.
           \item \textbf{\textit{Excellent Linux + OpenCV + TensorFlow Compatibility:}} Fully supported in Raspberry Pi OS, Jetson Nano, and other edge-AI platforms, with drivers readily available for OpenCV and GStreamer pipelines.
         \end{itemize}
-        \vspace{1cm} 
-        \noindent \textbf{\large Caddx Ant Lite Analog Camera} \\
-        \begin{wrapfigure}{r}{0.3\textwidth}
-          \includegraphics[width=1\linewidth]{fpvcam.png}
-          \caption{Caddx Ant Lit Analog Camera}
-          \label{fig:fpvcam}
-        \end{wrapfigure}
-
-        This FPV cam is good for the following reasons:
-        \begin{itemize}
-          \item \textbf{\textit{Ultra-Low Latency Analog Transmission:}} The Ant Lite supports analog video out, which is preferred in FPV racing and manual drone piloting due to its near-zero latency — crucial for split-second control.
-          \item \textbf{\textit{1200TVL Resolution:}} Offers high clarity and detail with 1200TVL (TV lines), ensuring pilots can clearly identify obstacles, gates, and terrain features during flight.
-          \item \textbf{\textit{Wide Field of View (FOV):}} Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad visual perspective, which enhances situational awareness and spatial navigation.
-        \end{itemize}
-        \clearpage
-        \subsubsection{\large Transmitter}
-        \begin{wrapfigure}{r}{0.3\textwidth}
+        
+        \subsubsection{\large Transmitter: {RadioMaster Pocket Radio Controller (M2) ELRS}}
+        \begin{wrapfigure}{r}{0.4\textwidth}
           \includegraphics[width=1\linewidth]{transmitter.png}
           \caption{Radiomaster Pocket Radio CC2500/ELRS}
           \label{fig:transmitter}
@@ -629,9 +675,85 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
           \item \textbf{\textit{OpenTX/EdgeTX Firmware:}} Runs EdgeTX, a customizable, open-source firmware for transmitters. Lets us configure \textbf{custom mizes, telemetry screens, voice alerts, programmable switches.}
           \item \textbf{\textit{Telemetry Support:}} When paired with the RP1 V2 or telemetry-capable CC2500 receivers, it supports real-time telemetry data: \textit{battery voltage, GPS coordinates, RSSI, link quality etc.}
         \end{itemize}
+        \vspace{0.5cm}
 
-        \textcolor{red}{\textbf{Problem:} we're using mavlink and elrs.. but that is not compatible.. we need to discuss and clarify this part.}
+        \subsubsection{\large Receiver: RP1 V2 ExpressLRS 2.4ghz Nano Receiver}
+        Both the RP1 V2 receiver and our Radiomaster Pocket TX use ExpressLRS 2.4GHz, a modern, open-source RC link. That means no special configuration or cross-protocol hacks needed — they speak the same language out of the box. It also has Ultra-low latency (5–20ms) — ideal for fast, precise drone control. \\ 
 
+        
+        \begin{figure}[H]
+          \centering  
+          \includegraphics[width=0.3\textwidth]{receiver.png}
+          \caption{RP1 V2 ExpressLRS 2.4ghz Nano Receiver}
+          \label{fig:receiver}
+        \end{figure}
+
+        The RP1 V2 is nano-sized and weighs less than 2g, so it's perfect for your drone’s weight budget. Great for aerodynamic efficiency and maintaining flight time. ELRS dynamically adjusts the packet rate and output power for optimal performance.
+
+\newpage
+        \subsubsection{\large Video Transmitter: SpeedyBee TX800 5.8GHz VTX}
+        The VTX (Video Transmitter) sends real-time video from the drone’s onboard camera to the pilot’s FPV goggles or ground station, enabling precise remote navigation and control.
+        \begin{figure}[H]
+          \centering  
+          \includegraphics[width=0.3\textwidth]{vtx.png}
+          \caption{SpeedyBee TX800 5.8GHz VTX}
+          \label{fig:vtx}
+        \end{figure}
+
+        We're using the \textbf{SpeedyBee TX800 5.8GHz VTX} because it offers high power output (up to 800mW) for long-range, interference-resistant video transmission, multiple channel support for team use, and smartaudio control for easy configuration via Ardupilot (via MAVLink passthrough). Its \textbf{800mW output} ensures strong, stable FPV feed—critical for long-range missions.
+
+        \subsubsection{\large NEO-M8N GPS Module}
+         \begin{wrapfigure}{r}{0.3\textwidth}
+        \includegraphics[width=0.3\textwidth]{gps.png}
+        \caption{NEO-M8N GPS Module}
+        \label{fig:gps}
+      \end{wrapfigure}
+
+        It supports multi-GNSS constellations (GPS, GLONASS, Galileo, BeiDou), which improves satellite lock speed and position accuracy, even in challenging environments. With an update rate of up to 10 Hz, it delivers real-time, high-refresh positional data to your flight controller—crucial for autonomous missions, waypoint navigation, and return-to-home functions. \\ 
+             
+        It also integrates seamlessly with ArduPilot via UART, often including a compass module (like HMC5883L or QMC5883L), which helps stabilize heading and orientation. This makes the NEO-M8N a reliable, cost-effective, and flight-proven GPS solution for competitive UAV applications like Aerothon.
+
+        \subsubsection{\large HDMI-to-RCA Converter}
+         \begin{wrapfigure}{r}{0.3\textwidth}
+        \includegraphics[width=0.3\textwidth]{hdmi2rca.png}
+        \caption{HDMI-to-RCA}
+        \label{fig:hdmi2rca}
+      \end{wrapfigure}
+      We're usign this to convert the video output from Jetson Nano to analog via a HDMI cable output. This supports 480i/576i output (works with analog displays or FPV AV transmitters). Plug and play, no drivers or config needed.\\ 
+
+Works with Raspberry Pi, laptops, or flight controllers that output HDMI (if needed for onboard video conversion).
+
+\newpage
+          \subsection{Communication System Framework}
+          \subsubsection{\large RC Link}
+            The Radio Control \& Telemetry link being used is ELRS. ELRS stands for ExpressLRS. Some of the benefits of ELRS are -
+            \begin{itemize}
+              \item Compatibility and interoperability with Ardupilot GSC as well as ROS ecosystem.
+              \item Long Range (compared to traditional 2.4GHz systems)
+              \item Telemetry (over Mavlink)
+              \item Versatile hardware and software support due to the open source nature.
+            \end{itemize}
+
+          \noindent The 2.4GHz ELRS communication link comprises of control and telemetry data, the packet rates and bandwidth of which can be adjusted according to the latency, range and signal strength required. The ELRS link is also fully compatible with the Ardupilot Flight Control software which provides open access to the Mission Planner Ground Control Software. This enables various smart features such as -
+          \begin{itemize}
+            \item Geofencing.
+            \item Waypoint-based GPS navigation.
+            \item Python language based control of the UAV during autonomous operation.
+            \item Various failsafe triggers along with support for custom failsafe routines.
+            \item Automation of the payload drop mechanism through the onboard flight computer via mavlink.
+          \end{itemize}
+
+          \noindent The Jetson Nano (flight computer) is the intermediary between the Digital cameras mounted on the UAV and the analog video transmitter unit. The schematic is as follows:
+
+        \begin{figure}[H]
+          \centering 
+          \includegraphics[width=0.9\textwidth]{2D_schematic.png}
+          \caption{Schematic of Communication Framework}
+          \label{fig:framework}
+        \end{figure}
+    \noindent This setup allows for dynamic switching of both feeds as per need. The feed to be transmitted can be selected on GCS and the corresponding feed will be outputted over HDMI as an external display signal. This allows for onboard processing of the video feed on the UAV itself and subsequent transmission, avoiding latency issues encountered with offboard processing based systems.
+
+    \newpage
     \section{Autonomous Navigation System}
       \subsection{Hardware Setup}
       The hardware setup for autonomous navigation primarily consists of -
@@ -653,11 +775,60 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
         \item Marker Tracker library for autonomous payload dropping.
         \item Failsafe ROS2 node which stops the UAV in 3d space in order to a prevent collision by utilizing data from the Ultrasonic Sensor Array.
       \end{enumerate}
-
-
+\newpage
     \section{C.G. Calculation \& Stability Analysis}
-      \subsection{Lift, Drag and Stability Considerations}
-      \subsection{Center of Gravity Position \& Trim}
+    \section*{Mass Properties of New UDSAV}
+
+\textbf{Configuration:} Default  
+\\
+\textbf{Coordinate system:} -- default --  
+
+\vspace{1em}
+\textbf{Mass:} 734.38 grams  
+\\
+\textbf{Volume:} 686326.54 cubic millimeters  
+\\
+\textbf{Surface area:} 404467.91 square millimeters  
+
+\vspace{1em}
+\textbf{Center of mass (millimeters):}  
+\begin{itemize}
+  \item X = -42.86  
+  \item Y = 72.66  
+  \item Z = 18.98  
+\end{itemize}
+
+\vspace{1em}
+\textbf{Principal axes of inertia and principal moments of inertia (grams $\cdot$ mm\textsuperscript{2})}  
+\textit{Taken at the center of mass}  
+\[
+\begin{array}{lll}
+\text{Axis} & \text{Principal Moment (g$\cdot$mm\textsuperscript{2})} \\
+( 0.000,\ -0.001,\ 1.000 ) & I_{px} = 4364311.10 \\
+( 1.000,\ 0.005,\ 0.005 ) & I_{py} = 5070622.83 \\
+( 0.005,\ 1.000,\ 0.001 ) & I_{pz} = 7387707.58 \\
+\end{array}
+\]
+
+\vspace{1em}
+\textbf{Moments of inertia (grams $\cdot$ mm\textsuperscript{2})}  
+\textit{Taken at the center of mass and aligned with the output coordinate system}  
+\[
+\begin{array}{llll}
+I_{xx} = 5077527.82 & I_{xy} = -182965.60 & I_{xz} = -2193.50 \\
+I_{yy} = 1236636.10 & I_{yz} = 723658.63 & I_{zz} = 4564390.02 \\
+\end{array}
+\]
+
+\vspace{1em}
+\textbf{Moments of inertia (grams $\cdot$ mm\textsuperscript{2})}  
+\textit{Taken at the output coordinate system (using absolute accuracy)}  
+\[
+\begin{array}{llll}
+I_{xx} = 9219433.51 & I_{xy} = -2180617.87 & I_{xz} = -599741.09 \\
+I_{yy} = 2610687.76 & I_{yz} = 8990434.29 & I_{zz} = 9591054.61 \\
+\end{array}
+\]
 
   % =========== Computationl Analysis ============
   \chapter{Computational Analysis}
@@ -670,7 +841,13 @@ Features a 2.1mm lens with a wide FOV (up to 165°), giving the pilot a broad vi
 
 Open-source and proprietary tools like ANSYS and SolidWorks Simulation were used. These analyses guided material thickness choices, arm length adjustments, and center of mass alignment to enhance both flight performance and structural durability.
 
-
+      \begin{figure}[H]
+        \begin{center}
+          \includegraphics[width=0.8\textwidth]{fem.jpeg}
+        \end{center}
+        \caption{FEM Analysis}\label{fig:femanalysis}
+      \end{figure}
+      
 
     \section{CAD Model and Performance Validation}
     A comprehensive 3D CAD model of the drone was created using SolidWorks to visualize and validate all mechanical subsystems.
@@ -680,22 +857,147 @@ Open-source and proprietary tools like ANSYS and SolidWorks Simulation were used
       \item \textbf{Design-to-Prototype Transition:} The finalized CAD was used to generate 2D technical drawings for 3D printing, and component fabrication. It served as the backbone for building a physically accurate prototype, ensuring minimal mismatch between design and build.
     \end{enumerate}
   % =========== Safety, Compliance & Risk Assessment====== 
-  \chapter{Safety \& SORA Assessment}
-    \subsubsection{\Large Risk Analysis and Mitigation Strategies}
+  \subsubsection{\LARGE Safety \& SORA Assessment} 
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{sora.png}
+    \end{center}
+    \caption{}\label{fig:sora}
+  \end{figure}
+
+  These features are present in the ardupilot software and can be configured to our needs.
+This helps us to ensure the safety of the drone and environment around it.
+Links to the saftey features in detailed will be shared in appendix
+  
       
   % ========= Conclusion & Future Work =====
   \chapter{Methodology for Autonomous Operations}
     \section{Flight Control Algorithm}
-    The flight control algorithm primarily consists of a setup based upon the ROS2 architecture. Here, multiple operation nodes will be executed as subroutines based upon their required use. The communication between the nodes will be based upon a subscriber-publisher relationship.\\
+    The flight control algorithm primarily consists of a setup based upon the ROS2 architecture. Here, multiple operation node/addis will be executed as subroutines based upon their required use. The communication between the nodes will be based upon a subscriber-publisher relationship.\\
 
 Under the various nodes, there is a primary node which decides upon the flight path. The flight path is generated using the geofence co-ordinates as the boundary then a maximum coverage algorithm is utilised to effectively scan the whole bound area for objects and disaster scenarios. The master node also runs the image recognition model which identifies objects in the frame. Then a counter slave node is called upon which inputs the incoming feed and outputs the number of objects identified under each class. This is a separate CNN meant for accurate counting. Another slave node is present for more classification of the disaster once a signal is received from the master node. The type of disaster is returned to the master node. The same feed is sent into a "headcount" which identifies the number for human bodies in the frame to look for potential survivors in the area, after notification from the master node.\\
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{night.mp4.jpg}
+  \end{center}
+  \caption{Stiching Using Panorama}\label{fig:night}
+\end{figure}
+
 
 As the mapping is completed, a "stiching" node inputs the video feed to turn the feed into a panorama map by utilizing the time series accelerometer data. This is then further fed into the object classification node for a final object count to ensure optimal accuracy. The following routine is executed during the Autonomous operation of the UAV. Our unique approach to cross checking with the stiched map ensures accuracy as it directly reduces the chances for one object getting counted multiple times if the UAV crosses an area twice. The divided processing approach based on the nodal architecture ensures optimal computation usage and saves on energy as well, which is an important factor for on-board processing systems.
 
     \section{Object Detection \& Counting}
+    Our model is built on deep learning frameworks like YOLOv8  trained extensively on real-world disaster scenarios:
+\begin{itemize}
+  \item Human and Survivor Detection: Pinpoint stranded individuals quickly.
+  \item Vehicle \& Animal Identification: Understand evacuation conditions or trapped animals.
+  \item Structural Feature Analysis: Detect broken rooftops, scattered debris, and partially collapsed infrastructure.
+\end{itemize}
+
+Beyond object recognition, the drone is equipped with environmental sensing intelligence:
+\begin{itemize}
+  \item Flood Detection: Using color segmentation, motion tracking, and boundary anomaly mapping to recognize overflow zones.
+  \item Fire Detection: Utilizing flame color profiles and motion-based flame dynamics; enhanced with thermal imaging when available.
+  \item Damage Recognition: Edge detection and shape analysis identify collapsed structures and terrain changes that indicate danger zones.
+\end{itemize}
+
+\subsubsection{\large Processing Pipeline}
+Each frame from the drone's onboard camera undergoes an accelerated data pipeline:
+\begin{itemize}
+  \item Live Capture: Stabilized image stream from onboard camera.
+  \item Fast Inference: Jetson device runs object detection using TensorRT-optimized deep learning models.
+  \item Tracking \& Validation: Deep SORT tracks objects persistently and filters false positives.
+  \item Disaster Awareness Overlay: Visual tags like “Fire”, “Flooded Area”, or “Human Detected” are displayed with bounding boxes—turning raw footage into actionable insight.
+\end{itemize}
+
+    \subsubsection{\large Ground Impact}
+    What good is vision if it doesn’t translate into action?
+\begin{itemize}
+  \item Real-time Alerts: Visual and audible notifications via onboard LEDs, buzzers, or wireless communication.
+  \item Geo-Tagged Data Logs: Every detection is timestamped and GPS-tagged for immediate relay to rescue teams.
+  \item Aerial Mapping: A bird’s eye view of the hazard zones with object counts and threat labels—a living map to guide boots on the ground.
+\end{itemize}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{obj.png}
+  \end{center}
+  \caption{}\label{fig:obj}
+\end{figure}
+
+
     \section{Autonomous Payload Drop Mechanism (Gripper)}
+    In critical scenarios, delayed aid is denied aid. Our second module ensures that the drone does more than just report—it responds. Through a precisely-engineered servo-actuated gripper system, the drone can autonomously deliver essential supplies with centimeter-level precision—whether it’s a medical kit, a water bottle, or communication tools.
+
+    \subsubsection{Gripper Engineering}
+    A durable, lightweight, two-finger gripper is mounted beneath the drone:
+    \begin{itemize}
+      \item Controlled by a high-precision PWM-driven servo, activated by the Jetson via GPIO.
+      \item Payload capacity of 500g, with reinforced grip pads for flight stability.
+      \item Designed for modular upgrades (magnet-based attachments, spring-loaded release, etc.).
+    \end{itemize}
+
+    \subsubsection{Drop Intelligence}
+    \begin{enumerate}
+      \item \textbf{Option A: GPS-Triggered Release}
+        \begin{itemize}
+          \item Constantly monitors live GPS coordinates.
+          \item When drone enters target radius (e.g., 3–5m), drop logic initiates the release.
+        \end{itemize}
+      \item \textbf{Option B: Vision-Based Drop}
+        \begin{itemize}
+          \item Uses onboard camera to detect  high-contrast visual markers.
+          \item Verifies drone position and stability before executing release—a precise, visual-based delivery system.
+
+        \end{itemize}
+      \item \textbf{Built-In Redundancy}
+        \begin{itemize}
+          \item Height and Position Checks: Confirms correct altitude before triggering drop.
+          \item Manual Override: Remote-based abort options via MAVLink.
+          \item Post-Drop Feedback: Sensor signal confirms payload release with optional auditory cue or digital flag.
+        \end{itemize}
+    \end{enumerate}
+
 
   \chapter{Innovations and Future Scope}
+  As a future enhancement, we envision integrating a stitching node that converts video feeds into a panoramic map using time-series accelerometer data. This map would feed into an advanced object classification node to ensure more accurate counts. By cross-referencing with the stitched map, we aim to reduce duplicate detections when the UAV revisits the same area. This nodal, divided-processing architecture not only boosts accuracy but also optimizes onboard computation and energy efficiency—key factors for real-time autonomous UAV operations. \\ Few images from our attempts at this innovation: 
+
+  \noindent
+      \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{test_down.jpg}
+        \captionof{figure}{Image 1}
+    \end{minipage}%
+    \hfill
+      \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{sea.mp4.jpg}
+        \captionof{figure}{Image 2}
+    \end{minipage}%
+    \hfill
+      \begin{minipage}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{road.mp4.jpg}
+        \captionof{figure}{Image 3}
+    \end{minipage}%
+    
+    \vspace{0.5cm}
+    The script used to iterate this process has been added in the appendix. \\
+
+    \noindent \textbf{Hardware Enhancements}
+    \begin{itemize}
+      \item Use carbon fiber composites to reduce weight further while increasing structural strength.
+      \item Experiment with lightweight, impact-resistant polymers for additional durability.
+    \end{itemize}
+    \noindent \textbf{Software Enhancements:} Swarm Intelligence -> Enable multiple drones to collaborate for large-scale disaster assessments or coordinated payload delivery. \\ 
+
+    \noindent \textbf{Mission Specific Enhancements:} Disaster Response Toolkit 
+    \begin{itemize}
+      \item Add modular attachments like water sprinklers for firefighting or chemical sensors for hazardous material detection.
+      \item Equip drones with loudspeakers for communication during search-and-rescue missions.
+    \end{itemize}
+
   \chapter{Bill of Materials}
     \begin{table}[h!]
       \centering
@@ -706,22 +1008,26 @@ As the mapping is completed, a "stiching" node inputs the video feed to turn the
           \hline
           NVIDIA Jetson Orin Nano 8GB & 1 & 36,499 \\
           Pixhawk 2.4.8 Flight Controller & 1 & 11,179 \\
-          Cameras & 2 & 1,000 \\
+          Cameras & 2 & 3,200 \\
           SpeedyBee BL32 50A 4-in-1 ESC &1 &7139\\
           DYS D2836-7 1120KV Brushless Motor &4 &1,228\\
           Orange Pro-Range 5200mah 11.1V & 1 &3,653\\
           GPS – Neo M8N  &1 &1,500\\
+          HDMI-to-RCA & 1 & 200 \\
+          VTX & 1 & 3000 \\
           SkyDroid Transmitter  &1 & 12,075\\
-          Servo & 1& 500\\
+          Receiver & 1 & 1,700 \\
+          Servo & 1 & 500\\
           Frame  &1& 3,000\\
           9-inch Propellers & 4 &200\\
           \hline
-          \textbf{Total}  & --  & \textbf{83,257 /-}   \\      
+          \textbf{Total}  & --  & \textbf{90,357 /-}   \\      
           \hline
         \end{tabular}
     \end{table}
 
    \chapter{Appendix} 
+
 
 \end{document}
 
