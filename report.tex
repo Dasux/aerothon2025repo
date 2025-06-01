@@ -57,13 +57,7 @@
   % ============ [TABLE OF CONTENTS] ================
   \tableofcontents
   \newpage
-\begingroup
-  \let\clearpage\relax
-  \listoftables
-  \vspace{1in}
-  \listoffigures
-\endgroup
-  \newpage
+
 
   \newgeometry{left=1in, right=0.5in, top=0.5in, bottom=0.5in}
   \renewcommand{\arraystretch}{1.5}
@@ -832,7 +826,7 @@ I_{yy} = 2610687.76 & I_{yz} = 8990434.29 & I_{zz} = 9591054.61 \\
 
   % =========== Computationl Analysis ============
   \chapter{Computational Analysis}
-    \section{CFD / FEM / MATLAB Simulations}
+    \section{CFD / FEM Analysis}
     \subsubsection{\large CFD Analysis}
     The airflow around the drone was analyzed to optimize lift, minimize drag, and improve stability during low-speed operations like payload drop and hovering. Simulations focused on propeller wash interactions, pressure distribution, and vortex formation near the arms. This helped in validating the positioning of rotors and the overall aerodynamics of the UAV.
 
@@ -983,7 +977,6 @@ Each frame from the drone's onboard camera undergoes an accelerated data pipelin
     \end{minipage}%
     
     \vspace{0.5cm}
-    The script used to iterate this process has been added in the appendix. \\
 
     \noindent \textbf{Hardware Enhancements}
     \begin{itemize}
@@ -1027,6 +1020,219 @@ Each frame from the drone's onboard camera undergoes an accelerated data pipelin
     \end{table}
 
    \chapter{Appendix} 
+    The links to safety features:
+    \begin{itemize}
+      \item https://ardupilot.org/plane/docs/rtl-mode.html
+      \item https://ardupilot.org/plane/docs/geofencing.html
+      \item https://ardupilot.org/copter/docs/common-understanding-altitude.html
+      \item https://ardupilot.org/copter/docs/airspeed-estimation.html
+      \item https://ardupilot.org/copter/docs/common-3dr-radio-advanced-configuration-and-technical-
+        information.html 
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \subsubsection{\large Additional CAD designs for reference}
+    \begin{minipage}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{1.jpeg}
+    \captionof{figure}{}
+\end{minipage}%
+\hfill % Removes extra space in between images
+\begin{minipage}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{2.jpeg}
+    \captionof{figure}{}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{3.jpeg}
+    \captionof{figure}{}
+\end{minipage}%
+\hfill % Removes extra space in between images
+\begin{minipage}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{4.jpeg}
+    \captionof{figure}{}
+\end{minipage}
+
+
+   \begin{table}[h]
+      \centering
+      \caption{Motor Datasheet (DYS D2836-7 1120kV BLDC)}
+        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Motor KV (RPM/V) & 1120 \\
+          \hline
+          Motor Type & Brushless Motor \\
+          \hline
+          Compatible LiPO Batteries & 2S to 4S \\
+          \hline
+          Weight (g) & 70 \\
+          \hline
+          Shaft Diameter (mm) & $\Phi$4.0×49mm \\
+          \hline
+          Max. Power (W) & 336 \\
+          \hline
+          Maximum Thrust (gm) & 1130 \\
+          \hline
+          Compatible Propeller (inch) & 9×5 \\
+          \hline
+          Required ESC (A) & 40 \\
+          \hline
+        \end{tabular}
+
+      \caption{ESC Datasheet (SpeedyBee BL32 50A 4-in-1 ESC)}
+        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Continuous Current (A)	& 50\\
+          PWM Frequency Range (KHz) & 16 to 128\\
+          Input Power (W)	& 3-6S LiPo \\
+          Current Sensor Input	& Support (Scale=490 Offset=0) \\
+          Mounting Hole Diameter (mm)	& 30.5 x 30.5mm( {\small 4mm hole diameter}) \\
+          Length (mm)	&          45.6\\
+          Width (mm)	&      40 \\
+          Height (mm)	&        8.8 \\
+          Weight (g)	& 19.2g with heat sink\\
+          \hline
+        \end{tabular}
+      
+      \caption{Propeller Datasheet (HQProp Thin Electric Prop 9×5 (2CCW) Propeller)}
+        \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{6cm}|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Material & Carbon Fiber Composite\\
+          Rotation Direction	& CCW\\
+          Pitch(inch)	& 5\\
+          No. of Blades &	2\\
+          Hub Diameter (mm)	& 18\\
+          Hub Thickness (mm) &	7\\
+          Shaft Size (mm) &	9.5/8/6\\
+          Adapter Rings (mm) & 6/5/4/3\\
+          Weight (g) &	9, (each)\\
+          \hline
+        \end{tabular}
+      \end{table}
+
+      \begin{table}[h!]
+      \centering
+      \caption{Battery Datasheet (Orange 11.1V 5200mAh 3S)}
+        \begin{tabular}{|l|c|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Voltage & 11.1V (3S) \\
+          \hline
+          Capacity & 5.2Ah \\
+          \hline
+          C-Rating (Continuous) & 35C \\
+          \hline
+          Theoretical Max Discharge Current & $35 \times 5.2 = \mathbf{182A}$ \\
+          \hline
+          Stated Max Discharge Current (datasheet) & 156A \\
+          \hline
+          System Current Draw (4 motors @ 24A) & $4 \times 24 = \mathbf{96A}$ \\
+          \hline
+              Flight Time @ Full Throttle (96A) & $\frac{5.2}{96} = \mathbf{3.25 \text{ minutes}}$ \\
+          \hline
+          Flight Time @ Moderate Throttle (60A) & $\frac{5.2}{60} = \mathbf{5.2 \text{ minutes}}$ \\
+          \hline
+          Energy Capacity & $11.1 \times 5.2 = \mathbf{57.72\,Wh}$ \\
+          \hline
+        \end{tabular}
+      
+        \caption{Flight Controller Datasheet (Pixhawk 2.4.8)}
+        \begin{tabular}{|l|p{6cm}|}
+          \hline
+          \textbf{Parameter} & \textbf{Value} \\
+          \hline
+          Input Voltage (V)	& 7V \\
+          Firmware	   &   Mission Planner \\
+          Sensor	 &  {\small 3-Axis Gyrometer, Accelerometer, High-performance Barometer, Magnetometer} \\
+          Processor	 &    {\small 32bit STM32F427 Cortex M4 core with FPU, The 32-bit STM32F103 failsafe Co-processor} \\
+          Micro SD Card Slot (Y/N)	    &   Yes \\
+          Dimensions {\small (L x W x H) mm}	   &   82 x 50 x 16 \\
+          Weight (g)	 &    40 \\
+          \hline
+        \end{tabular}
+      \end{table}
+
+      \begin{table}[h!]
+        \centering
+        \caption{Jetson Orin Nano 8GB Datasheet}
+      \begin{tabular}{|p{4.5cm}|p{8.5cm}|}
+        \hline
+        \textbf{Specification} & \textbf{Details} \\
+        \hline
+        AI Performance & 40 TOPS \\
+        \hline
+        GPU & 1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores \\
+        \hline
+        CPU & 6-core Arm\textsuperscript{\textregistered} Cortex\textsuperscript{\texttrademark}-A78AE v8.2 64-bit CPU @ 1.5GHz \\
+        \hline
+        Memory & 8GB 128-bit LPDDR5 @ 68GB/s \\
+        \hline
+        Storage & Supports external NVMe \\
+        \hline
+        Camera Support & Up to 4 cameras (via 8 virtual channels), 8 MIPI CSI-2 lanes, D-PHY 2.1 (up to 20Gbps) \\
+        \hline
+        Display Output & 1x 4K30 via DP 1.2 (+MST) / eDP 1.4 / HDMI 1.4 \\
+        \hline
+        Video Encode & 1080p30 supported by 1–2 CPU cores \\
+        \hline
+        Video Decode & 1x 4K60 (H.265), 2x 4K30 (H.265), 5x 1080p60 (H.265), 11x 1080p30 (H.265) \\
+        \hline
+        Networking & 1x Gigabit Ethernet \\
+        \hline
+        USB Ports & 3x USB 3.2 Gen2 (10 Gbps), 3x USB 2.0 \\
+        \hline
+        Other I/O & 3x UART, 2x SPI, 2x I2S, 4x I2C, 1x CAN, DMIC \& DSPK, PWM, GPIOs \\
+        \hline
+        PCIe Support & 1x4 + 3x1 (PCIe Gen3, Root Port and Endpoint) \\
+        \hline
+        Power Consumption & 7W – 15W \\
+        \hline
+        Form Factor & 69.6mm × 45mm, 260-pin SO-DIMM connector \\
+        \hline
+      \end{tabular}
+      \end{table}
+    
+      \begin{table}
+        \centering
+        \caption{VTX Datasheet (SpeedyBee TX800 5.8GHz Video Transmitter)}
+        \begin{tabular}{|>{\columncolor{cyan!20}}l|l|}
+    \hline
+    \textbf{Item Type:} & Transmitter \\ 
+    \hline
+    \textbf{Frequency (GHz):} & 5.8 \\ 
+    \hline
+    \textbf{Output Power (W):} & PIT/25mW/200mW/400mW/800mW \\ 
+    \hline
+    \textbf{Working Current (mA):} & 5V@250-750mA \\ 
+    \hline
+    \textbf{Input Voltage (V):} & 3.7-5V \\ 
+    \hline
+    \textbf{Video input impedance (ohm):} & 75 \\ 
+    \hline
+    \textbf{Antenna Connector Type} & MMCX \\ 
+    \hline
+    \textbf{Weight (g):} & 5.6 (without antenna) \\ 
+    \hline
+    \textbf{Size (mm):} & 28mm$\times$28mm$\times$20 \\ 
+    \hline
+    \textbf{Mounting holes:} & M4 holes on the PCB; M3 holes on the metal heat sink \\ 
+    \hline
+    \textbf{Shipping Weight} & 0.017 kg \\ 
+    \hline
+    \textbf{Shipping Dimensions} & 6.5 $\times$ 5 $\times$ 2.3 cm \\ 
+    \hline
+\end{tabular}
+      \end{table}
+
 
 
 \end{document}

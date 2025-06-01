@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.20)  1 JUN 2025 21:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.20)  1 JUN 2025 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,28 +910,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/base/8r.enc}] (./report.lot)
-\tf@lot=\write7
-\openout7 = `report.lot'.
-
- (./report.lof
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 4.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 7.
-)
-\tf@lof=\write8
-\openout8 = `report.lof'.
-
-
-
-[2]
+st/fonts/enc/dvips/base/8r.enc}]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -967,628 +946,637 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 74.
+(Font)              scaled to size 16.41594pt on input line 68.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 74.
+(Font)              scaled to size 16.41594pt on input line 68.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 78.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 11.39996pt on input line 78.
-<droneschematic2d.png, id=276, 390.70969pt x 305.64188pt>
+(Font)              scaled to size 11.39996pt on input line 72.
+<droneschematic2d.png, id=206, 390.70969pt x 305.64188pt>
 File: droneschematic2d.png Graphic file (type png)
 <use droneschematic2d.png>
-Package pdftex.def Info: droneschematic2d.png  used on input line 81.
+Package pdftex.def Info: droneschematic2d.png  used on input line 75.
 (pdftex.def)             Requested size: 244.55144pt x 191.30551pt.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 87.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/phv/b/sl' will be
-(Font)              scaled to size 11.39996pt on input line 87.
+(Font)              scaled to size 11.39996pt on input line 81.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
 
 
-[3
+[2
 
 
  <./droneschematic2d.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 100.
+(Font)              scaled to size 13.67995pt on input line 94.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 100.
+(Font)              scaled to size 13.67995pt on input line 94.
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
 
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+16.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 116.
 
+
+[3]
 
 [4]
-
-[5]
 Chapter 2.
 
-Overfull \hbox (5.82567pt too wide) in paragraph at lines 166--167
+Overfull \hbox (5.82567pt too wide) in paragraph at lines 160--161
 []\OT1/phv/m/n/12 Component Se-lec-tion: Each sub-sys-tem|propulsion, aero-dy-n
 am-ics, struc-ture, sen-sors|was
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
+
+
+[5
+
+]
+Chapter 3.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 203.
+<thrust3.png, id=243, 96.36pt x 160.6pt>
+File: thrust3.png Graphic file (type png)
+<use thrust3.png>
+Package pdftex.def Info: thrust3.png  used on input line 225.
+(pdftex.def)             Requested size: 85.5945pt x 142.65662pt.
 
 
 [6
 
-]
-Chapter 3.
-<thrust3.png, id=313, 96.36pt x 160.6pt>
-File: thrust3.png Graphic file (type png)
-<use thrust3.png>
-Package pdftex.def Info: thrust3.png  used on input line 231.
-(pdftex.def)             Requested size: 85.5945pt x 142.65662pt.
-
-
-[7
-
  <./thrust3.png>]
-<bldc.png, id=324, 235.63031pt x 220.57407pt>
+<bldc.png, id=254, 235.63031pt x 220.57407pt>
 File: bldc.png Graphic file (type png)
 <use bldc.png>
-Package pdftex.def Info: bldc.png  used on input line 241.
+Package pdftex.def Info: bldc.png  used on input line 235.
 (pdftex.def)             Requested size: 146.73235pt x 137.35695pt.
 
-Underfull \hbox (badness 1584) in paragraph at lines 242--242
+Underfull \hbox (badness 1584) in paragraph at lines 236--236
 []\OT1/phv/m/n/12 Figure 3.2: |DYS D2836-7
  []
 
-<esc.png, id=325, 139.27031pt x 152.06813pt>
+<esc.png, id=255, 139.27031pt x 152.06813pt>
 File: esc.png Graphic file (type png)
 <use esc.png>
-Package pdftex.def Info: esc.png  used on input line 254.
+Package pdftex.def Info: esc.png  used on input line 248.
 (pdftex.def)             Requested size: 146.73235pt x 160.21921pt.
 
 
-[8 <./bldc.png (PNG copy)> <./esc.png (PNG copy)>]
+[7 <./bldc.png (PNG copy)> <./esc.png (PNG copy)>]
 LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
-(Font)              scaled to size 13.67995pt on input line 269.
-<prop.png, id=330, 170.88844pt x 101.62968pt>
+(Font)              scaled to size 13.67995pt on input line 263.
+<prop.png, id=263, 170.88844pt x 101.62968pt>
 File: prop.png Graphic file (type png)
 <use prop.png>
-Package pdftex.def Info: prop.png  used on input line 271.
+Package pdftex.def Info: prop.png  used on input line 265.
 (pdftex.def)             Requested size: 146.73235pt x 87.26955pt.
 
-Underfull \hbox (badness 2384) in paragraph at lines 272--272
+Underfull \hbox (badness 2384) in paragraph at lines 266--266
 []\OT1/phv/m/n/12 Figure 3.4: |HQProp Thin
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 272--272
+Underfull \hbox (badness 1888) in paragraph at lines 266--266
 \OT1/phv/m/n/12 Elec-tric Prop 9\TS1/phv/m/n/12 Ö\OT1/phv/m/n/12 5 (2CCW)
  []
 
 LaTeX Info: Symbol \textrightarrow not provided by
             font family phv in TS1 encoding.
-            Default family used instead on input line 279.
+            Default family used instead on input line 273.
 LaTeX Info: Symbol \textrightarrow not provided by
             font family phv in TS1 encoding.
-            Default family used instead on input line 280.
+            Default family used instead on input line 274.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 7.59998pt on input line 291.
+(Font)              scaled to size 7.59998pt on input line 285.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 291.
+(Font)              scaled to size 5.69998pt on input line 285.
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 
 
-[9 <./prop.png (PNG copy)>]
+[8 <./prop.png (PNG copy)>]
+
+[9]
+
+LaTeX Warning: Hyper reference `chap:appendix' on page 10 undefined on input li
+ne 368.
+
+
 
 [10]
-
-LaTeX Warning: Hyper reference `chap:appendix' on page 11 undefined on input li
-ne 374.
-
-
-
-[11]
-<prop_clear.jpeg, id=352, 619.56468pt x 478.78876pt>
+<prop_clear.jpeg, id=286, 619.56468pt x 478.78876pt>
 File: prop_clear.jpeg Graphic file (type jpg)
 <use prop_clear.jpeg>
-Package pdftex.def Info: prop_clear.jpeg  used on input line 380.
+Package pdftex.def Info: prop_clear.jpeg  used on input line 374.
 (pdftex.def)             Requested size: 391.2838pt x 302.37639pt.
-<hub1.png, id=353, 237.13594pt x 124.96687pt>
+<hub1.png, id=287, 237.13594pt x 124.96687pt>
 File: hub1.png Graphic file (type png)
 <use hub1.png>
-Package pdftex.def Info: hub1.png  used on input line 390.
+Package pdftex.def Info: hub1.png  used on input line 384.
 (pdftex.def)             Requested size: 146.73235pt x 77.32802pt.
 
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 385.
+See the caption package documentation for explanation.
+
+<hub3.png, id=288, 161.10187pt x 142.28156pt>
+File: hub3.png Graphic file (type png)
+<use hub3.png>
+Package pdftex.def Info: hub3.png  used on input line 390.
+(pdftex.def)             Requested size: 146.73235pt x 129.59581pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 391.
 See the caption package documentation for explanation.
 
-<hub3.png, id=354, 161.10187pt x 142.28156pt>
-File: hub3.png Graphic file (type png)
-<use hub3.png>
-Package pdftex.def Info: hub3.png  used on input line 396.
-(pdftex.def)             Requested size: 146.73235pt x 129.59581pt.
+<hub2.png, id=289, 249.18094pt x 188.95593pt>
+File: hub2.png Graphic file (type png)
+<use hub2.png>
+Package pdftex.def Info: hub2.png  used on input line 396.
+(pdftex.def)             Requested size: 146.73235pt x 111.26967pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 397.
 See the caption package documentation for explanation.
 
-<hub2.png, id=355, 249.18094pt x 188.95593pt>
-File: hub2.png Graphic file (type png)
-<use hub2.png>
-Package pdftex.def Info: hub2.png  used on input line 402.
-(pdftex.def)             Requested size: 146.73235pt x 111.26967pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 403.
-See the caption package documentation for explanation.
-
-<landing1.png, id=356, 222.07968pt x 143.03438pt>
+<landing1.png, id=290, 222.07968pt x 143.03438pt>
 File: landing1.png Graphic file (type png)
 <use landing1.png>
-Package pdftex.def Info: landing1.png  used on input line 409.
+Package pdftex.def Info: landing1.png  used on input line 403.
 (pdftex.def)             Requested size: 195.63817pt x 126.00375pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 410.
+(caption)                particular \caption on input line 404.
 See the caption package documentation for explanation.
 
-<landing2.png, id=357, 173.14688pt x 142.28156pt>
+<landing2.png, id=291, 173.14688pt x 142.28156pt>
 File: landing2.png Graphic file (type png)
 <use landing2.png>
-Package pdftex.def Info: landing2.png  used on input line 416.
+Package pdftex.def Info: landing2.png  used on input line 410.
 (pdftex.def)             Requested size: 156.5165pt x 128.61885pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 417.
+(caption)                particular \caption on input line 411.
 See the caption package documentation for explanation.
 
 
 
-[12 <./prop_clear.jpeg> <./hub1.png (PNG copy)> <./hub3.png (PNG copy)> <./hub2
+[11 <./prop_clear.jpeg> <./hub1.png (PNG copy)> <./hub3.png (PNG copy)> <./hub2
 .png (PNG copy)>]
-<wheelbase.png, id=362, 326.72063pt x 352.31625pt>
+<wheelbase.png, id=300, 326.72063pt x 352.31625pt>
 File: wheelbase.png Graphic file (type png)
 <use wheelbase.png>
-Package pdftex.def Info: wheelbase.png  used on input line 424.
+Package pdftex.def Info: wheelbase.png  used on input line 418.
 (pdftex.def)             Requested size: 391.2838pt x 421.93874pt.
 
 
-[13 <./landing1.png (PNG copy)> <./landing2.png (PNG copy)> <./wheelbase.png (P
+[12 <./landing1.png (PNG copy)> <./landing2.png (PNG copy)> <./wheelbase.png (P
 NG copy)>]
-<battery.png, id=368, 242.40562pt x 163.3603pt>
+<battery.png, id=309, 242.40562pt x 163.3603pt>
 File: battery.png Graphic file (type png)
 <use battery.png>
-Package pdftex.def Info: battery.png  used on input line 436.
+Package pdftex.def Info: battery.png  used on input line 430.
 (pdftex.def)             Requested size: 146.73235pt x 98.88936pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Overfull \hbox (77.45654pt too wide) detected at line 443
+Overfull \hbox (77.45654pt too wide) detected at line 437
 [] \OT1/cmr/m/n/12 = [] = [] \OMS/cmsy/m/n/12 ^^Y \OT1/cmr/m/n/12 0\OML/cmm/m/i
 t/12 :\OT1/cmr/m/n/12 0542\OML/cmm/m/it/12 hrs \OT1/cmr/m/n/12 = 3\OML/cmm/m/it
 /12 :\OT1/cmr/m/n/12 25\OML/cmm/m/it/12 mins
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 455--455
+Underfull \hbox (badness 2359) in paragraph at lines 449--449
 []|\OT1/phv/m/n/10.95 Flight Con-troller, GPS Mod-ule,
  []
 
 
-Overfull \hbox (8.51627pt too wide) in paragraph at lines 450--461
+Overfull \hbox (8.51627pt too wide) in paragraph at lines 444--455
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 
  []
 
 
 
-[14
+[13
 
  <./battery.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--495
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
 
-Overfull \hbox (14.5725pt too wide) detected at line 498
+Overfull \hbox (14.5725pt too wide) detected at line 492
 []
  []
 
 
 
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
+
+ []
+
+
+
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 520--521
-
- []
-
-
-
-[16]
-Underfull \hbox (badness 3229) in paragraph at lines 602--602
+Underfull \hbox (badness 3229) in paragraph at lines 596--596
 \OT1/phv/m/n/12 sile strength: 30{45 MPa
  []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 602--602
+Underfull \hbox (badness 7869) in paragraph at lines 596--596
 []|\OT1/phv/m/n/12 Good layer ad-he-sion Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 \OT1/phv/m/n/12 quires heated bed and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 \OT1/phv/m/n/12 con-trolled en-vi-ron-ment to
  []
 
 
-Underfull \hbox (badness 7081) in paragraph at lines 602--602
+Underfull \hbox (badness 7081) in paragraph at lines 596--596
 \OT1/phv/m/n/12 avoid warp-ing Easy post-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 \OT1/phv/m/n/12 processing (e.g., sand-ing,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 []|\OT1/phv/m/n/12 Ensures durable, smooth,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 \OT1/phv/m/n/12 and aero-dy-namic drone
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 602--602
+Underfull \hbox (badness 6125) in paragraph at lines 596--596
 \OT1/phv/m/n/12 and small-scale pro-duc-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 \OT1/phv/m/n/12 with-out com-pro-mis-ing on
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 602--602
+Underfull \hbox (badness 3019) in paragraph at lines 596--596
 []|\OT1/phv/b/n/12 Comparison with Al-ter-na-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--602
+Underfull \hbox (badness 10000) in paragraph at lines 596--596
 []|\OT1/phv/b/n/12 PLA: \OT1/phv/m/n/12 Brit-tle, less heat-
  []
 
 
-Underfull \hbox (badness 4886) in paragraph at lines 602--602
+Underfull \hbox (badness 4886) in paragraph at lines 596--596
 \OT1/phv/m/n/12 ex-pen-sive, harder to print
  []
 
 
 
-[17]
-<pixhawk.png, id=402, 164.86594pt x 217.5628pt>
+[16]
+<pixhawk.png, id=347, 164.86594pt x 217.5628pt>
 File: pixhawk.png Graphic file (type png)
 <use pixhawk.png>
-Package pdftex.def Info: pixhawk.png  used on input line 612.
+Package pdftex.def Info: pixhawk.png  used on input line 606.
 (pdftex.def)             Requested size: 146.73235pt x 193.64024pt.
 
-Underfull \hbox (badness 1852) in paragraph at lines 620--621
+Underfull \hbox (badness 1852) in paragraph at lines 614--615
 []\OT1/phv/b/sl/12 Compatible with au-tonomous and GPS-guided mis-
  []
 
 
-Overfull \hbox (28.29387pt too wide) in paragraph at lines 622--623
+Overfull \hbox (28.29387pt too wide) in paragraph at lines 616--617
 []\OT1/phv/b/sl/12 Excellent sim-u-la-tion sup-port: \OT1/phv/m/n/12 Com-pat-i-
 ble with \OT1/phv/b/n/12 HITL (Hardware-
  []
 
 
-Overfull \hbox (5.67682pt too wide) in paragraph at lines 622--623
+Overfull \hbox (5.67682pt too wide) in paragraph at lines 616--617
 \OT1/phv/b/n/12 in-the-loop) \OT1/phv/m/n/12 and \OT1/phv/b/n/12 SITL (Software
 -in-the-loop) \OT1/phv/m/n/12 for con-trol test-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 626--627
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
 
  []
 
-<jetson.png, id=403, 389.20406pt x 260.47313pt>
+<jetson.png, id=348, 389.20406pt x 260.47313pt>
 File: jetson.png Graphic file (type png)
 <use jetson.png>
-Package pdftex.def Info: jetson.png  used on input line 630.
+Package pdftex.def Info: jetson.png  used on input line 624.
 (pdftex.def)             Requested size: 224.49805pt x 150.24782pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--637
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
 
  []
 
 
 
-[18 <./pixhawk.png (PNG copy)> <./jetson.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
+[17 <./pixhawk.png (PNG copy)> <./jetson.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
 
-Overfull \hbox (3.89604pt too wide) in paragraph at lines 641--642
+Overfull \hbox (3.89604pt too wide) in paragraph at lines 635--636
 []\OT1/phv/m/n/12 This con-fig-u-ra-tion al-lows the air-craft to func-tion \OT
 1/phv/b/n/12 au-tonomously even with-out con-stant ground
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 
  []
 
-<rpicam.png, id=408, 137.01187pt x 124.96687pt>
+<rpicam.png, id=355, 137.01187pt x 124.96687pt>
 File: rpicam.png Graphic file (type png)
 <use rpicam.png>
-Package pdftex.def Info: rpicam.png  used on input line 649.
+Package pdftex.def Info: rpicam.png  used on input line 643.
 (pdftex.def)             Requested size: 146.73235pt x 133.8429pt.
-<transmitter.png, id=409, 197.23688pt x 193.47281pt>
+<transmitter.png, id=356, 197.23688pt x 193.47281pt>
 File: transmitter.png Graphic file (type png)
 <use transmitter.png>
-Package pdftex.def Info: transmitter.png  used on input line 667.
+Package pdftex.def Info: transmitter.png  used on input line 661.
 (pdftex.def)             Requested size: 195.63817pt x 191.90474pt.
 
 
-[19 <./rpicam.png (PNG copy)>]
-Underfull \hbox (badness 1127) in paragraph at lines 673--674
+[18 <./rpicam.png (PNG copy)>]
+Underfull \hbox (badness 1127) in paragraph at lines 667--668
 \OT1/phv/m/n/12 ports many pop-u-lar pro-to-cols: FrSky D8/D16,
  []
 
 
-Underfull \hbox (badness 4713) in paragraph at lines 674--675
+Underfull \hbox (badness 4713) in paragraph at lines 668--669
 []\OT1/phv/b/sl/12 ELRS 2.4GHz: Ultra-Responsive & Long-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--682
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
 
  []
 
-<receiver.png, id=415, 221.32687pt x 197.23688pt>
+<receiver.png, id=362, 221.32687pt x 197.23688pt>
 File: receiver.png Graphic file (type png)
 <use receiver.png>
-Package pdftex.def Info: receiver.png  used on input line 686.
+Package pdftex.def Info: receiver.png  used on input line 680.
 (pdftex.def)             Requested size: 146.73235pt x 130.7696pt.
 
 
-[20 <./transmitter.png (PNG copy)> <./receiver.png (PNG copy)>]
-<vtx.png, id=420, 318.43968pt x 363.60844pt>
+[19 <./transmitter.png (PNG copy)> <./receiver.png (PNG copy)>]
+<vtx.png, id=370, 318.43968pt x 363.60844pt>
 File: vtx.png Graphic file (type png)
 <use vtx.png>
-Package pdftex.def Info: vtx.png  used on input line 698.
+Package pdftex.def Info: vtx.png  used on input line 692.
 (pdftex.def)             Requested size: 146.73235pt x 167.54486pt.
-<gps.png, id=421, 139.27031pt x 126.4725pt>
+<gps.png, id=371, 139.27031pt x 126.4725pt>
 File: gps.png Graphic file (type png)
 <use gps.png>
-Package pdftex.def Info: gps.png  used on input line 707.
+Package pdftex.def Info: gps.png  used on input line 701.
 (pdftex.def)             Requested size: 146.73235pt x 133.2516pt.
 
-Underfull \hbox (badness 3049) in paragraph at lines 712--713
+Underfull \hbox (badness 3049) in paragraph at lines 706--707
 \OT1/phv/m/n/12 Bei-Dou), which im-proves satel-lite lock speed and po-si-tion
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 712--713
+Underfull \hbox (badness 2080) in paragraph at lines 706--707
 \OT1/phv/m/n/12 ac-cu-racy, even in chal-leng-ing en-vi-ron-ments. With an up-
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 712--713
+Underfull \hbox (badness 6542) in paragraph at lines 706--707
 \OT1/phv/m/n/12 date rate of up to 10 Hz, it de-liv-ers real-time, high-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 712--713
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
 
  []
 
-<hdmi2rca.png, id=422, 161.85469pt x 153.57375pt>
+<hdmi2rca.png, id=372, 161.85469pt x 153.57375pt>
 File: hdmi2rca.png Graphic file (type png)
 <use hdmi2rca.png>
-Package pdftex.def Info: hdmi2rca.png  used on input line 718.
+Package pdftex.def Info: hdmi2rca.png  used on input line 712.
 (pdftex.def)             Requested size: 146.73235pt x 139.2321pt.
 
-Underfull \hbox (badness 2846) in paragraph at lines 722--723
+Underfull \hbox (badness 2846) in paragraph at lines 716--717
 []\OT1/phv/m/n/12 We're usign this to con-vert the video out-put from Jet-son
  []
 
 
-Underfull \hbox (badness 4954) in paragraph at lines 722--723
+Underfull \hbox (badness 4954) in paragraph at lines 716--717
 \OT1/phv/m/n/12 Nano to ana-log via a HDMI ca-ble out-put. This sup-
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 722--723
+Underfull \hbox (badness 2134) in paragraph at lines 716--717
 \OT1/phv/m/n/12 ports 480i/576i out-put (works with ana-log dis-plays or FPV
  []
 
 
-Underfull \hbox (badness 5490) in paragraph at lines 722--723
+Underfull \hbox (badness 5490) in paragraph at lines 716--717
 \OT1/phv/m/n/12 AV trans-mit-ters). Plug and play, no drivers or con-fig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
+Underfull \hbox (badness 10000) in paragraph at lines 716--717
 
  []
 
 
 
-[21 <./vtx.png (PNG copy)> <./gps.png (PNG copy)> <./hdmi2rca.png (PNG copy)>]
-<2D_schematic.png, id=427, 416.55624pt x 112.42pt>
+[20 <./vtx.png (PNG copy)> <./gps.png (PNG copy)> <./hdmi2rca.png (PNG copy)>]
+<2D_schematic.png, id=380, 416.55624pt x 112.42pt>
 File: 2D_schematic.png Graphic file (type png)
 <use 2D_schematic.png>
-Package pdftex.def Info: 2D_schematic.png  used on input line 750.
+Package pdftex.def Info: 2D_schematic.png  used on input line 744.
 (pdftex.def)             Requested size: 440.1896pt x 118.8044pt.
 
 
-[22 <./2D_schematic.png>]
+[21 <./2D_schematic.png>]
+
+[22]
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 796.
+
 
 [23]
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 802.
-
-
-[24]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 840--841
+Underfull \hbox (badness 10000) in paragraph at lines 834--835
 
  []
 
-<fem.jpeg, id=454, 938.00438pt x 473.51906pt>
+<fem.jpeg, id=407, 938.00438pt x 473.51906pt>
 File: fem.jpeg Graphic file (type jpg)
 <use fem.jpeg>
-Package pdftex.def Info: fem.jpeg  used on input line 846.
+Package pdftex.def Info: fem.jpeg  used on input line 840.
 (pdftex.def)             Requested size: 391.2838pt x 197.5255pt.
 
 
-[25
+[24
 
  <./fem.jpeg>]
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 19.70294pt on input line 860.
-<sora.png, id=462, 380.92313pt x 483.30562pt>
+(Font)              scaled to size 19.70294pt on input line 854.
+<sora.png, id=415, 380.92313pt x 483.30562pt>
 File: sora.png Graphic file (type png)
 <use sora.png>
-Package pdftex.def Info: sora.png  used on input line 863.
+Package pdftex.def Info: sora.png  used on input line 857.
 (pdftex.def)             Requested size: 391.2838pt x 496.46817pt.
 
 
-[26 <./sora.png (PNG copy)>]
+[25 <./sora.png (PNG copy)>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 876--877
+Underfull \hbox (badness 10000) in paragraph at lines 870--871
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--879
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
 
  []
 
-<night.mp4.jpg, id=468, 3047.385pt x 2312.64pt>
+<night.mp4.jpg, id=423, 3047.385pt x 2312.64pt>
 File: night.mp4.jpg Graphic file (type jpg)
 <use night.mp4.jpg>
-Package pdftex.def Info: night.mp4.jpg  used on input line 882.
+Package pdftex.def Info: night.mp4.jpg  used on input line 876.
 (pdftex.def)             Requested size: 464.64624pt x 352.59769pt.
 
 
-[27
+[26
 
  <./night.mp4.jpg>]
-<obj.png, id=473, 372.64218pt x 203.25937pt>
+<obj.png, id=430, 372.64218pt x 203.25937pt>
 File: obj.png Graphic file (type png)
 <use obj.png>
-Package pdftex.def Info: obj.png  used on input line 924.
+Package pdftex.def Info: obj.png  used on input line 918.
 (pdftex.def)             Requested size: 195.63817pt x 106.70966pt.
 
 
-[28]
+[27]
 
-[29 <./obj.png (PNG copy)>]
+[28 <./obj.png (PNG copy)>]
 Chapter 6.
-<test_down.jpg, id=485, 1027.84pt x 1445.4pt>
+<test_down.jpg, id=443, 1027.84pt x 1445.4pt>
 File: test_down.jpg Graphic file (type jpg)
 <use test_down.jpg>
-Package pdftex.def Info: test_down.jpg  used on input line 969.
+Package pdftex.def Info: test_down.jpg  used on input line 963.
 (pdftex.def)             Requested size: 146.73235pt x 206.32452pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 964.
+See the caption package documentation for explanation.
+
+<sea.mp4.jpg, id=444, 2312.64pt x 3252.15pt>
+File: sea.mp4.jpg Graphic file (type jpg)
+<use sea.mp4.jpg>
+Package pdftex.def Info: sea.mp4.jpg  used on input line 969.
+(pdftex.def)             Requested size: 146.73235pt x 206.33554pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 970.
 See the caption package documentation for explanation.
 
-<sea.mp4.jpg, id=486, 2312.64pt x 3252.15pt>
-File: sea.mp4.jpg Graphic file (type jpg)
-<use sea.mp4.jpg>
-Package pdftex.def Info: sea.mp4.jpg  used on input line 975.
+<road.mp4.jpg, id=445, 2312.64pt x 3252.15pt>
+File: road.mp4.jpg Graphic file (type jpg)
+<use road.mp4.jpg>
+Package pdftex.def Info: road.mp4.jpg  used on input line 975.
 (pdftex.def)             Requested size: 146.73235pt x 206.33554pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 976.
-See the caption package documentation for explanation.
-
-<road.mp4.jpg, id=487, 2312.64pt x 3252.15pt>
-File: road.mp4.jpg Graphic file (type jpg)
-<use road.mp4.jpg>
-Package pdftex.def Info: road.mp4.jpg  used on input line 981.
-(pdftex.def)             Requested size: 146.73235pt x 206.33554pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 982.
 See the caption package documentation for explanation.
 
 
@@ -1597,27 +1585,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 986--987
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 993--994
 
- []
-
-
-
-[30
+[29
 
  <./test_down.jpg> <./sea.mp4.jpg> <./road.mp4.jpg>]
 Chapter 7.
 
 
-[31
+[30
 
 ]
 Chapter 8.
 
+Overfull \hbox (8.47377pt too wide) in paragraph at lines 1029--1031
+[]\OT1/phv/m/n/12 https://ardupilot.org/copter/docs/common-3dr-radio-advanced-c
+onfiguration-and-technical- in-
+ []
 
-[32
+<1.jpeg, id=458, 807.7678pt x 577.40718pt>
+File: 1.jpeg Graphic file (type jpg)
+<use 1.jpeg>
+Package pdftex.def Info: 1.jpeg  used on input line 1037.
+(pdftex.def)             Requested size: 195.63817pt x 139.84045pt.
 
-] (./report.aux)
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1038.
+See the caption package documentation for explanation.
+
+<2.jpeg, id=459, 928.21782pt x 537.50812pt>
+File: 2.jpeg Graphic file (type jpg)
+<use 2.jpeg>
+Package pdftex.def Info: 2.jpeg  used on input line 1043.
+(pdftex.def)             Requested size: 195.63817pt x 113.29012pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1044.
+See the caption package documentation for explanation.
+
+<3.jpeg, id=460, 753.5653pt x 508.90125pt>
+File: 3.jpeg Graphic file (type jpg)
+<use 3.jpeg>
+Package pdftex.def Info: 3.jpeg  used on input line 1048.
+(pdftex.def)             Requested size: 195.63817pt x 132.11707pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1049.
+See the caption package documentation for explanation.
+
+<4.jpeg, id=461, 786.68906pt x 471.26062pt>
+File: 4.jpeg Graphic file (type jpg)
+<use 4.jpeg>
+Package pdftex.def Info: 4.jpeg  used on input line 1054.
+(pdftex.def)             Requested size: 195.63817pt x 117.19644pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1055.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 5862) in paragraph at lines 1155--1156
+[]|\OT1/phv/m/n/10.95 3-Axis Gy-rom-e-ter, Ac-celerom-e-ter,
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 1175.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[31
+
+ <./1.jpeg> <./2.jpeg> <./3.jpeg> <./4.jpeg>]
+
+[32]
+
+[33]
+
+[34] (./report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1627,16 +1678,16 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: E0998E70EE883206114C563A5C4F5C21;7343.
+(rerunfilecheck)             Checksum: E8E9C4702C64BD6E78B7ECD3276F6968;7277.
  ) 
 Here is how much of TeX's memory you used:
- 25659 strings out of 475178
- 493576 string characters out of 5766539
- 899942 words of memory out of 5000000
- 48043 multiletter control sequences out of 15000+600000
- 589924 words of font info for 97 fonts, out of 8000000 for 9000
+ 25685 strings out of 475178
+ 493920 string characters out of 5766539
+ 914940 words of memory out of 5000000
+ 48067 multiletter control sequences out of 15000+600000
+ 590237 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 102i,15n,107p,1233b,592s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,15n,107p,1233b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/anirban/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcss1200.6
 00pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
@@ -1651,10 +1702,10 @@ lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
 bo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on report.pdf (32 pages, 5491941 bytes).
+Output written on report.pdf (34 pages, 5919756 bytes).
 PDF statistics:
- 602 PDF objects out of 1000 (max. 8388607)
- 502 compressed objects within 6 object streams
- 159 named destinations out of 1000 (max. 500000)
- 462 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 588 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
+ 167 named destinations out of 1000 (max. 500000)
+ 482 words of extra memory for PDF output out of 10000 (max. 10000000)
 
